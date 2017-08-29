@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Mimizuku\\' => array($baseDir . '/'),
+    'Snow_Monkey\\' => array($baseDir . '/'),
     'Inc2734\\WP_oEmbed_Blog_Card\\' => array($vendorDir . '/inc2734/wp-oembed-blog-card/src'),
     'Inc2734\\WP_View_Controller\\' => array($vendorDir . '/inc2734/wp-view-controller/src'),
     'Inc2734\\WP_Share_Buttons\\' => array($vendorDir . '/inc2734/wp-share-buttons/src'),
