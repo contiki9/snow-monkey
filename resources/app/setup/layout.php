@@ -10,9 +10,14 @@ add_filter( 'mimizuku_layout', function( $layout ) {
 		return 'one-column';
 	}
 
-	if ( is_page() && get_post_meta( get_the_ID(), '_wp_page_template', true ) ) {
+	$_wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
+	if ( $_wp_page_template && 'default' !== $_wp_page_template ) {
 		return $layout;
 	}
 
-	return get_theme_mod( 'basic-layout' );
+	if ( is_front_page() ) {
+		return 'one-column-fluid';
+	}
+
+	return get_theme_mod( get_post_type() . '-layout' );
 } );
