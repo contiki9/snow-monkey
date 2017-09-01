@@ -7,9 +7,15 @@
 
 global $post;
 
+$items = explode( ',', $instance['items'] );
+if ( ! $items ) {
+	return;
+}
+
 $recent_posts = get_posts( [
 	'post_type'      => 'post',
-	'posts_per_page' => $instance['posts-per-page'],
+	'posts_per_page' => -1,
+	'post__in'       => $items,
 ] );
 ?>
 
@@ -22,14 +28,14 @@ $recent_posts = get_posts( [
 	<?php endif; ?>
 
 	<div
-		class="wpaw-recent-posts"
-		id="wpaw-recent-posts-<?php echo esc_attr( $args['widget_id'] ); ?>"
+		class="wpaw-ranking"
+		id="wpaw-ranking-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		>
 
-		<ul class="wpaw-recent-posts__list">
+		<ul class="wpaw-ranking__list">
 			<?php foreach ( $recent_posts as $post ) : ?>
 				<?php setup_postdata( $post ); ?>
-				<li class="wpaw-recent-posts__item">
+				<li class="wpaw-ranking__item">
 					<a href="<?php the_permalink(); ?>">
 
 						<?php if ( $instance['show-thumbnail'] ) : ?>
@@ -38,18 +44,18 @@ $recent_posts = get_posts( [
 							></div>
 						<?php endif; ?>
 
-						<div class="wpaw-recent-posts__body">
+						<div class="wpaw-ranking__body">
 							<?php $terms = get_the_terms( get_the_ID(), 'category' ); ?>
 							<?php if ( $instance['show-taxonomy'] && $terms ) : ?>
-								<div class="wpaw-recent-posts__taxonomy">
+								<div class="wpaw-ranking__taxonomy">
 									<?php foreach ( $terms as $term ) : ?>
-										<span class="wpaw-recent-posts__term"><?php echo esc_html( $term->name ); ?></span>
-									<?php break; ?>
+										<span class="wpaw-ranking__term"><?php echo esc_html( $term->name ); ?></span>
+										<?php break; ?>
 									<?php endforeach; ?>
 								</div>
 							<?php endif; ?>
 
-							<div class="wpaw-recent-posts__title">
+							<div class="wpaw-ranking__title">
 								<?php
 								ob_start();
 								the_title();
@@ -57,7 +63,7 @@ $recent_posts = get_posts( [
 								echo esc_html( $title );
 								?>
 							</div>
-							<div class="wpaw-recent-posts__date"><?php the_time( get_option( 'date_format' ) ); ?></div>
+							<div class="wpaw-ranking__date"><?php the_time( get_option( 'date_format' ) ); ?></div>
 						</div>
 
 					</a>

@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="wpaw-recent-posts-widget">
+<div class="wpaw-ranking-widget">
 	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'inc2734-wp-awesome-widgets' ); ?></label><br>
 		<input
@@ -17,17 +17,47 @@
 		>
 	</p>
 
-	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'posts-per-page' ) ); ?>"><?php esc_html_e( 'Number of posts', 'inc2734-wp-awesome-widgets' ); ?></label><br>
+	<div class="wpaw-item-selector">
+		<ul class="wpaw-item-selector__selected-items">
+			<?php
+			$items = $instance['items'];
+			if ( empty( $items ) ) {
+				$items = [];
+			} elseif ( ! is_array( $items ) ) {
+				$items = explode( ',', $items );
+			}
+			?>
+			<?php foreach ( $items as $item ) : ?>
+				<li class="wpaw-item-selector__selected-item" data-post-id="<?php echo esc_attr( $item ); ?>">
+					<span class="dashicons dashicons-minus"></span>
+					<?php echo get_the_title( $item ); ?>
+				</li>
+			<?php endforeach; ?>
+		</ul>
+
+		<?php
+		$recent_posts = get_posts( [
+			'post_type'      => 'post',
+			'posts_per_page' => 10,
+		] );
+		?>
+		<ul class="wpaw-item-selector__items">
+			<?php foreach ( $recent_posts as $_post ) : ?>
+				<li class="wpaw-item-selector__item" data-post-id="<?php echo esc_attr( $_post->ID ); ?>" data-post-title="<?php echo esc_attr( $_post->post_title ); ?>">
+					<span class="dashicons dashicons-plus"></span>
+					<?php echo esc_html( $_post->post_title ); ?>
+				</li>
+			<?php endforeach; ?>
+		</ul>
+
 		<input
-			type="number"
-			name="<?php echo esc_attr( $this->get_field_name( 'posts-per-page' ) ); ?>"
-			id="<?php echo esc_attr( $this->get_field_id( 'posts-per-page' ) ); ?>"
-			value="<?php echo esc_attr( $instance['posts-per-page'] ); ?>"
-			step="1"
-			min="1"
+			class="wpaw-item-selector__input"
+			type="hidden"
+			name="<?php echo esc_attr( $this->get_field_name( 'items' ) ); ?>"
+			id="<?php echo esc_attr( $this->get_field_id( 'items' ) ); ?>"
+			value="<?php echo esc_attr( $instance['items'] ); ?>"
 		>
-	</p>
+	</div>
 
 	<p>
 		<input type="hidden" name="<?php echo esc_attr( $this->get_field_name( 'show-thumbnail' ) ); ?>" value="0">
