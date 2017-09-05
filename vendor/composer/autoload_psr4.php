@@ -19,5 +19,6 @@ return array(
     'Inc2734\\WP_Breadcrumbs\\' => array($vendorDir . '/inc2734/wp-breadcrumbs/src'),
     'Inc2734\\WP_Basis\\' => array($vendorDir . '/inc2734/wp-basis/src'),
     'Inc2734\\WP_Awesome_Widgets\\' => array($vendorDir . '/inc2734/wp-awesome-widgets/src'),
+    'Inc2734\\WP_Awesome_Components\\' => array($vendorDir . '/inc2734/wp-awesome-components/src'),
     'Inc2734\\Mimizuku_Core\\' => array($vendorDir . '/inc2734/mimizuku-core/src'),
 );

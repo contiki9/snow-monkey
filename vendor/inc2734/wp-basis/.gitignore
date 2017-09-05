@@ -1,6 +1,5 @@
 .DS_Store
 vendor/
 composer.lock
-node_modules/
 node_modules/*
 !node_modules/sass-basis

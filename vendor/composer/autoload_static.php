@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6dc9e108ee2f0cbb88d25b401f45ca51
+class ComposerStaticInita522e9704f30f3aa521e64690b37237d
 {
     public static $prefixLengthsPsr4 = array (
         'S' => 
@@ -25,6 +25,7 @@ class ComposerStaticInit6dc9e108ee2f0cbb88d25b401f45ca51
             'Inc2734\\WP_Breadcrumbs\\' => 23,
             'Inc2734\\WP_Basis\\' => 17,
             'Inc2734\\WP_Awesome_Widgets\\' => 27,
+            'Inc2734\\WP_Awesome_Components\\' => 30,
             'Inc2734\\Mimizuku_Core\\' => 22,
         ),
     );
@@ -82,6 +83,10 @@ class ComposerStaticInit6dc9e108ee2f0cbb88d25b401f45ca51
         array (
             0 => __DIR__ . '/..' . '/inc2734/wp-awesome-widgets/src',
         ),
+        'Inc2734\\WP_Awesome_Components\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/inc2734/wp-awesome-components/src',
+        ),
         'Inc2734\\Mimizuku_Core\\' => 
         array (
             0 => __DIR__ . '/..' . '/inc2734/mimizuku-core/src',
@@ -91,8 +96,8 @@ class ComposerStaticInit6dc9e108ee2f0cbb88d25b401f45ca51
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6dc9e108ee2f0cbb88d25b401f45ca51::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6dc9e108ee2f0cbb88d25b401f45ca51::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInita522e9704f30f3aa521e64690b37237d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInita522e9704f30f3aa521e64690b37237d::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
