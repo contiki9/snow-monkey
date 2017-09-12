@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInita522e9704f30f3aa521e64690b37237d
+class ComposerStaticInitdb2c4e9fcbb53d08e11d3f860eb5ab9d
 {
     public static $prefixLengthsPsr4 = array (
         'S' => 
@@ -22,6 +22,7 @@ class ComposerStaticInita522e9704f30f3aa521e64690b37237d
             'Inc2734\\WP_Like_Me_Box\\' => 23,
             'Inc2734\\WP_GitHub_Theme_Updater\\' => 32,
             'Inc2734\\WP_Customizer_Framework\\' => 32,
+            'Inc2734\\WP_Contents_Outline\\' => 28,
             'Inc2734\\WP_Breadcrumbs\\' => 23,
             'Inc2734\\WP_Basis\\' => 17,
             'Inc2734\\WP_Awesome_Widgets\\' => 27,
@@ -71,6 +72,10 @@ class ComposerStaticInita522e9704f30f3aa521e64690b37237d
         array (
             0 => __DIR__ . '/..' . '/inc2734/wp-customizer-framework/src',
         ),
+        'Inc2734\\WP_Contents_Outline\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/inc2734/wp-contents-outline/src',
+        ),
         'Inc2734\\WP_Breadcrumbs\\' => 
         array (
             0 => __DIR__ . '/..' . '/inc2734/wp-breadcrumbs/src',
@@ -96,8 +101,8 @@ class ComposerStaticInita522e9704f30f3aa521e64690b37237d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInita522e9704f30f3aa521e64690b37237d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInita522e9704f30f3aa521e64690b37237d::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitdb2c4e9fcbb53d08e11d3f860eb5ab9d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitdb2c4e9fcbb53d08e11d3f860eb5ab9d::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

@@ -1,5 +1,8 @@
 'use strict';
 
+import $ from 'jquery';
+
+import 'slick-carousel';
 import '../../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/js/basis.js';
 
 import BasisStickyHeader from '../../../vendor/inc2734/wp-basis/node_modules/sass-basis-layout/src/js/sticky-header.js';
@@ -25,3 +28,9 @@ new SnowMonkeyDropNav();
 
 import SnowMonkeyPageTopScroll from './page-top-scroll.js';
 new SnowMonkeyPageTopScroll();
+
+import './background-parallax-scroll.js';
+$(function() {
+  $('.c-page-header').SnowMonkeyBackgroundParallaxScroll();
+  $('.wpaw-showcase').SnowMonkeyBackgroundParallaxScroll();
+});

@@ -15,14 +15,15 @@ $ composer require inc2734/wp-customizer-framework
 ```
 
 ## How to use
-
+### Customizer
 ```
 // When Using composer auto loader
-// $Customizer = \Inc2734\WP_Customizer_Framework\Customizer_Framework::init();
+require_once( get_theme_file_path( '/vendor/autoload.php' ) );
+$Customizer = \Inc2734\WP_Customizer_Framework\Customizer_Framework::init();
 
 // When not Using composer auto loader
-include_once( get_theme_file_path( '/vendor/inc2734/wp-customizer-framework/src/wp-customizer-framework.php' ) );
-$customizer = Inc2734_WP_Customizer_Framework::init();
+// include_once( get_theme_file_path( '/vendor/inc2734/wp-customizer-framework/src/wp-customizer-framework.php' ) );
+// $customizer = Inc2734_WP_Customizer_Framework::init();
 
 $customizer->panel( 'panel-id', [
   'title' => 'panel-name',
@@ -41,12 +42,26 @@ $panel = $customizer->panel( 'panel-id' );
 $section = $customizer->section( 'section-id' );
 $control = $customizer->control( 'control-id' );
 $control->join( $section )->join( $panel );
+```
 
-// Enqueue CSS for admin page
-add_action( 'admin_enqueue_scripts', function() {
-  wp_enqueue_style(
-    get_stylesheet() . '-admin',
-    get_theme_file_uri( '/assets/css/admin.min.css' )
+### Set styles
+```
+add_action( 'wp_loaded', function() {
+  $Customizer = \Inc2734\WP_Customizer_Framework\Customizer_Framework::init();
+  $cfs = Customizer->styles();
+
+  $accent_color = get_theme_mod( 'accent-color' );
+
+  $cfs->register(
+    [
+      '.page-title',
+      '.strong',
+    ],
+    [
+      "color: {$accent_color}",
+      "border-bottom-color: {$accent_color}",
+    ],
+    '@media (min-width: 768px)' // Optional
   );
-} );
+});
 ```

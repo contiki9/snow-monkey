@@ -16,6 +16,7 @@ return array(
     'Inc2734\\WP_Like_Me_Box\\' => array($vendorDir . '/inc2734/wp-like-me-box/src'),
     'Inc2734\\WP_GitHub_Theme_Updater\\' => array($vendorDir . '/inc2734/wp-github-theme-updater/src'),
     'Inc2734\\WP_Customizer_Framework\\' => array($vendorDir . '/inc2734/wp-customizer-framework/src'),
+    'Inc2734\\WP_Contents_Outline\\' => array($vendorDir . '/inc2734/wp-contents-outline/src'),
     'Inc2734\\WP_Breadcrumbs\\' => array($vendorDir . '/inc2734/wp-breadcrumbs/src'),
     'Inc2734\\WP_Basis\\' => array($vendorDir . '/inc2734/wp-basis/src'),
     'Inc2734\\WP_Awesome_Widgets\\' => array($vendorDir . '/inc2734/wp-awesome-widgets/src'),
