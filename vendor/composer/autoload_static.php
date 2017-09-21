@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitdb2c4e9fcbb53d08e11d3f860eb5ab9d
+class ComposerStaticInit3ff4c920f90ba1626f3b1a6ee2b3ac32
 {
     public static $prefixLengthsPsr4 = array (
         'S' => 
@@ -18,6 +18,7 @@ class ComposerStaticInitdb2c4e9fcbb53d08e11d3f860eb5ab9d
             'Inc2734\\WP_Share_Buttons\\' => 25,
             'Inc2734\\WP_SEO\\' => 15,
             'Inc2734\\WP_Pure_CSS_Gallery\\' => 28,
+            'Inc2734\\WP_Profile_Box\\' => 23,
             'Inc2734\\WP_OGP\\' => 15,
             'Inc2734\\WP_Like_Me_Box\\' => 23,
             'Inc2734\\WP_GitHub_Theme_Updater\\' => 32,
@@ -34,7 +35,7 @@ class ComposerStaticInitdb2c4e9fcbb53d08e11d3f860eb5ab9d
     public static $prefixDirsPsr4 = array (
         'Snow_Monkey\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/',
+            0 => __DIR__ . '/../../..' . '/',
         ),
         'Inc2734\\WP_oEmbed_Blog_Card\\' => 
         array (
@@ -55,6 +56,10 @@ class ComposerStaticInitdb2c4e9fcbb53d08e11d3f860eb5ab9d
         'Inc2734\\WP_Pure_CSS_Gallery\\' => 
         array (
             0 => __DIR__ . '/..' . '/inc2734/wp-pure-css-gallery/src',
+        ),
+        'Inc2734\\WP_Profile_Box\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/inc2734/wp-profile-box/src',
         ),
         'Inc2734\\WP_OGP\\' => 
         array (
@@ -101,8 +106,8 @@ class ComposerStaticInitdb2c4e9fcbb53d08e11d3f860eb5ab9d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitdb2c4e9fcbb53d08e11d3f860eb5ab9d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitdb2c4e9fcbb53d08e11d3f860eb5ab9d::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3ff4c920f90ba1626f3b1a6ee2b3ac32::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3ff4c920f90ba1626f3b1a6ee2b3ac32::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
