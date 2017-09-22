@@ -14233,6 +14233,7 @@ html[data-window-scroll="false"] .l-container {
     padding-left: 5em; }
 
 .wp-profile-box {
+  background-color: #f7f7f7;
   border: 1px solid #eeeeee; }
   .wp-profile-box__title {
     border-bottom: 1px solid #eeeeee;
