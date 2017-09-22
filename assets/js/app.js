@@ -3113,6 +3113,204 @@ new BasisPageEffect();
 
 new BasisSelect();
 
+var Sticky = function () {
+  function Sticky(target) {
+    var _this = this;
+
+    var args = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    classCallCheck(this, Sticky);
+
+    if (!target.length) {
+      return;
+    }
+
+    this.target = target;
+    this.parent = target.parent();
+    this.args = $.extend({
+      offset: 0
+    }, args);
+
+    this.placeholder = $('<div class="js-sticky-placeholder"/>');
+
+    this.isAdded = false;
+
+    this.initialize();
+
+    $(window).scroll(function () {
+      _this.initialize();
+    });
+
+    $(window).resize(function () {
+      _this.initialize();
+    });
+  }
+
+  createClass(Sticky, [{
+    key: 'initialize',
+    value: function initialize() {
+      if ('none' == this.target.css('display')) {
+        this.parent.removeClass('js-sticky-parent');
+        this.target.removeClass('js-sticky-top');
+        this.target.removeClass('js-sticky-bottom');
+        this.placeholder.remove();
+        this.isAdded = false;
+        return;
+      }
+
+      this.placeholder.width(this.target.outerWidth());
+      this.placeholder.height(this.target.outerHeight() + parseInt(this.target.css('margin-bottom')));
+
+      if (this.shouldStickyTop()) {
+        this.setTargetSize(this.target.height(), this.target.width());
+        this.target.addClass('js-sticky-top');
+        this.target.css('top', this.args.offset);
+        this.target.after(this.placeholder);
+        this.isAdded = true;
+      } else if (this.shouldStickyBottom()) {
+        this.parent.addClass('js-sticky-parent');
+        this.target.removeClass('js-sticky-top');
+        this.target.css('top', '');
+        this.target.addClass('js-sticky-bottom');
+      } else if (this.shouldReleaseStickyBottom()) {
+        this.parent.removeClass('js-sticky-parent');
+        this.target.addClass('js-sticky-top');
+        this.target.css('top', this.args.offset);
+        this.target.removeClass('js-sticky-bottom');
+      } else if (this.shouldReleaseStickyTop()) {
+        this.parent.removeClass('js-sticky-parent');
+        this.target.removeClass('js-sticky-top');
+        this.target.css('top', '');
+        this.target.removeClass('js-sticky-bottom');
+        this.setTargetSize('', '');
+        this.placeholder.remove();
+        this.isAdded = false;
+      }
+    }
+  }, {
+    key: 'shouldStickyTop',
+    value: function shouldStickyTop() {
+      return this.getScrollTop() >= this.getTargetTopY() && !this.isAdded;
+    }
+  }, {
+    key: 'shouldStickyBottom',
+    value: function shouldStickyBottom() {
+      return this.getTargetBottomY() >= this.getParentBottomY() && !this.parent.hasClass('js-sticky-parent') && this.isAdded;
+    }
+  }, {
+    key: 'shouldReleaseStickyBottom',
+    value: function shouldReleaseStickyBottom() {
+      return this.getScrollTop() <= this.getTargetTopY() && this.getTargetTopY() >= this.getParentTopY() && this.parent.hasClass('js-sticky-parent') && this.isAdded;
+    }
+  }, {
+    key: 'shouldReleaseStickyTop',
+    value: function shouldReleaseStickyTop() {
+      return this.getScrollTop() <= this.getParentTopY() && this.isAdded;
+    }
+  }, {
+    key: 'getScrollTop',
+    value: function getScrollTop() {
+      return $(window).scrollTop() + this.args.offset + parseInt(this.target.css('margin-top'));
+    }
+  }, {
+    key: 'getParentTopY',
+    value: function getParentTopY() {
+      if (this.target.prev().length) {
+        return this.target.prev().offset().top + this.target.prev().outerHeight();
+      }
+      return this.parent.offset().top;
+    }
+  }, {
+    key: 'getParentBottomY',
+    value: function getParentBottomY() {
+      if (this.target.next(':not(.js-sticky-placeholder)').length) {
+        return this.target.next(':not(.js-sticky-placeholder)').offset().top;
+      }
+      return this.parent.offset().top + this.parent.outerHeight();
+    }
+  }, {
+    key: 'getTargetTopY',
+    value: function getTargetTopY() {
+      return this.target.offset().top;
+    }
+  }, {
+    key: 'getTargetBottomY',
+    value: function getTargetBottomY() {
+      return this.getTargetTopY() + this.target.outerHeight();
+    }
+  }, {
+    key: 'setTargetSize',
+    value: function setTargetSize(height, width) {
+      this.target.width(width);
+      this.target.height(height);
+    }
+  }]);
+  return Sticky;
+}();
+
+/**
+ * Name: jquery.sticky
+ * Author: Takashi Kitajima (inc2734)
+ * Author URI: https://2inc.org
+ * License: MIT
+ *
+ * @param { offset }
+ */
+
+(function ($$$1) {
+  $$$1.fn.sticky = function (args) {
+    return this.each(function (i, e) {
+      new Sticky($$$1(e), args);
+    });
+  };
+})(jQuery);
+
+/**
+ * Name: jquery.background-parallax-scroll
+ * Author: Takashi Kitajima (inc2734)
+ * Author URI: https://2inc.org
+ * License: MIT
+ *
+ * @param { speed }
+ */
+
+(function ($$$1) {
+  $$$1.fn.backgroundParallaxScroll = function (params) {
+    params = $$$1.extend({
+      speed: 3
+    }, params);
+
+    return this.each(function (i, e) {
+      var target = $$$1(e);
+      var bpy = 0;
+
+      init();
+      setPosition(0);
+
+      $$$1(window).resize(function () {
+        init();
+        setPosition($$$1(window).scrollTop());
+      });
+
+      $$$1(window).scroll(function () {
+        setPosition($$$1(window).scrollTop());
+      });
+
+      function init() {
+        target.css('background-position-y', '');
+        bpy = target.css('background-position-y');
+      }
+
+      function setPosition(scroll) {
+        scroll = parseInt(scroll);
+        var offset = target.offset().top;
+        var parallax = (scroll - offset) / params.speed;
+        var newBpy = 'calc(' + bpy + ' - ' + parallax + 'px)';
+        target.css('background-position-y', newBpy);
+      }
+    });
+  };
+})(jQuery);
+
 /**
  * This is for the sticky header.
  */
@@ -3817,7 +4015,10 @@ var SnowMonkeyPageTopScroll = function SnowMonkeyPageTopScroll() {
 
     _this.pageTop.find('a[href^="#"]').SmoothScroll({
       duration: 1000,
-      easing: 'easeOutQuint'
+      easing: 'easeOutQuint',
+      offset: function () {
+        return parseInt($('html').css('margin-top'));
+      }()
     });
 
     $(window).on('load', function () {
@@ -3826,52 +4027,14 @@ var SnowMonkeyPageTopScroll = function SnowMonkeyPageTopScroll() {
         easing: 'easeOutQuint',
         offset: function () {
           if ('sticky' === $('.l-header').attr('data-l-header-type')) {
-            return $('.l-header').outerHeight();
+            return $('.l-header').outerHeight() + parseInt($('html').css('margin-top'));
           }
-          return $('.l-header__drop-nav').outerHeight();
+          return $('.l-header__drop-nav').outerHeight() + parseInt($('html').css('margin-top'));
         }()
       });
     });
   });
 };
-
-$(function () {
-  $.fn.SnowMonkeyBackgroundParallaxScroll = function (params) {
-    params = $.extend({
-      speed: 3
-    }, params);
-
-    return this.each(function (i, e) {
-      var target = $(e);
-      var bpy = 0;
-
-      init();
-      setPosition(0);
-
-      $(window).resize(function () {
-        init();
-        setPosition($(window).scrollTop());
-      });
-
-      $(window).scroll(function () {
-        setPosition($(window).scrollTop());
-      });
-
-      function init() {
-        target.css('background-position-y', '');
-        bpy = target.css('background-position-y');
-      }
-
-      function setPosition(scroll) {
-        scroll = parseInt(scroll);
-        var offset = target.offset().top;
-        var parallax = (scroll - offset) / params.speed;
-        var newBpy = 'calc(' + bpy + ' - ' + parallax + 'px)';
-        target.css('background-position-y', newBpy);
-      }
-    });
-  };
-});
 
 new BasisStickyHeader();
 
@@ -3890,8 +4053,19 @@ new SnowMonkeyDropNav();
 new SnowMonkeyPageTopScroll();
 
 $(function () {
-  $('.c-page-header').SnowMonkeyBackgroundParallaxScroll();
-  $('.wpaw-showcase').SnowMonkeyBackgroundParallaxScroll();
+  $('.l-sidebar-sticky-widget-area').sticky({
+    offset: function () {
+      if ('sticky' === $('.l-header').attr('data-l-header-type')) {
+        return $('.l-header').outerHeight() + parseInt($('html').css('margin-top'));
+      }
+      return $('.l-header__drop-nav').outerHeight() + parseInt($('html').css('margin-top'));
+    }()
+  });
+});
+
+$(function () {
+  $('.c-page-header').backgroundParallaxScroll();
+  $('.wpaw-showcase').backgroundParallaxScroll();
 });
 
 }(jQuery));
