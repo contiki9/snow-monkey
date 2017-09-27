@@ -197,7 +197,8 @@
       float: left;
       margin-right: 5px;
       line-height: 16px;
-      padding: 1px 7px 1px 5px; }
+      padding: 1px 7px 1px 5px;
+      min-height: 23px; }
     .wp-share-button--horizontal.wp-share-button--pocket .wp-share-button__button, .wp-share-button--pocket.wp-share-button--feed.wp-share-button--official .wp-share-button__button {
       margin-right: 0; }
     .wp-share-button--horizontal.wp-share-button--pocket .wp-share-button__count, .wp-share-button--pocket.wp-share-button--feed.wp-share-button--official .wp-share-button__count {
@@ -7560,7 +7561,7 @@ Button component
 <a class="c-btn c-btn--ghost" role="button">btn</a>
 ```
 */
-.c-btn, body.c-entry__content .wpaw-showcase__more {
+.c-btn {
   display: inline-block;
   cursor: pointer;
   line-height: 1;
@@ -12893,6 +12894,30 @@ body.c-entry__content {
       @media (min-width: 64em) {
         body.c-entry__content .wpaw-pr-box__item-summary {
           margin-top: 0.45rem; } }
+    body.c-entry__content .wpaw-pr-box__action {
+      margin: 0.9rem 0 0; }
+    body.c-entry__content .wpaw-pr-box__more {
+      display: inline-block;
+      cursor: pointer;
+      line-height: 1;
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      background-color: #bd3c4f;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      padding: 0.9rem 2.7rem;
+      -webkit-transition: background-color 0.2s ease-out;
+      transition: background-color 0.2s ease-out;
+      padding: 0.9rem 1.8rem; }
+      body.c-entry__content .wpaw-pr-box__more:hover, body.c-entry__content .wpaw-pr-box__more:active, body.c-entry__content .wpaw-pr-box__more:focus {
+        background-color: #aa3647; }
+      @media (min-width: 64em) {
+        body.c-entry__content .wpaw-pr-box__more {
+          padding: 0.9rem 3.6rem; } }
   body.c-entry__content .widget_inc2734_wp_awesome_widgets_showcase {
     padding: 0; }
   body.c-entry__content .wpaw-showcase {
@@ -12973,7 +12998,24 @@ body.c-entry__content {
           margin: 0;
           padding: 0 1.8rem; } }
     body.c-entry__content .wpaw-showcase__more {
+      display: inline-block;
+      cursor: pointer;
+      line-height: 1;
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      background-color: #bd3c4f;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      padding: 0.9rem 2.7rem;
+      -webkit-transition: background-color 0.2s ease-out;
+      transition: background-color 0.2s ease-out;
       padding: 0.9rem 1.8rem; }
+      body.c-entry__content .wpaw-showcase__more:hover, body.c-entry__content .wpaw-showcase__more:active, body.c-entry__content .wpaw-showcase__more:focus {
+        background-color: #aa3647; }
       @media (min-width: 64em) {
         body.c-entry__content .wpaw-showcase__more {
           padding: 0.9rem 3.6rem; } }
@@ -13093,7 +13135,7 @@ body.c-entry__content {
       text-decoration: none; }
       body.c-entry__content .c-copyright a:hover, body.c-entry__content .c-copyright a:active, body.c-entry__content .c-copyright a:focus {
         text-decoration: underline; }
-  body.c-entry__content .c-btn, body.c-entry__content .wpaw-showcase__more {
+  body.c-entry__content .c-btn {
     display: inline-block;
     cursor: pointer;
     line-height: 1;
@@ -13109,7 +13151,7 @@ body.c-entry__content {
     padding: 0.9rem 2.7rem;
     -webkit-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out; }
-    body.c-entry__content .c-btn:hover, body.c-entry__content .wpaw-showcase__more:hover, body.c-entry__content .c-btn:active, body.c-entry__content .wpaw-showcase__more:active, body.c-entry__content .c-btn:focus, body.c-entry__content .wpaw-showcase__more:focus {
+    body.c-entry__content .c-btn:hover, body.c-entry__content .c-btn:active, body.c-entry__content .c-btn:focus {
       background-color: #aa3647; }
   body.c-entry__content .c-entry-aside {
     margin: 1.8rem 0 0; }

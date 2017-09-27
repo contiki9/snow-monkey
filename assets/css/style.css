@@ -197,7 +197,8 @@
       float: left;
       margin-right: 5px;
       line-height: 16px;
-      padding: 1px 7px 1px 5px; }
+      padding: 1px 7px 1px 5px;
+      min-height: 23px; }
     .wp-share-button--horizontal.wp-share-button--pocket .wp-share-button__button, .wp-share-button--pocket.wp-share-button--feed.wp-share-button--official .wp-share-button__button {
       margin-right: 0; }
     .wp-share-button--horizontal.wp-share-button--pocket .wp-share-button__count, .wp-share-button--pocket.wp-share-button--feed.wp-share-button--official .wp-share-button__count {
@@ -7560,7 +7561,7 @@ Button component
 <a class="c-btn c-btn--ghost" role="button">btn</a>
 ```
 */
-.c-btn, .wpaw-showcase__more, .p-main-visual__item-more, .p-recent-posts__more-btn {
+.c-btn, .p-main-visual__item-more, .p-recent-posts__more-btn {
   display: inline-block;
   cursor: pointer;
   line-height: 1;
@@ -13382,6 +13383,30 @@ html[data-window-scroll="false"] .l-container {
     @media (min-width: 64em) {
       .wpaw-pr-box__item-summary {
         margin-top: 0.45rem; } }
+  .wpaw-pr-box__action {
+    margin: 0.9rem 0 0; }
+  .wpaw-pr-box__more {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 1;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #bd3c4f;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    padding: 0.9rem 2.7rem;
+    -webkit-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+    padding: 0.9rem 1.8rem; }
+    .wpaw-pr-box__more:hover, .wpaw-pr-box__more:active, .wpaw-pr-box__more:focus {
+      background-color: #aa3647; }
+    @media (min-width: 64em) {
+      .wpaw-pr-box__more {
+        padding: 0.9rem 3.6rem; } }
 
 /**
  * Showcase
@@ -13467,7 +13492,24 @@ html[data-window-scroll="false"] .l-container {
         margin: 0;
         padding: 0 1.8rem; } }
   .wpaw-showcase__more {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 1;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #bd3c4f;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    padding: 0.9rem 2.7rem;
+    -webkit-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
     padding: 0.9rem 1.8rem; }
+    .wpaw-showcase__more:hover, .wpaw-showcase__more:active, .wpaw-showcase__more:focus {
+      background-color: #aa3647; }
     @media (min-width: 64em) {
       .wpaw-showcase__more {
         padding: 0.9rem 3.6rem; } }
@@ -13726,7 +13768,7 @@ html[data-window-scroll="false"] .l-container {
     .c-copyright a:hover, .c-copyright a:active, .c-copyright a:focus {
       text-decoration: underline; }
 
-.c-btn, .wpaw-showcase__more, .p-main-visual__item-more, .p-recent-posts__more-btn {
+.c-btn, .p-main-visual__item-more, .p-recent-posts__more-btn {
   display: inline-block;
   cursor: pointer;
   line-height: 1;
@@ -13742,7 +13784,7 @@ html[data-window-scroll="false"] .l-container {
   padding: 0.9rem 2.7rem;
   -webkit-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out; }
-  .c-btn:hover, .wpaw-showcase__more:hover, .p-main-visual__item-more:hover, .p-recent-posts__more-btn:hover, .c-btn:active, .wpaw-showcase__more:active, .p-main-visual__item-more:active, .p-recent-posts__more-btn:active, .c-btn:focus, .wpaw-showcase__more:focus, .p-main-visual__item-more:focus, .p-recent-posts__more-btn:focus {
+  .c-btn:hover, .p-main-visual__item-more:hover, .p-recent-posts__more-btn:hover, .c-btn:active, .p-main-visual__item-more:active, .p-recent-posts__more-btn:active, .c-btn:focus, .p-main-visual__item-more:focus, .p-recent-posts__more-btn:focus {
     background-color: #aa3647; }
 
 .c-entry-aside {
