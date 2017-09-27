@@ -12232,11 +12232,14 @@ body.c-entry__content {
   body.c-entry__content .wp-caption {
     max-width: 100%; }
     body.c-entry__content .wp-caption-text {
-      margin: 2px 0 0;
+      margin: 6px 0 0;
       color: #999;
       font-size: 14px;
       font-size: 0.875rem;
-      line-height: 1.91429; }
+      line-height: 1.64; }
+  body.c-entry__content img[class*="wp-image-"] {
+    -webkit-box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1); }
   body.c-entry__content .c-drawer {
     z-index: 100000;
     background-color: #bd3c4f;
