@@ -266,50 +266,6 @@
         "description": "A library to add profile box for WordPress."
     },
     {
-        "name": "inc2734/wp-oembed-blog-card",
-        "version": "1.0.1",
-        "version_normalized": "1.0.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-            "reference": "fcb26f96a5b93c9b82f270d7974eb3b749205895"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/fcb26f96a5b93c9b82f270d7974eb3b749205895",
-            "reference": "fcb26f96a5b93c9b82f270d7974eb3b749205895",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "phpmd/phpmd": "2.*",
-            "phpunit/phpunit": "^5.7",
-            "squizlabs/php_codesniffer": "*",
-            "wp-coding-standards/wpcs": "*"
-        },
-        "time": "2017-10-01T12:06:02+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Inc2734\\WP_OEmbed_Blog_Card\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Takashi Kitajima",
-                "email": "inc@2inc.org"
-            }
-        ],
-        "description": "A library for WordPress oEmbed Blog Card."
-    },
-    {
         "name": "inc2734/wp-like-me-box",
         "version": "0.1.2",
         "version_normalized": "0.1.2.0",
@@ -663,18 +619,62 @@
         "description": "A library to add some awesome components for WordPress."
     },
     {
-        "name": "inc2734/mimizuku-core",
+        "name": "inc2734/wp-oembed-blog-card",
         "version": "1.0.2",
         "version_normalized": "1.0.2.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "4ad252e698a7b0d3bad2851d0f5e0f6af6cb724f"
+            "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
+            "reference": "f7b626919bbe02610368ab59a0f1640663cfaa95"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/4ad252e698a7b0d3bad2851d0f5e0f6af6cb724f",
-            "reference": "4ad252e698a7b0d3bad2851d0f5e0f6af6cb724f",
+            "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/f7b626919bbe02610368ab59a0f1640663cfaa95",
+            "reference": "f7b626919bbe02610368ab59a0f1640663cfaa95",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "phpmd/phpmd": "2.*",
+            "phpunit/phpunit": "^5.7",
+            "squizlabs/php_codesniffer": "*",
+            "wp-coding-standards/wpcs": "*"
+        },
+        "time": "2017-10-01T12:49:01+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Inc2734\\WP_OEmbed_Blog_Card\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Takashi Kitajima",
+                "email": "inc@2inc.org"
+            }
+        ],
+        "description": "A library for WordPress oEmbed Blog Card."
+    },
+    {
+        "name": "inc2734/mimizuku-core",
+        "version": "1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/inc2734/mimizuku-core.git",
+            "reference": "15e0ee082ee7ffa73ac1bb1dae14eb62aeee5830"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/15e0ee082ee7ffa73ac1bb1dae14eb62aeee5830",
+            "reference": "15e0ee082ee7ffa73ac1bb1dae14eb62aeee5830",
             "shasum": ""
         },
         "require": {
@@ -686,7 +686,7 @@
             "inc2734/wp-customizer-framework": ">=2.1.2",
             "inc2734/wp-github-theme-updater": ">=0.2.2",
             "inc2734/wp-like-me-box": ">=0.1.2",
-            "inc2734/wp-oembed-blog-card": ">=1.0.1",
+            "inc2734/wp-oembed-blog-card": ">=1.0.2",
             "inc2734/wp-profile-box": ">=0.1.1",
             "inc2734/wp-pure-css-gallery": ">=0.1.4",
             "inc2734/wp-seo": ">=0.4.2",
@@ -700,7 +700,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-10-01T12:07:28+00:00",
+        "time": "2017-10-01T12:49:42+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
