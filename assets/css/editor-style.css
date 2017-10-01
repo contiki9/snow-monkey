@@ -20020,11 +20020,6 @@ Visible utility for lg
     @media (min-width: 64em) {
       body.mce-content-body .l-footer-widget-area {
         padding: 2.7rem 0; } }
-    body.mce-content-body .l-footer-widget-area a {
-      color: #333;
-      text-decoration: none; }
-      body.mce-content-body .l-footer-widget-area a:hover, body.mce-content-body .l-footer-widget-area a:active, body.mce-content-body .l-footer-widget-area a:focus {
-        text-decoration: underline; }
   body.mce-content-body .l-contents-bottom-widget-area {
     margin: 1.8rem 0; }
     body.mce-content-body .l-contents-bottom-widget-area > * {
@@ -20057,11 +20052,6 @@ Visible utility for lg
     body.mce-content-body .l-contents-bottom-widget-area > ul ol,
     body.mce-content-body .l-contents-bottom-widget-area > ul ul {
       margin-bottom: 0; }
-    body.mce-content-body .l-contents-bottom-widget-area a {
-      color: #333;
-      text-decoration: none; }
-      body.mce-content-body .l-contents-bottom-widget-area a:hover, body.mce-content-body .l-contents-bottom-widget-area a:active, body.mce-content-body .l-contents-bottom-widget-area a:focus {
-        text-decoration: underline; }
   body.mce-content-body .l-sidebar-sticky-widget-area > * {
     margin-top: 0;
     margin-bottom: 0; }
