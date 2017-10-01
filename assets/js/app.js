@@ -3134,13 +3134,7 @@ var Sticky = function () {
 
     this.isAdded = false;
 
-    this.initialize();
-
-    $(window).scroll(function () {
-      _this.initialize();
-    });
-
-    $(window).resize(function () {
+    $(window).on('load scroll resize', function () {
       _this.initialize();
     });
   }

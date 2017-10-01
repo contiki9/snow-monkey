@@ -13,13 +13,13 @@ class ComposerStaticInit3ff4c920f90ba1626f3b1a6ee2b3ac32
         ),
         'I' => 
         array (
-            'Inc2734\\WP_oEmbed_Blog_Card\\' => 28,
             'Inc2734\\WP_View_Controller\\' => 27,
             'Inc2734\\WP_Share_Buttons\\' => 25,
             'Inc2734\\WP_SEO\\' => 15,
             'Inc2734\\WP_Pure_CSS_Gallery\\' => 28,
             'Inc2734\\WP_Profile_Box\\' => 23,
             'Inc2734\\WP_OGP\\' => 15,
+            'Inc2734\\WP_OEmbed_Blog_Card\\' => 28,
             'Inc2734\\WP_Like_Me_Box\\' => 23,
             'Inc2734\\WP_GitHub_Theme_Updater\\' => 32,
             'Inc2734\\WP_Customizer_Framework\\' => 32,
@@ -36,10 +36,6 @@ class ComposerStaticInit3ff4c920f90ba1626f3b1a6ee2b3ac32
         'Snow_Monkey\\' => 
         array (
             0 => __DIR__ . '/../../..' . '/',
-        ),
-        'Inc2734\\WP_oEmbed_Blog_Card\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/inc2734/wp-oembed-blog-card/src',
         ),
         'Inc2734\\WP_View_Controller\\' => 
         array (
@@ -64,6 +60,10 @@ class ComposerStaticInit3ff4c920f90ba1626f3b1a6ee2b3ac32
         'Inc2734\\WP_OGP\\' => 
         array (
             0 => __DIR__ . '/..' . '/inc2734/wp-ogp/src',
+        ),
+        'Inc2734\\WP_OEmbed_Blog_Card\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/inc2734/wp-oembed-blog-card/src',
         ),
         'Inc2734\\WP_Like_Me_Box\\' => 
         array (

@@ -7,13 +7,13 @@ $baseDir = dirname(dirname($vendorDir));
 
 return array(
     'Snow_Monkey\\' => array($baseDir . '/'),
-    'Inc2734\\WP_oEmbed_Blog_Card\\' => array($vendorDir . '/inc2734/wp-oembed-blog-card/src'),
     'Inc2734\\WP_View_Controller\\' => array($vendorDir . '/inc2734/wp-view-controller/src'),
     'Inc2734\\WP_Share_Buttons\\' => array($vendorDir . '/inc2734/wp-share-buttons/src'),
     'Inc2734\\WP_SEO\\' => array($vendorDir . '/inc2734/wp-seo/src'),
     'Inc2734\\WP_Pure_CSS_Gallery\\' => array($vendorDir . '/inc2734/wp-pure-css-gallery/src'),
     'Inc2734\\WP_Profile_Box\\' => array($vendorDir . '/inc2734/wp-profile-box/src'),
     'Inc2734\\WP_OGP\\' => array($vendorDir . '/inc2734/wp-ogp/src'),
+    'Inc2734\\WP_OEmbed_Blog_Card\\' => array($vendorDir . '/inc2734/wp-oembed-blog-card/src'),
     'Inc2734\\WP_Like_Me_Box\\' => array($vendorDir . '/inc2734/wp-like-me-box/src'),
     'Inc2734\\WP_GitHub_Theme_Updater\\' => array($vendorDir . '/inc2734/wp-github-theme-updater/src'),
     'Inc2734\\WP_Customizer_Framework\\' => array($vendorDir . '/inc2734/wp-customizer-framework/src'),
