@@ -20152,8 +20152,8 @@ Visible utility for lg
         text-decoration: none; }
   body.mce-content-body .c-entry__header {
     margin: 0 0 1.8rem;
-    border-bottom: 1px solid #eeeeee;
-    padding: 0 0 0.9rem; }
+    border-bottom: 3px solid #111;
+    padding: 0 0 0.45rem; }
     body.mce-content-body .c-entry__header .wp-share-buttons {
       margin: 0.9rem 0 0; }
     .l-body--one-column-fluid body.mce-content-body .c-entry__header {
@@ -20226,17 +20226,9 @@ Visible utility for lg
     margin-bottom: 0; }
   body.mce-content-body .c-entry__content > h2 {
     position: relative;
-    padding: 0 0 1.8rem;
+    border-bottom: 1px solid #eeeeee;
+    padding: 0 0 0.45rem;
     margin-bottom: 2.7rem; }
-    body.mce-content-body .c-entry__content > h2::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      content: '';
-      display: block;
-      height: 1px;
-      background-color: #bd3c4f;
-      width: 40px; }
   body.mce-content-body .c-entry__content > table {
     border-collapse: collapse;
     width: 100%; }
@@ -21965,6 +21957,107 @@ Visible utility for lg
       background-color: #fff;
       border: 1px solid #bd3c4f;
       color: #bd3c4f; }
+  body.mce-content-body .c-page-summary__figure {
+    position: relative;
+    margin: 0 0 0.45rem;
+    overflow: hidden; }
+    body.mce-content-body .c-page-summary__figure::before {
+      content: '';
+      display: block;
+      padding-top: 75%; }
+    body.mce-content-body .c-page-summary__figure > span:first-child {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-color: #eeeeee;
+      -webkit-transition: -webkit-transform 0.2s ease-out;
+      transition: -webkit-transform 0.2s ease-out;
+      transition: transform 0.2s ease-out;
+      transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden; }
+    body.mce-content-body .c-page-summary__figure::after {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      bottom: 8px;
+      left: 8px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      background-color: rgba(189, 60, 79, 0.4);
+      background-image: radial-gradient(rgba(189, 60, 79, 0.9) 33%, transparent 33%);
+      background-size: 1px 1px;
+      content: 'READ MORE';
+      color: #fff;
+      font-weight: bold;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: opacity 0.2s ease-out;
+      transition: opacity 0.2s ease-out; }
+    body.mce-content-body .c-page-summary__figure:hover > span:first-child, body.mce-content-body .c-page-summary__figure:active > span:first-child, body.mce-content-body .c-page-summary__figure:focus > span:first-child {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05); }
+    body.mce-content-body .c-page-summary__figure:hover::after, body.mce-content-body .c-page-summary__figure:active::after, body.mce-content-body .c-page-summary__figure:focus::after {
+      opacity: 1;
+      visibility: visible; }
+  body.mce-content-body .c-page-summary__title {
+    margin: 0 0 0.36rem;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.53333;
+    -webkit-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out; }
+    @media (min-width: 64em) {
+      body.mce-content-body .c-page-summary__title {
+        margin: 0 0 0.45rem;
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1.53333; } }
+  body.mce-content-body .c-page-summary__content {
+    margin: 0 0 0.36rem;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 1.64;
+    color: #666666;
+    -webkit-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out; }
+    @media (min-width: 64em) {
+      body.mce-content-body .c-page-summary__content {
+        margin: 0 0 0.9rem; } }
+  body.mce-content-body .c-page-summary__more {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 1;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 1px solid #bd3c4f;
+    border-radius: 3px;
+    color: #bd3c4f;
+    font-size: 14px;
+    font-size: 0.875rem;
+    padding: 0.45rem 0.9rem;
+    text-transform: uppercase;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+    body.mce-content-body .c-page-summary__more:hover, body.mce-content-body .c-page-summary__more:active, body.mce-content-body .c-page-summary__more:focus {
+      background-color: #bd3c4f;
+      color: #fff; }
   body.mce-content-body .js-sticky-top {
     top: 0;
     position: fixed; }
@@ -22409,17 +22502,9 @@ Visible utility for lg
     margin-bottom: 0; }
   body.mce-content-body > h2 {
     position: relative;
-    padding: 0 0 1.8rem;
+    border-bottom: 1px solid #eeeeee;
+    padding: 0 0 0.45rem;
     margin-bottom: 2.7rem; }
-    body.mce-content-body > h2::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      content: '';
-      display: block;
-      height: 1px;
-      background-color: #bd3c4f;
-      width: 40px; }
   body.mce-content-body > table {
     border-collapse: collapse;
     width: 100%; }

@@ -619,17 +619,17 @@
     },
     {
         "name": "inc2734/wp-awesome-widgets",
-        "version": "1.0.1",
-        "version_normalized": "1.0.1.0",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-            "reference": "f727a3c79804216eccd1375ef2bb03ef28a51f94"
+            "reference": "2847666cce2651a8fc6ac9b9f1a97c1eff86251e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/f727a3c79804216eccd1375ef2bb03ef28a51f94",
-            "reference": "f727a3c79804216eccd1375ef2bb03ef28a51f94",
+            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/2847666cce2651a8fc6ac9b9f1a97c1eff86251e",
+            "reference": "2847666cce2651a8fc6ac9b9f1a97c1eff86251e",
             "shasum": ""
         },
         "require": {
@@ -642,7 +642,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-10-02T00:57:11+00:00",
+        "time": "2017-10-02T02:41:32+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -664,22 +664,22 @@
     },
     {
         "name": "inc2734/mimizuku-core",
-        "version": "1.0.4",
-        "version_normalized": "1.0.4.0",
+        "version": "1.0.5",
+        "version_normalized": "1.0.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "d14c2867abd6db97fa16604fdc65e9f57f42f6c5"
+            "reference": "0dbaf872338d621e09a3f7be1f5b850e606321e5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/d14c2867abd6db97fa16604fdc65e9f57f42f6c5",
-            "reference": "d14c2867abd6db97fa16604fdc65e9f57f42f6c5",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/0dbaf872338d621e09a3f7be1f5b850e606321e5",
+            "reference": "0dbaf872338d621e09a3f7be1f5b850e606321e5",
             "shasum": ""
         },
         "require": {
             "inc2734/wp-awesome-components": ">=0.3.2",
-            "inc2734/wp-awesome-widgets": ">=1.0.1",
+            "inc2734/wp-awesome-widgets": ">=1.0.2",
             "inc2734/wp-basis": ">=0.4.2",
             "inc2734/wp-breadcrumbs": ">=0.3.2",
             "inc2734/wp-contents-outline": ">=0.1.3",
@@ -700,7 +700,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-10-02T01:32:14+00:00",
+        "time": "2017-10-02T02:42:33+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
