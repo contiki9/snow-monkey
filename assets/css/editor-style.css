@@ -16428,7 +16428,7 @@ Visible utility for lg
   body.mce-content-body .slick-arrow.slick-hidden {
     display: none; }
   .slick-loading body.mce-content-body .slick-list {
-    background: #fff url("../../assets/packages/slick/slick-carousel/ajax-loader.gif") center center no-repeat; }
+    background: #fff url("../../assets/packages/slick-carousel/slick/ajax-loader.gif") center center no-repeat; }
 
 @font-face {
   body.mce-content-body {
