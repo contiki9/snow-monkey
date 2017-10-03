@@ -167,8 +167,12 @@ var Sticky = function () {
 
     this.isAdded = false;
 
-    $(window).on('load scroll resize', function () {
+    $(window).on('ready load scroll resize', function () {
       _this.initialize();
+    });
+
+    $(window).on('resize', function () {
+      $(window).scrollTop($(window).scrollTop() + 1);
     });
   }
 
