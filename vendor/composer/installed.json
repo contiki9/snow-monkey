@@ -133,51 +133,6 @@
         "description": "A library for WordPress OGP."
     },
     {
-        "name": "inc2734/wp-seo",
-        "version": "0.4.2",
-        "version_normalized": "0.4.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/inc2734/wp-seo.git",
-            "reference": "6a3af90ce91eb8f5ab30710d430fb001e66a98db"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/6a3af90ce91eb8f5ab30710d430fb001e66a98db",
-            "reference": "6a3af90ce91eb8f5ab30710d430fb001e66a98db",
-            "shasum": ""
-        },
-        "require": {
-            "inc2734/wp-ogp": ">=0.3.2",
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "phpmd/phpmd": "2.*",
-            "phpunit/phpunit": "^5.7",
-            "squizlabs/php_codesniffer": "*",
-            "wp-coding-standards/wpcs": "*"
-        },
-        "time": "2017-09-30T08:39:37+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Inc2734\\WP_SEO\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Takashi Kitajima",
-                "email": "inc@2inc.org"
-            }
-        ],
-        "description": "A library for SEO of WordPress."
-    },
-    {
         "name": "inc2734/wp-pure-css-gallery",
         "version": "0.1.4",
         "version_normalized": "0.1.4.0",
@@ -663,18 +618,63 @@
         "description": "A library for WordPress oEmbed Blog Card."
     },
     {
-        "name": "inc2734/mimizuku-core",
-        "version": "1.0.6",
-        "version_normalized": "1.0.6.0",
+        "name": "inc2734/wp-seo",
+        "version": "0.5.0",
+        "version_normalized": "0.5.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "bbd7a464cbbb6ed97b4d71ac876e9db4b14ecaee"
+            "url": "https://github.com/inc2734/wp-seo.git",
+            "reference": "68d9c517cc9888c81df87eed73c634f07c91200e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/bbd7a464cbbb6ed97b4d71ac876e9db4b14ecaee",
-            "reference": "bbd7a464cbbb6ed97b4d71ac876e9db4b14ecaee",
+            "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/68d9c517cc9888c81df87eed73c634f07c91200e",
+            "reference": "68d9c517cc9888c81df87eed73c634f07c91200e",
+            "shasum": ""
+        },
+        "require": {
+            "inc2734/wp-ogp": ">=0.3.3",
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "phpmd/phpmd": "2.*",
+            "phpunit/phpunit": "^5.7",
+            "squizlabs/php_codesniffer": "*",
+            "wp-coding-standards/wpcs": "*"
+        },
+        "time": "2017-10-04T05:22:56+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Inc2734\\WP_SEO\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Takashi Kitajima",
+                "email": "inc@2inc.org"
+            }
+        ],
+        "description": "A library for SEO of WordPress."
+    },
+    {
+        "name": "inc2734/mimizuku-core",
+        "version": "1.0.7",
+        "version_normalized": "1.0.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/inc2734/mimizuku-core.git",
+            "reference": "04d456d0f62cb601bfb9d1a2b1c70c6902be89f6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/04d456d0f62cb601bfb9d1a2b1c70c6902be89f6",
+            "reference": "04d456d0f62cb601bfb9d1a2b1c70c6902be89f6",
             "shasum": ""
         },
         "require": {
@@ -689,7 +689,7 @@
             "inc2734/wp-oembed-blog-card": ">=1.0.3",
             "inc2734/wp-profile-box": ">=0.1.1",
             "inc2734/wp-pure-css-gallery": ">=0.1.4",
-            "inc2734/wp-seo": ">=0.4.2",
+            "inc2734/wp-seo": ">=0.5.0",
             "inc2734/wp-share-buttons": ">=0.5.3",
             "inc2734/wp-view-controller": ">=2.1.4",
             "php": ">=5.6"
@@ -700,7 +700,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-10-03T16:20:44+00:00",
+        "time": "2017-10-04T05:23:58+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

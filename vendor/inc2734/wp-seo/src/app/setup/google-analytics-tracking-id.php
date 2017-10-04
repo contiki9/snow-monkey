@@ -10,7 +10,7 @@
  *
  * @return void
  */
-add_action( 'wp_head', function() {
+add_action( 'wp_enqueue_scripts', function() {
 	$tracking_id = apply_filters( 'inc2734_wp_seo_google_analytics_tracking_id', null );
 	if ( ! $tracking_id ) {
 		return;
@@ -19,15 +19,18 @@ add_action( 'wp_head', function() {
 	if ( ! preg_match( '/^UA-\d+-\d+$/', $tracking_id ) ) {
 		return;
 	}
-	?>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', '<?php echo esc_js( $tracking_id ); ?>', 'auto');
-  ga('send', 'pageview');
-</script>
-	<?php
+	wp_enqueue_script(
+		'inc2734-wp-seo-google-analytics',
+		esc_url( 'https://www.googletagmanager.com/gtag/js?id=' . $tracking_id ),
+		[],
+		false,
+		false
+	);
+
+	wp_add_inline_script(
+		'inc2734-wp-seo-google-analytics',
+		"window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config', '{$tracking_id}');",
+		'after'
+	);
 } );

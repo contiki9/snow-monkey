@@ -8056,11 +8056,11 @@ Content utility
 
 .u-content > h3 {
   margin-top: 3.6rem;
-  margin-bottom: 1.8rem; }
+  margin-bottom: 1.35rem; }
 
 .u-content > h4 {
   margin-top: 2.25rem;
-  margin-bottom: 1.8rem; }
+  margin-bottom: 1.35rem; }
 
 .u-content > h5 {
   margin-top: 1.8rem;
@@ -19284,10 +19284,10 @@ Visible utility for lg
     margin-bottom: 1.8rem; }
   body.mce-content-body .u-content > h3 {
     margin-top: 3.6rem;
-    margin-bottom: 1.8rem; }
+    margin-bottom: 1.35rem; }
   body.mce-content-body .u-content > h4 {
     margin-top: 2.25rem;
-    margin-bottom: 1.8rem; }
+    margin-bottom: 1.35rem; }
   body.mce-content-body .u-content > h5 {
     margin-top: 1.8rem;
     margin-bottom: 0.9rem; }
@@ -19559,12 +19559,14 @@ Visible utility for lg
     /* dummy property */ }
   body.mce-content-body .wp-caption {
     max-width: 100%; }
-    body.mce-content-body .wp-caption-text {
+    body.mce-content-body .wp-caption-text, body.mce-content-body .wp-caption-dd {
       margin: 6px 0 0;
       color: #999;
       font-size: 14px;
       font-size: 0.875rem;
       line-height: 1.64; }
+    body.mce-content-body .wp-caption--dd {
+      margin: 10px 0 0; }
   body.mce-content-body img[class*="wp-image-"] {
     -webkit-box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1); }
@@ -19637,10 +19639,10 @@ Visible utility for lg
         margin-bottom: 1.8rem; }
       body.mce-content-body .l-contents__sidebar > h3 {
         margin-top: 3.6rem;
-        margin-bottom: 1.8rem; }
+        margin-bottom: 1.35rem; }
       body.mce-content-body .l-contents__sidebar > h4 {
         margin-top: 2.25rem;
-        margin-bottom: 1.8rem; }
+        margin-bottom: 1.35rem; }
       body.mce-content-body .l-contents__sidebar > h5 {
         margin-top: 1.8rem;
         margin-bottom: 0.9rem; }
@@ -19997,10 +19999,10 @@ Visible utility for lg
     margin-bottom: 1.8rem; }
   body.mce-content-body .l-sidebar-widget-area > h3 {
     margin-top: 3.6rem;
-    margin-bottom: 1.8rem; }
+    margin-bottom: 1.35rem; }
   body.mce-content-body .l-sidebar-widget-area > h4 {
     margin-top: 2.25rem;
-    margin-bottom: 1.8rem; }
+    margin-bottom: 1.35rem; }
   body.mce-content-body .l-sidebar-widget-area > h5 {
     margin-top: 1.8rem;
     margin-bottom: 0.9rem; }
@@ -20035,10 +20037,10 @@ Visible utility for lg
       margin-bottom: 1.8rem; }
     body.mce-content-body .l-contents-bottom-widget-area > h3 {
       margin-top: 3.6rem;
-      margin-bottom: 1.8rem; }
+      margin-bottom: 1.35rem; }
     body.mce-content-body .l-contents-bottom-widget-area > h4 {
       margin-top: 2.25rem;
-      margin-bottom: 1.8rem; }
+      margin-bottom: 1.35rem; }
     body.mce-content-body .l-contents-bottom-widget-area > h5 {
       margin-top: 1.8rem;
       margin-bottom: 0.9rem; }
@@ -20065,10 +20067,10 @@ Visible utility for lg
     margin-bottom: 1.8rem; }
   body.mce-content-body .l-sidebar-sticky-widget-area > h3 {
     margin-top: 3.6rem;
-    margin-bottom: 1.8rem; }
+    margin-bottom: 1.35rem; }
   body.mce-content-body .l-sidebar-sticky-widget-area > h4 {
     margin-top: 2.25rem;
-    margin-bottom: 1.8rem; }
+    margin-bottom: 1.35rem; }
   body.mce-content-body .l-sidebar-sticky-widget-area > h5 {
     margin-top: 1.8rem;
     margin-bottom: 0.9rem; }
@@ -20207,10 +20209,10 @@ Visible utility for lg
     margin-bottom: 1.8rem; }
   body.mce-content-body .c-entry__content > h3 {
     margin-top: 3.6rem;
-    margin-bottom: 1.8rem; }
+    margin-bottom: 1.35rem; }
   body.mce-content-body .c-entry__content > h4 {
     margin-top: 2.25rem;
-    margin-bottom: 1.8rem; }
+    margin-bottom: 1.35rem; }
   body.mce-content-body .c-entry__content > h5 {
     margin-top: 1.8rem;
     margin-bottom: 0.9rem; }
@@ -20889,10 +20891,10 @@ Visible utility for lg
       margin-bottom: 0.9rem; }
     body.mce-content-body .wpaw-showcase__body > h3 {
       margin-top: 1.8rem;
-      margin-bottom: 0.9rem; }
+      margin-bottom: 0.675rem; }
     body.mce-content-body .wpaw-showcase__body > h4 {
       margin-top: 1.125rem;
-      margin-bottom: 0.9rem; }
+      margin-bottom: 0.675rem; }
     body.mce-content-body .wpaw-showcase__body > h5 {
       margin-top: 0.9rem;
       margin-bottom: 0.45rem; }
@@ -20922,10 +20924,10 @@ Visible utility for lg
           margin-bottom: 1.8rem; }
         body.mce-content-body .wpaw-showcase__body > h3 {
           margin-top: 3.6rem;
-          margin-bottom: 1.8rem; }
+          margin-bottom: 1.35rem; }
         body.mce-content-body .wpaw-showcase__body > h4 {
           margin-top: 2.25rem;
-          margin-bottom: 1.8rem; }
+          margin-bottom: 1.35rem; }
         body.mce-content-body .wpaw-showcase__body > h5 {
           margin-top: 1.8rem;
           margin-bottom: 0.9rem; }
@@ -21001,10 +21003,10 @@ Visible utility for lg
       margin-bottom: 0.9rem; }
     body.mce-content-body .wpaw-site-branding__description > h3 {
       margin-top: 1.8rem;
-      margin-bottom: 0.9rem; }
+      margin-bottom: 0.675rem; }
     body.mce-content-body .wpaw-site-branding__description > h4 {
       margin-top: 1.125rem;
-      margin-bottom: 0.9rem; }
+      margin-bottom: 0.675rem; }
     body.mce-content-body .wpaw-site-branding__description > h5 {
       margin-top: 0.9rem;
       margin-bottom: 0.45rem; }
@@ -21147,10 +21149,10 @@ Visible utility for lg
         margin-bottom: 0.9rem; }
       body.mce-content-body .c-comment__content > h3 {
         margin-top: 1.8rem;
-        margin-bottom: 0.9rem; }
+        margin-bottom: 0.675rem; }
       body.mce-content-body .c-comment__content > h4 {
         margin-top: 1.125rem;
-        margin-bottom: 0.9rem; }
+        margin-bottom: 0.675rem; }
       body.mce-content-body .c-comment__content > h5 {
         margin-top: 0.9rem;
         margin-bottom: 0.45rem; }
@@ -21791,10 +21793,10 @@ Visible utility for lg
     margin-bottom: 1.8rem; }
   body.mce-content-body .wpcf7-form > h3 {
     margin-top: 3.6rem;
-    margin-bottom: 1.8rem; }
+    margin-bottom: 1.35rem; }
   body.mce-content-body .wpcf7-form > h4 {
     margin-top: 2.25rem;
-    margin-bottom: 1.8rem; }
+    margin-bottom: 1.35rem; }
   body.mce-content-body .wpcf7-form > h5 {
     margin-top: 1.8rem;
     margin-bottom: 0.9rem; }
@@ -22487,10 +22489,10 @@ Visible utility for lg
     margin-bottom: 1.8rem; }
   body.mce-content-body > h3 {
     margin-top: 3.6rem;
-    margin-bottom: 1.8rem; }
+    margin-bottom: 1.35rem; }
   body.mce-content-body > h4 {
     margin-top: 2.25rem;
-    margin-bottom: 1.8rem; }
+    margin-bottom: 1.35rem; }
   body.mce-content-body > h5 {
     margin-top: 1.8rem;
     margin-bottom: 0.9rem; }
