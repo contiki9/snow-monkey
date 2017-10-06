@@ -485,95 +485,6 @@
         "description": "This library customizes HTML to use sass-basis in WordPress."
     },
     {
-        "name": "inc2734/wp-awesome-components",
-        "version": "0.3.2",
-        "version_normalized": "0.3.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/inc2734/wp-awesome-components.git",
-            "reference": "e549247a14bd96d60728c4a4772ff98c1af54d23"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/e549247a14bd96d60728c4a4772ff98c1af54d23",
-            "reference": "e549247a14bd96d60728c4a4772ff98c1af54d23",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "phpmd/phpmd": "2.*",
-            "phpunit/phpunit": "^5.7",
-            "squizlabs/php_codesniffer": "*",
-            "wp-coding-standards/wpcs": "*"
-        },
-        "time": "2017-10-01T10:37:41+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Inc2734\\WP_Awesome_Components\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Takashi Kitajima",
-                "email": "inc@2inc.org"
-            }
-        ],
-        "description": "A library to add some awesome components for WordPress."
-    },
-    {
-        "name": "inc2734/wp-awesome-widgets",
-        "version": "1.0.2",
-        "version_normalized": "1.0.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-            "reference": "2847666cce2651a8fc6ac9b9f1a97c1eff86251e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/2847666cce2651a8fc6ac9b9f1a97c1eff86251e",
-            "reference": "2847666cce2651a8fc6ac9b9f1a97c1eff86251e",
-            "shasum": ""
-        },
-        "require": {
-            "inc2734/wp-view-controller": "^2.1",
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "phpmd/phpmd": "2.*",
-            "phpunit/phpunit": "^5.7",
-            "squizlabs/php_codesniffer": "*",
-            "wp-coding-standards/wpcs": "*"
-        },
-        "time": "2017-10-02T02:41:32+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Inc2734\\WP_Awesome_Widgets\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Takashi Kitajima",
-                "email": "inc@2inc.org"
-            }
-        ],
-        "description": "A library to add some awesome widgets for WordPress."
-    },
-    {
         "name": "inc2734/wp-oembed-blog-card",
         "version": "1.0.3",
         "version_normalized": "1.0.3.0",
@@ -663,23 +574,112 @@
         "description": "A library for SEO of WordPress."
     },
     {
-        "name": "inc2734/mimizuku-core",
-        "version": "1.0.7",
-        "version_normalized": "1.0.7.0",
+        "name": "inc2734/wp-awesome-widgets",
+        "version": "1.0.3",
+        "version_normalized": "1.0.3.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "04d456d0f62cb601bfb9d1a2b1c70c6902be89f6"
+            "url": "https://github.com/inc2734/wp-awesome-widgets.git",
+            "reference": "434b7dd4249e7d4715fab28b1bdc3baad76ce6ad"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/04d456d0f62cb601bfb9d1a2b1c70c6902be89f6",
-            "reference": "04d456d0f62cb601bfb9d1a2b1c70c6902be89f6",
+            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/434b7dd4249e7d4715fab28b1bdc3baad76ce6ad",
+            "reference": "434b7dd4249e7d4715fab28b1bdc3baad76ce6ad",
             "shasum": ""
         },
         "require": {
-            "inc2734/wp-awesome-components": ">=0.3.2",
-            "inc2734/wp-awesome-widgets": ">=1.0.2",
+            "inc2734/wp-view-controller": "^2.1",
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "phpmd/phpmd": "2.*",
+            "phpunit/phpunit": "^5.7",
+            "squizlabs/php_codesniffer": "*",
+            "wp-coding-standards/wpcs": "*"
+        },
+        "time": "2017-10-06T03:30:36+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Inc2734\\WP_Awesome_Widgets\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Takashi Kitajima",
+                "email": "inc@2inc.org"
+            }
+        ],
+        "description": "A library to add some awesome widgets for WordPress."
+    },
+    {
+        "name": "inc2734/wp-awesome-components",
+        "version": "0.4.0",
+        "version_normalized": "0.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/inc2734/wp-awesome-components.git",
+            "reference": "e9cfe29244262936ddfdb8833cb476825a129fb4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/e9cfe29244262936ddfdb8833cb476825a129fb4",
+            "reference": "e9cfe29244262936ddfdb8833cb476825a129fb4",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "phpmd/phpmd": "2.*",
+            "phpunit/phpunit": "^5.7",
+            "squizlabs/php_codesniffer": "*",
+            "wp-coding-standards/wpcs": "*"
+        },
+        "time": "2017-10-05T01:34:48+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Inc2734\\WP_Awesome_Components\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Takashi Kitajima",
+                "email": "inc@2inc.org"
+            }
+        ],
+        "description": "A library to add some awesome components for WordPress."
+    },
+    {
+        "name": "inc2734/mimizuku-core",
+        "version": "1.0.9",
+        "version_normalized": "1.0.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/inc2734/mimizuku-core.git",
+            "reference": "71fee5530c7aafb4ef575dbeee8fd3f2895e0490"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/71fee5530c7aafb4ef575dbeee8fd3f2895e0490",
+            "reference": "71fee5530c7aafb4ef575dbeee8fd3f2895e0490",
+            "shasum": ""
+        },
+        "require": {
+            "inc2734/wp-awesome-components": ">=0.4.0",
+            "inc2734/wp-awesome-widgets": ">=1.0.3",
             "inc2734/wp-basis": ">=0.4.2",
             "inc2734/wp-breadcrumbs": ">=0.3.2",
             "inc2734/wp-contents-outline": ">=0.1.3",
@@ -700,7 +700,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-10-04T05:23:58+00:00",
+        "time": "2017-10-06T03:35:58+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
