@@ -3,7 +3,7 @@
   margin: 10px; }
 
 /*!
- * Name: Basis v7.0.2
+ * Name: Basis v7.0.3
  * Description: A lightweight responsive Sass/CSS framework based on flexible box.
  * Author: Takashi Kitajima ( inc2734 )
  * Author URL: https://2inc.org
@@ -2511,7 +2511,7 @@ new BasisDrawer({
 ### html
 ```ejs
 <div style="min-height: 200px">
-  <nav id="drawer" class="c-drawer" role="navigation" aria-hidden="true" aria-labeledby="hamburger-btn">
+  <nav id="drawer" class="c-drawer" role="navigation" aria-hidden="true" aria-labelledby="hamburger-btn">
     <ul class="c-drawer__menu">
       <li class="c-drawer__item"><a href="#">menu</a></li>
       <li class="c-drawer__item"><a href="#">menu</a></li>
@@ -2696,7 +2696,7 @@ new BasisHamburgerBtn({
   <div class="c-hamburger-btn__bar"></div>
 </div>
 
-<nav id="drawer" aria-labeledby="hamburger-btn">...</nav>
+<nav id="drawer" aria-labelledby="hamburger-btn">...</nav>
 ```
 */
 /*
@@ -4585,7 +4585,7 @@ Drawer component
 ### html
 ```html
 <div style="min-height: 200px; position: relative">
-  <nav id="drawer" class="c-drawer" role="navigation" aria-hidden="true" aria-labeledby="hamburger-btn">
+  <nav id="drawer" class="c-drawer" role="navigation" aria-hidden="true" aria-labelledby="hamburger-btn">
     <ul class="c-drawer__menu">
       <li class="c-drawer__item"><a href="#">menu</a></li>
       <li class="c-drawer__item"><a href="#">menu</a></li>
@@ -4840,7 +4840,7 @@ Hamburger button component
   <div class="c-hamburger-btn__bar"></div>
 </div>
 
-<nav id="drawer" aria-labeledby="hamburger-btn">...</nav>
+<nav id="drawer" aria-labelledby="hamburger-btn">...</nav>
 ```
 */
 .c-hamburger-btn {
@@ -8525,7 +8525,7 @@ body.mce-content-body {
  * Foundation
  */
   /*!
- * Name: Basis v7.0.2
+ * Name: Basis v7.0.3
  * Description: A lightweight responsive Sass/CSS framework based on flexible box.
  * Author: Takashi Kitajima ( inc2734 )
  * Author URL: https://2inc.org
@@ -11026,7 +11026,7 @@ new BasisDrawer({
 ### html
 ```ejs
 <div style="min-height: 200px">
-  <nav id="drawer" class="c-drawer" role="navigation" aria-hidden="true" aria-labeledby="hamburger-btn">
+  <nav id="drawer" class="c-drawer" role="navigation" aria-hidden="true" aria-labelledby="hamburger-btn">
     <ul class="c-drawer__menu">
       <li class="c-drawer__item"><a href="#">menu</a></li>
       <li class="c-drawer__item"><a href="#">menu</a></li>
@@ -11211,7 +11211,7 @@ new BasisHamburgerBtn({
   <div class="c-hamburger-btn__bar"></div>
 </div>
 
-<nav id="drawer" aria-labeledby="hamburger-btn">...</nav>
+<nav id="drawer" aria-labelledby="hamburger-btn">...</nav>
 ```
 */
   /*
@@ -12512,7 +12512,7 @@ Drawer component
 ### html
 ```html
 <div style="min-height: 200px; position: relative">
-  <nav id="drawer" class="c-drawer" role="navigation" aria-hidden="true" aria-labeledby="hamburger-btn">
+  <nav id="drawer" class="c-drawer" role="navigation" aria-hidden="true" aria-labelledby="hamburger-btn">
     <ul class="c-drawer__menu">
       <li class="c-drawer__item"><a href="#">menu</a></li>
       <li class="c-drawer__item"><a href="#">menu</a></li>
@@ -12647,7 +12647,7 @@ Hamburger button component
   <div class="c-hamburger-btn__bar"></div>
 </div>
 
-<nav id="drawer" aria-labeledby="hamburger-btn">...</nav>
+<nav id="drawer" aria-labelledby="hamburger-btn">...</nav>
 ```
 */
   /*
@@ -20932,12 +20932,14 @@ Visible utility for lg
   body.mce-content-body .widget_inc2734_wp_awesome_widgets_showcase {
     padding: 0; }
   body.mce-content-body .wpaw-showcase {
+    background-attachment: scroll;
     padding: 2.7rem 0; }
     .c-section body.mce-content-body .wpaw-showcase {
       margin-right: calc(50% - 50vw);
       margin-left: calc(50% - 50vw); }
     @media (min-width: 64em) {
       body.mce-content-body .wpaw-showcase {
+        background-attachment: fixed;
         padding: 3.6rem 0; } }
     @media (min-width: 64em) {
       body.mce-content-body .wpaw-showcase__inner {
@@ -21125,8 +21127,11 @@ Visible utility for lg
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     height: 60vh; }
+    @media (min-width: 64em) {
+      body.mce-content-body .c-page-header {
+        background-attachment: fixed; } }
     body.mce-content-body .c-page-header::after {
       content: '';
       display: block;

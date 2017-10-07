@@ -2885,7 +2885,7 @@ var BasisDrawer = function () {
         _this.setIdForSubmenu(drawer);
 
         var container = drawer.parent();
-        var btn = $('#' + drawer.attr('aria-labeledby'));
+        var btn = $('#' + drawer.attr('aria-labelledby'));
         var toggleBtns = drawer.find(_this.args.toggle + '[aria-controls]');
 
         container.on('click', function (event) {
@@ -3300,11 +3300,13 @@ var Sticky = function () {
       }
 
       function setPosition(scroll) {
-        scroll = parseInt(scroll);
-        var offset = target.offset().top;
-        var parallax = (scroll - offset) / params.speed;
-        var newBpy = 'calc(' + bpy + ' - ' + parallax + 'px)';
-        target.css('background-position-y', newBpy);
+        if ('fixed' === target.css('background-attachment')) {
+          scroll = parseInt(scroll);
+          var offset = target.offset().top;
+          var parallax = (scroll - offset) / params.speed;
+          var newBpy = 'calc(' + bpy + ' - ' + parallax + 'px)';
+          target.css('background-position-y', newBpy);
+        }
       }
     });
   };

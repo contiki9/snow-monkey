@@ -42,11 +42,13 @@ jquery = jquery && jquery.hasOwnProperty('default') ? jquery['default'] : jquery
       }
 
       function setPosition(scroll) {
-        scroll = parseInt(scroll);
-        var offset = target.offset().top;
-        var parallax = (scroll - offset) / params.speed;
-        var newBpy = 'calc(' + bpy + ' - ' + parallax + 'px)';
-        target.css('background-position-y', newBpy);
+        if ('fixed' === target.css('background-attachment')) {
+          scroll = parseInt(scroll);
+          var offset = target.offset().top;
+          var parallax = (scroll - offset) / params.speed;
+          var newBpy = 'calc(' + bpy + ' - ' + parallax + 'px)';
+          target.css('background-position-y', newBpy);
+        }
       }
     });
   };
