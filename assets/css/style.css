@@ -13059,6 +13059,9 @@ html[data-window-scroll="false"] .l-container {
   text-align: center; }
 
 .c-hamburger-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
   vertical-align: middle; }
 
 .c-meta__item + .c-meta__item {
@@ -13822,12 +13825,21 @@ html[data-window-scroll="false"] .l-container {
     padding: 0.9rem 2.7rem;
     -webkit-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out;
-    padding: 0.9rem 1.8rem; }
+    white-space: normal;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 0.45rem 1.8rem; }
     .wpaw-showcase__more:hover, .wpaw-showcase__more:active, .wpaw-showcase__more:focus {
       background-color: #aa3647; }
     @media (min-width: 64em) {
       .wpaw-showcase__more {
-        padding: 0.9rem 3.6rem; } }
+        padding: 0.45rem 3.6rem; } }
+  .wpaw-showcase--format-1 .wpaw-showcase__figure, .wpaw-showcase--format-2 .wpaw-showcase__figure {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    max-width: 50%; }
   .wpaw-showcase--format-3 .wpaw-showcase__body {
     margin-bottom: 1.8rem; }
 

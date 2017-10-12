@@ -20365,6 +20365,9 @@ Visible utility for lg
     font-weight: bold;
     text-align: center; }
   body.mce-content-body .c-hamburger-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
     vertical-align: middle; }
   body.mce-content-body .c-meta__item + body.mce-content-body .c-meta__item {
     padding-left: .75em; }
@@ -21050,12 +21053,21 @@ Visible utility for lg
       padding: 0.9rem 2.7rem;
       -webkit-transition: background-color 0.2s ease-out;
       transition: background-color 0.2s ease-out;
-      padding: 0.9rem 1.8rem; }
+      white-space: normal;
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.8;
+      padding: 0.45rem 1.8rem; }
       body.mce-content-body .wpaw-showcase__more:hover, body.mce-content-body .wpaw-showcase__more:active, body.mce-content-body .wpaw-showcase__more:focus {
         background-color: #aa3647; }
       @media (min-width: 64em) {
         body.mce-content-body .wpaw-showcase__more {
-          padding: 0.9rem 3.6rem; } }
+          padding: 0.45rem 3.6rem; } }
+    body.mce-content-body .wpaw-showcase--format-1 .wpaw-showcase__figure, body.mce-content-body .wpaw-showcase--format-2 .wpaw-showcase__figure {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      max-width: 50%; }
     body.mce-content-body .wpaw-showcase--format-3 .wpaw-showcase__body {
       margin-bottom: 1.8rem; }
   body.mce-content-body .widget_inc2734_wp_awesome_widgets_slider {

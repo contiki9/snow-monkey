@@ -1,49 +1,5 @@
 [
     {
-        "name": "inc2734/wp-view-controller",
-        "version": "2.1.4",
-        "version_normalized": "2.1.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/inc2734/wp-view-controller.git",
-            "reference": "a88afa7c72332160e873e160f383aa6b5146767c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/a88afa7c72332160e873e160f383aa6b5146767c",
-            "reference": "a88afa7c72332160e873e160f383aa6b5146767c",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "phpmd/phpmd": "2.*",
-            "phpunit/phpunit": "^5.7",
-            "squizlabs/php_codesniffer": "*",
-            "wp-coding-standards/wpcs": "*"
-        },
-        "time": "2017-09-30T07:41:55+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Inc2734\\WP_View_Controller\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Takashi Kitajima",
-                "email": "inc@2inc.org"
-            }
-        ],
-        "description": "A library for WordPress theme view controller."
-    },
-    {
         "name": "inc2734/wp-share-buttons",
         "version": "0.5.3",
         "version_normalized": "0.5.3.0",
@@ -486,51 +442,6 @@
         "description": "A library for WordPress. This adds contents outline of the post."
     },
     {
-        "name": "inc2734/wp-awesome-widgets",
-        "version": "1.0.4",
-        "version_normalized": "1.0.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-            "reference": "f65a0b2b6ca16e75d424573eb8e0e04b2ad9b083"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/f65a0b2b6ca16e75d424573eb8e0e04b2ad9b083",
-            "reference": "f65a0b2b6ca16e75d424573eb8e0e04b2ad9b083",
-            "shasum": ""
-        },
-        "require": {
-            "inc2734/wp-view-controller": "^2.1",
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "phpmd/phpmd": "2.*",
-            "phpunit/phpunit": "^5.7",
-            "squizlabs/php_codesniffer": "*",
-            "wp-coding-standards/wpcs": "*"
-        },
-        "time": "2017-10-06T13:16:22+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Inc2734\\WP_Awesome_Widgets\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Takashi Kitajima",
-                "email": "inc@2inc.org"
-            }
-        ],
-        "description": "A library to add some awesome widgets for WordPress."
-    },
-    {
         "name": "inc2734/wp-awesome-components",
         "version": "0.4.1",
         "version_normalized": "0.4.1.0",
@@ -663,23 +574,112 @@
         "description": "A library for WordPress that automatic theme updater with GitHub API."
     },
     {
-        "name": "inc2734/mimizuku-core",
-        "version": "1.0.13",
-        "version_normalized": "1.0.13.0",
+        "name": "inc2734/wp-view-controller",
+        "version": "2.2.0",
+        "version_normalized": "2.2.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "63790a644a8c1fef52b506b2ea73431957feedc2"
+            "url": "https://github.com/inc2734/wp-view-controller.git",
+            "reference": "e9673a3dc2ab7de6fd3c94e7fdac2012f2e398f3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/63790a644a8c1fef52b506b2ea73431957feedc2",
-            "reference": "63790a644a8c1fef52b506b2ea73431957feedc2",
+            "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/e9673a3dc2ab7de6fd3c94e7fdac2012f2e398f3",
+            "reference": "e9673a3dc2ab7de6fd3c94e7fdac2012f2e398f3",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "phpmd/phpmd": "2.*",
+            "phpunit/phpunit": "^5.7",
+            "squizlabs/php_codesniffer": "*",
+            "wp-coding-standards/wpcs": "*"
+        },
+        "time": "2017-10-12T14:46:25+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Inc2734\\WP_View_Controller\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Takashi Kitajima",
+                "email": "inc@2inc.org"
+            }
+        ],
+        "description": "A library for WordPress theme view controller."
+    },
+    {
+        "name": "inc2734/wp-awesome-widgets",
+        "version": "1.0.5",
+        "version_normalized": "1.0.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/inc2734/wp-awesome-widgets.git",
+            "reference": "1dd3f455ff101caab104691e32f60d22ed27141e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/1dd3f455ff101caab104691e32f60d22ed27141e",
+            "reference": "1dd3f455ff101caab104691e32f60d22ed27141e",
+            "shasum": ""
+        },
+        "require": {
+            "inc2734/wp-view-controller": "^2.1",
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "phpmd/phpmd": "2.*",
+            "phpunit/phpunit": "^5.7",
+            "squizlabs/php_codesniffer": "*",
+            "wp-coding-standards/wpcs": "*"
+        },
+        "time": "2017-10-12T13:32:50+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Inc2734\\WP_Awesome_Widgets\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Takashi Kitajima",
+                "email": "inc@2inc.org"
+            }
+        ],
+        "description": "A library to add some awesome widgets for WordPress."
+    },
+    {
+        "name": "inc2734/mimizuku-core",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/inc2734/mimizuku-core.git",
+            "reference": "34864fe12db452593b89ff05bb5edb0be03494ca"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/34864fe12db452593b89ff05bb5edb0be03494ca",
+            "reference": "34864fe12db452593b89ff05bb5edb0be03494ca",
             "shasum": ""
         },
         "require": {
             "inc2734/wp-awesome-components": ">=0.4.1",
-            "inc2734/wp-awesome-widgets": ">=1.0.4",
+            "inc2734/wp-awesome-widgets": ">=1.0.5",
             "inc2734/wp-basis": ">=0.4.4",
             "inc2734/wp-breadcrumbs": ">=0.3.2",
             "inc2734/wp-contents-outline": ">=0.1.4",
@@ -700,7 +700,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-10-09T06:40:57+00:00",
+        "time": "2017-10-12T14:50:30+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
