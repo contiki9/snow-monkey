@@ -4037,6 +4037,36 @@ var SnowMonkeyPageTopScroll = function SnowMonkeyPageTopScroll() {
   });
 };
 
+var SnowMonkeyFooterStickyNav = function () {
+  function SnowMonkeyFooterStickyNav() {
+    var _this = this;
+
+    classCallCheck(this, SnowMonkeyFooterStickyNav);
+
+    $(function () {
+      _this.nav = $('.p-footer-sticky-nav');
+
+      _this._init();
+
+      $(window).on('load resize', function () {
+        _this._init();
+      });
+    });
+  }
+
+  createClass(SnowMonkeyFooterStickyNav, [{
+    key: '_init',
+    value: function _init() {
+      if ('none' !== this.nav.css('display')) {
+        $('body').css('margin-bottom', this.nav.outerHeight());
+      } else {
+        $('body').css('margin-bottom', '');
+      }
+    }
+  }]);
+  return SnowMonkeyFooterStickyNav;
+}();
+
 new BasisStickyHeader();
 
 new Inc2734_WP_Share_Buttons();
@@ -4052,6 +4082,8 @@ new SnowMonkeyHeader();
 new SnowMonkeyDropNav();
 
 new SnowMonkeyPageTopScroll();
+
+new SnowMonkeyFooterStickyNav();
 
 $(function () {
   $('.l-sidebar-sticky-widget-area').sticky({

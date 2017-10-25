@@ -71,7 +71,7 @@ $control = $customizer->get_control( 'header-layout' );
 $control->join( $section );
 
 /**
- * Footer laytou
+ * Footer layout
  */
 $customizer->control( 'select', 'footer-widget-area-column-size', [
 	'label'   => __( 'Number of columns in the footer widget area', 'snow-monkey' ),
@@ -85,6 +85,21 @@ $customizer->control( 'select', 'footer-widget-area-column-size', [
 ] );
 
 $control = $customizer->get_control( 'footer-widget-area-column-size' );
+$control->join( $section );
+
+/**
+ * Archive layout
+ */
+$customizer->control( 'select', 'archive-layout', [
+	'label'   => __( 'Archive layout', 'snow-monkey' ),
+	'default' => 'rich-media',
+	'choices' => [
+		'rich-media' => __( 'Rich media', 'snow-monkey' ),
+		'simple'     => __( 'Simple', 'snow-monkey' ),
+	],
+] );
+
+$control = $customizer->get_control( 'archive-layout' );
 $control->join( $section );
 
 /**
