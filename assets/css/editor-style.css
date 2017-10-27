@@ -20929,6 +20929,9 @@ Visible utility for xl or more
    */
     /**
    * One column (slim)
+   */
+    /**
+   * front page
    */ }
     body.mce-content-body .l-contents__sidebar {
       font-size: 14px;
@@ -21052,6 +21055,10 @@ Visible utility for xl or more
       @media (min-width: 64em) {
         .l-body--one-column-slim body.mce-content-body .l-contents__sidebar {
           margin: 3.6rem 0 0; } }
+    .home body.mce-content-body .l-contents {
+      padding-top: 2.7rem; }
+    .home[class*="page-id-"] body.mce-content-body .l-contents {
+      padding-top: 0; }
   .l-body--right-sidebar body.mce-content-body .l-footer,
   .l-body--left-sidebar body.mce-content-body .l-footer,
   .l-body--one-column body.mce-content-body .l-footer,
@@ -22852,16 +22859,18 @@ Visible utility for xl or more
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      background-color: #000;
       overflow: hidden; }
       @media (min-width: 40em) {
         body.mce-content-body .c-prev-next-nav__item {
           -webkit-box-flex: 1;
           -ms-flex: 1 1 0%;
           flex: 1 1 0%;
-          width: calc(50% - 0.9rem); } }
+          max-width: calc(50% - 0.9rem); } }
       body.mce-content-body .c-prev-next-nav__item:not(:first-child) {
         margin-top: 0.9rem; }
+        @media (min-width: 40em) {
+          body.mce-content-body .c-prev-next-nav__item:not(:first-child) {
+            margin-top: 0; } }
       @media (min-width: 40em) {
         body.mce-content-body .c-prev-next-nav__item--prev {
           margin: 0 0 0 0.9rem; } }
@@ -22886,7 +22895,8 @@ Visible utility for xl or more
         color: #fff;
         font-weight: bold;
         text-decoration: none;
-        padding: 0.9rem; }
+        padding: 0.9rem;
+        background-color: #000; }
         @media (min-width: 40em) {
           body.mce-content-body .c-prev-next-nav__item > a {
             padding: 1.8rem; } }
