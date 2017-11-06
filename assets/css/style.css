@@ -13825,15 +13825,16 @@ html[data-window-scroll="false"] .l-container {
   padding: 0;
   vertical-align: middle; }
 
-.c-meta__item + .c-meta__item {
-  padding-left: .75em; }
-
-.c-meta__item--author img {
-  border-radius: 100%;
-  height: 24px;
-  width: 24px;
-  overflow: hidden;
-  margin-right: 5px; }
+.c-meta__item {
+  display: inline-block; }
+  .c-meta__item + .c-meta__item {
+    padding-left: .75em; }
+  .c-meta__item--author img {
+    border-radius: 100%;
+    height: 24px;
+    width: 24px;
+    overflow: hidden;
+    margin-right: 5px; }
 
 .c-site-branding__title > a {
   color: #333;
@@ -16082,7 +16083,7 @@ span.wpcf7-not-valid-tip {
       right: -2px; }
 
 @media (min-width: 64em) {
-  .p-related-posts .c-entries--rich-media__item {
+  .p-related-posts .c-entries--rich-media .c-entries__item {
     max-width: 100%;
     -webkit-box-flex: 0;
     -ms-flex: 0 1 25%;

@@ -21751,14 +21751,16 @@ Visible utility for xl or more
     border: none;
     padding: 0;
     vertical-align: middle; }
-  body.mce-content-body .c-meta__item + body.mce-content-body .c-meta__item {
-    padding-left: .75em; }
-  body.mce-content-body .c-meta__item--author img {
-    border-radius: 100%;
-    height: 24px;
-    width: 24px;
-    overflow: hidden;
-    margin-right: 5px; }
+  body.mce-content-body .c-meta__item {
+    display: inline-block; }
+    body.mce-content-body .c-meta__item + body.mce-content-body .c-meta__item {
+      padding-left: .75em; }
+    body.mce-content-body .c-meta__item--author img {
+      border-radius: 100%;
+      height: 24px;
+      width: 24px;
+      overflow: hidden;
+      margin-right: 5px; }
   body.mce-content-body .c-site-branding__title > a {
     color: #333;
     text-decoration: none; }
@@ -23837,7 +23839,7 @@ Visible utility for xl or more
         content: "\f054";
         right: -2px; }
   @media (min-width: 64em) {
-    body.mce-content-body .p-related-posts .c-entries--rich-media__item {
+    body.mce-content-body .p-related-posts .c-entries--rich-media .c-entries__item {
       max-width: 100%;
       -webkit-box-flex: 0;
       -ms-flex: 0 1 25%;
