@@ -13108,11 +13108,7 @@ html[data-window-scroll="false"] .l-container {
         .l-header__drop-nav .p-global-nav .c-navbar__item > a {
           padding: 0.9rem 1.8rem; }
   .l-header .c-site-branding img {
-    max-height: 5vh;
     width: auto; }
-    @media (min-width: 40em) {
-      .l-header .c-site-branding img {
-        max-height: none; } }
 
 /**
  * simple header

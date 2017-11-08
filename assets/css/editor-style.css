@@ -21112,11 +21112,7 @@ Visible utility for xl or more
           body.mce-content-body .l-header__drop-nav .p-global-nav .c-navbar__item > a {
             padding: 0.9rem 1.8rem; }
     body.mce-content-body .l-header .c-site-branding img {
-      max-height: 5vh;
       width: auto; }
-      @media (min-width: 40em) {
-        body.mce-content-body .l-header .c-site-branding img {
-          max-height: none; } }
   body.mce-content-body .l-simple-header__row {
     display: -webkit-box;
     display: -ms-flexbox;
