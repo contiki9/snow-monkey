@@ -21493,6 +21493,13 @@ Visible utility for xl or more
         padding: 0; }
         body.mce-content-body .c-entries--simple .c-entries__item > a {
           padding: 1.8rem 0; }
+  @media (min-width: 64em) {
+    body.mce-content-body .l-body--right-sidebar .l-contents__main > .c-entries--rich-media .c-entries__item,
+    body.mce-content-body .l-body--left-sidebar .l-contents__main > .c-entries--rich-media .c-entries__item {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+      flex: 0 1 50%;
+      max-width: 50%; } }
   body.mce-content-body .c-entry__header {
     margin: 0 0 1.8rem;
     border-bottom: 3px solid #111;
@@ -23213,6 +23220,14 @@ Visible utility for xl or more
           max-width: 80rem; } }
     body.mce-content-body .wpac-section + body.mce-content-body .wpac-section {
       margin-top: 0 !important; }
+    .l-body--one-column body.mce-content-body .wpac-section,
+    .l-body--one-column-fluid body.mce-content-body .wpac-section,
+    .l-body--one-column-slim body.mce-content-body .wpac-section {
+      margin-right: calc(50% - 50vw);
+      margin-left: calc(50% - 50vw); }
+    .l-body--one-column-slim body.mce-content-body .wpac-section__body {
+      margin: 0 auto;
+      max-width: 64em; }
   body.mce-content-body .wpco {
     background-color: #fcfcfc;
     border: 1px solid #eeeeee;
