@@ -485,51 +485,6 @@
         "description": "A library to add some awesome components for WordPress."
     },
     {
-        "name": "inc2734/wp-share-buttons",
-        "version": "0.5.6",
-        "version_normalized": "0.5.6.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/inc2734/wp-share-buttons.git",
-            "reference": "50f0f034926fe90b4fd950c4d3c4dddd9d088f25"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/50f0f034926fe90b4fd950c4d3c4dddd9d088f25",
-            "reference": "50f0f034926fe90b4fd950c4d3c4dddd9d088f25",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "phpmd/phpmd": "2.*",
-            "phpunit/phpunit": "^5.7",
-            "squizlabs/php_codesniffer": "*",
-            "wp-coding-standards/wpcs": "*"
-        },
-        "time": "2017-11-14T01:09:44+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Inc2734\\WP_Share_Buttons\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Takashi Kitajima",
-                "email": "inc@2inc.org",
-                "homepage": "https://2inc.org"
-            }
-        ],
-        "description": "A library for WordPress theme that adds social share buttons."
-    },
-    {
         "name": "inc2734/wp-basis",
         "version": "0.5.1",
         "version_normalized": "0.5.1.0",
@@ -574,23 +529,21 @@
         "description": "This library customizes HTML to use sass-basis in WordPress."
     },
     {
-        "name": "inc2734/wp-awesome-widgets",
-        "version": "1.2.0",
-        "version_normalized": "1.2.0.0",
+        "name": "inc2734/wp-share-buttons",
+        "version": "0.5.8",
+        "version_normalized": "0.5.8.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-            "reference": "71512bb9b52a7795666ace1ac5ad25d5aea85a22"
+            "url": "https://github.com/inc2734/wp-share-buttons.git",
+            "reference": "cbb07cfeb8099cca184894c61cc084f03a4d1518"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/71512bb9b52a7795666ace1ac5ad25d5aea85a22",
-            "reference": "71512bb9b52a7795666ace1ac5ad25d5aea85a22",
+            "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/cbb07cfeb8099cca184894c61cc084f03a4d1518",
+            "reference": "cbb07cfeb8099cca184894c61cc084f03a4d1518",
             "shasum": ""
         },
         "require": {
-            "inc2734/wp-contents-outline": "^0.2.0",
-            "inc2734/wp-view-controller": "^2.1",
             "php": ">=5.6"
         },
         "require-dev": {
@@ -599,12 +552,12 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-11-14T06:33:55+00:00",
+        "time": "2017-11-17T05:17:30+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Inc2734\\WP_Awesome_Widgets\\": "src"
+                "Inc2734\\WP_Share_Buttons\\": "src"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -614,24 +567,25 @@
         "authors": [
             {
                 "name": "Takashi Kitajima",
-                "email": "inc@2inc.org"
+                "email": "inc@2inc.org",
+                "homepage": "https://2inc.org"
             }
         ],
-        "description": "A library to add some awesome widgets for WordPress."
+        "description": "A library for WordPress theme that adds social share buttons."
     },
     {
         "name": "inc2734/wp-contents-outline",
-        "version": "0.2.1",
-        "version_normalized": "0.2.1.0",
+        "version": "0.2.3",
+        "version_normalized": "0.2.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/wp-contents-outline.git",
-            "reference": "6ebfc7af441edfbb71a2e1470e7714a4b20a2bd3"
+            "reference": "32dd1f25aed9aad20da7c6fefb281e4ab597197c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/6ebfc7af441edfbb71a2e1470e7714a4b20a2bd3",
-            "reference": "6ebfc7af441edfbb71a2e1470e7714a4b20a2bd3",
+            "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/32dd1f25aed9aad20da7c6fefb281e4ab597197c",
+            "reference": "32dd1f25aed9aad20da7c6fefb281e4ab597197c",
             "shasum": ""
         },
         "require": {
@@ -643,7 +597,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-11-14T07:23:18+00:00",
+        "time": "2017-11-17T07:11:44+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -664,26 +618,72 @@
         "description": "A library for WordPress. This adds contents outline of the post."
     },
     {
-        "name": "inc2734/mimizuku-core",
+        "name": "inc2734/wp-awesome-widgets",
         "version": "1.2.1",
         "version_normalized": "1.2.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "42a7f5c36004ee824001d9818b18a375a62c0340"
+            "url": "https://github.com/inc2734/wp-awesome-widgets.git",
+            "reference": "eab9d66cfc66f2ed379e8dfd5c1c7742235e0167"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/42a7f5c36004ee824001d9818b18a375a62c0340",
-            "reference": "42a7f5c36004ee824001d9818b18a375a62c0340",
+            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/eab9d66cfc66f2ed379e8dfd5c1c7742235e0167",
+            "reference": "eab9d66cfc66f2ed379e8dfd5c1c7742235e0167",
+            "shasum": ""
+        },
+        "require": {
+            "inc2734/wp-contents-outline": "^0.2.3",
+            "inc2734/wp-view-controller": "^2.1",
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "phpmd/phpmd": "2.*",
+            "phpunit/phpunit": "^5.7",
+            "squizlabs/php_codesniffer": "*",
+            "wp-coding-standards/wpcs": "*"
+        },
+        "time": "2017-11-17T07:18:42+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Inc2734\\WP_Awesome_Widgets\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Takashi Kitajima",
+                "email": "inc@2inc.org"
+            }
+        ],
+        "description": "A library to add some awesome widgets for WordPress."
+    },
+    {
+        "name": "inc2734/mimizuku-core",
+        "version": "1.2.4",
+        "version_normalized": "1.2.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/inc2734/mimizuku-core.git",
+            "reference": "40ef2049c97c51ed568d7f27710ebd0ad14d6b2d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/40ef2049c97c51ed568d7f27710ebd0ad14d6b2d",
+            "reference": "40ef2049c97c51ed568d7f27710ebd0ad14d6b2d",
             "shasum": ""
         },
         "require": {
             "inc2734/wp-awesome-components": ">=0.4.2",
-            "inc2734/wp-awesome-widgets": ">=1.2.0",
+            "inc2734/wp-awesome-widgets": ">=1.2.1",
             "inc2734/wp-basis": ">=0.5.1",
             "inc2734/wp-breadcrumbs": ">=0.3.2",
-            "inc2734/wp-contents-outline": ">=0.2.1",
+            "inc2734/wp-contents-outline": ">=0.2.3",
             "inc2734/wp-customizer-framework": ">=2.2.0",
             "inc2734/wp-github-theme-updater": ">=0.2.4",
             "inc2734/wp-like-me-box": ">=0.1.2",
@@ -691,7 +691,7 @@
             "inc2734/wp-profile-box": ">=0.1.1",
             "inc2734/wp-pure-css-gallery": ">=0.1.4",
             "inc2734/wp-seo": ">=0.6.0",
-            "inc2734/wp-share-buttons": ">=0.5.6",
+            "inc2734/wp-share-buttons": ">=0.5.8",
             "inc2734/wp-view-controller": ">=2.1.4",
             "php": ">=5.6"
         },
@@ -701,7 +701,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-11-14T07:24:27+00:00",
+        "time": "2017-11-17T07:15:35+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
