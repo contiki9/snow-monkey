@@ -529,51 +529,6 @@
         "description": "This library customizes HTML to use sass-basis in WordPress."
     },
     {
-        "name": "inc2734/wp-share-buttons",
-        "version": "0.5.8",
-        "version_normalized": "0.5.8.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/inc2734/wp-share-buttons.git",
-            "reference": "cbb07cfeb8099cca184894c61cc084f03a4d1518"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/cbb07cfeb8099cca184894c61cc084f03a4d1518",
-            "reference": "cbb07cfeb8099cca184894c61cc084f03a4d1518",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "phpmd/phpmd": "2.*",
-            "phpunit/phpunit": "^5.7",
-            "squizlabs/php_codesniffer": "*",
-            "wp-coding-standards/wpcs": "*"
-        },
-        "time": "2017-11-17T05:17:30+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Inc2734\\WP_Share_Buttons\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Takashi Kitajima",
-                "email": "inc@2inc.org",
-                "homepage": "https://2inc.org"
-            }
-        ],
-        "description": "A library for WordPress theme that adds social share buttons."
-    },
-    {
         "name": "inc2734/wp-contents-outline",
         "version": "0.2.3",
         "version_normalized": "0.2.3.0",
@@ -664,18 +619,63 @@
         "description": "A library to add some awesome widgets for WordPress."
     },
     {
-        "name": "inc2734/mimizuku-core",
-        "version": "1.2.4",
-        "version_normalized": "1.2.4.0",
+        "name": "inc2734/wp-share-buttons",
+        "version": "0.5.9",
+        "version_normalized": "0.5.9.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "40ef2049c97c51ed568d7f27710ebd0ad14d6b2d"
+            "url": "https://github.com/inc2734/wp-share-buttons.git",
+            "reference": "32e63ac46c1ac714419f1f446eeb7e401f25498d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/40ef2049c97c51ed568d7f27710ebd0ad14d6b2d",
-            "reference": "40ef2049c97c51ed568d7f27710ebd0ad14d6b2d",
+            "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/32e63ac46c1ac714419f1f446eeb7e401f25498d",
+            "reference": "32e63ac46c1ac714419f1f446eeb7e401f25498d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "phpmd/phpmd": "2.*",
+            "phpunit/phpunit": "^5.7",
+            "squizlabs/php_codesniffer": "*",
+            "wp-coding-standards/wpcs": "*"
+        },
+        "time": "2017-11-18T05:39:33+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Inc2734\\WP_Share_Buttons\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Takashi Kitajima",
+                "email": "inc@2inc.org",
+                "homepage": "https://2inc.org"
+            }
+        ],
+        "description": "A library for WordPress theme that adds social share buttons."
+    },
+    {
+        "name": "inc2734/mimizuku-core",
+        "version": "1.2.5",
+        "version_normalized": "1.2.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/inc2734/mimizuku-core.git",
+            "reference": "9f7b9c392a93141ad78129ed2b5657aa40b60cda"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/9f7b9c392a93141ad78129ed2b5657aa40b60cda",
+            "reference": "9f7b9c392a93141ad78129ed2b5657aa40b60cda",
             "shasum": ""
         },
         "require": {
@@ -691,7 +691,7 @@
             "inc2734/wp-profile-box": ">=0.1.1",
             "inc2734/wp-pure-css-gallery": ">=0.1.4",
             "inc2734/wp-seo": ">=0.6.0",
-            "inc2734/wp-share-buttons": ">=0.5.8",
+            "inc2734/wp-share-buttons": ">=0.5.9",
             "inc2734/wp-view-controller": ">=2.1.4",
             "php": ">=5.6"
         },
@@ -701,7 +701,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-11-17T07:15:35+00:00",
+        "time": "2017-11-18T05:40:17+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
