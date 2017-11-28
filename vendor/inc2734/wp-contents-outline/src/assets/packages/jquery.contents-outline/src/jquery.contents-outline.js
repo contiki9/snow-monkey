@@ -1,5 +1,18 @@
-;(jQuery(function($) {
-  $.fn.wpContentsOutline = function(params) {
+/**
+ * Name: jquery.contents-outline
+ * Author: Takashi Kitajima (inc2734)
+ * Author URI: https://2inc.org
+ * License: MIT
+ *
+ * @param { headings, moveToBefore1stHeading }
+ */
+
+'use strict';
+
+import $ from 'jquery';
+
+;(($) => {
+  $.fn.contentsOutline = function(params) {
     var params = $.extend({
       headings : $('h2, h3, h4, h5, h6'),
       moveToBefore1stHeading: true
@@ -7,14 +20,14 @@
 
     return this.each((i, e) => {
       var wrapper = $(e);
-      var wpco    = wrapper.find('.wpco__body');
+      var co      = wrapper.find('.contents-outline');
 
       var outlines = $('<ol />');
 
       (function() {
         params.headings.each((i, e) => {
           if (! $(e).attr('id')) {
-            $(e).attr('id', 'wpco-index-' + i);
+            $(e).attr('id', 'co-index-' + i);
           }
           outlines = _createTree(outlines, $(e));
         });
@@ -28,7 +41,7 @@
         }
 
         wrapper.attr('aria-hidden', 'false');
-        wpco.append(outlines);
+        co.append(outlines);
       })();
 
       /**
@@ -94,4 +107,4 @@
       }
     });
   };
-}));
+})(jQuery);

@@ -1,12 +1,6 @@
 .#{$_prefix}c-page-header {
   position: relative;
-  @include _background-image-cover();
-  background-attachment: scroll;
   height: 60vh;
-
-  @include _media-min(lg) {
-    background-attachment: fixed;
-  }
 
   &::after {
     content: '';

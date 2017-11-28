@@ -3425,34 +3425,84 @@ var Sticky = function () {
 
     return this.each(function (i, e) {
       var target = $$$1(e);
-      var bpy = 0;
+      var bg = target.find('.js-bg-parallax__bg');
+      var src = bg.attr('src');
+      var dummy = new Image();
 
-      init();
-      setPosition(0);
+      dummy.onload = function () {
+        bg.addClass('js-bg-parallax__bg--loaded');
 
-      $$$1(window).resize(function () {
         init();
-        setPosition($$$1(window).scrollTop());
-      });
+        setPosition(0);
 
-      $$$1(window).scroll(function () {
-        setPosition($$$1(window).scrollTop());
-      });
+        $$$1(window).resize(function () {
+          init();
+          setPosition($$$1(window).scrollTop());
+        });
 
-      function init() {
-        target.css('background-position-y', '');
-        bpy = target.css('background-position-y');
-      }
+        $$$1(window).scroll(function () {
+          setPosition($$$1(window).scrollTop());
+        });
 
-      function setPosition(scroll) {
-        if ('fixed' === target.css('background-attachment')) {
-          scroll = parseInt(scroll);
+        /**
+         * Set background image size and position
+         *
+         * @return {void}
+         */
+        function init() {
+          var size = getImageSize();
+
+          bg.css('width', size.width).css('height', size.height).css('left', 'calc(50% - ' + parseInt(size.width) / 2 + 'px)').css('top', 'calc(50% - ' + parseInt(size.height) / 2 + 'px)');
+        }
+
+        /**
+         * Return background image size
+         *
+         * @return {hash}
+         *   @var length width
+         *   @var length height
+         */
+        function getImageSize() {
+          var width = void 0,
+              height = void 0;
+
+          if (target.outerWidth() / target.outerHeight() > dummy.width / dummy.height) {
+            width = target.outerWidth();
+            height = dummy.height * (width / dummy.width);
+          } else {
+            height = target.outerHeight();
+            width = dummy.width * (height / dummy.height);
+          }
+
+          return {
+            width: width,
+            height: height
+          };
+        }
+
+        /**
+         * Set background image position for parallax effect
+         *
+         * @param {int} scroll
+         * @return {void}
+         */
+        function setPosition(scroll) {
           var offset = target.offset().top;
           var parallax = (scroll - offset) / params.speed;
-          var newBpy = 'calc(' + bpy + ' - ' + parallax + 'px)';
-          target.css('background-position-y', newBpy);
+
+          if ($$$1(window).height() > offset) {
+            parallax = scroll / params.speed;
+          }
+
+          if (Math.abs(parallax) > (bg.height() - target.outerHeight()) / 2) {
+            return;
+          }
+
+          bg.css('transform', 'translateY(' + parallax + 'px)');
         }
-      }
+      };
+
+      dummy.src = src;
     });
   };
 })(jQuery);
