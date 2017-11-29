@@ -353,50 +353,6 @@
         "description": "A library for SEO of WordPress."
     },
     {
-        "name": "inc2734/wp-customizer-framework",
-        "version": "2.2.0",
-        "version_normalized": "2.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/inc2734/wp-customizer-framework.git",
-            "reference": "7dfd7214a40ed86a6d0de42a10a752e427ed7117"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/7dfd7214a40ed86a6d0de42a10a752e427ed7117",
-            "reference": "7dfd7214a40ed86a6d0de42a10a752e427ed7117",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "phpmd/phpmd": "2.*",
-            "phpunit/phpunit": "^5.7",
-            "squizlabs/php_codesniffer": "*",
-            "wp-coding-standards/wpcs": "*"
-        },
-        "time": "2017-11-08T01:51:38+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Inc2734\\WP_Customizer_Framework\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Takashi Kitajima",
-                "email": "inc@2inc.org"
-            }
-        ],
-        "description": "A library for WordPress Customizer."
-    },
-    {
         "name": "inc2734/wp-awesome-components",
         "version": "0.4.2",
         "version_normalized": "0.4.2.0",
@@ -664,18 +620,62 @@
         "description": "A library to add some awesome widgets for WordPress."
     },
     {
-        "name": "inc2734/mimizuku-core",
-        "version": "1.2.10",
-        "version_normalized": "1.2.10.0",
+        "name": "inc2734/wp-customizer-framework",
+        "version": "2.2.1",
+        "version_normalized": "2.2.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "f5c6f5b5bc22ee4e74a8a63a38dfe54695a906cc"
+            "url": "https://github.com/inc2734/wp-customizer-framework.git",
+            "reference": "27fd06096f5f542a32c2ab345c4c4646916d19f7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/f5c6f5b5bc22ee4e74a8a63a38dfe54695a906cc",
-            "reference": "f5c6f5b5bc22ee4e74a8a63a38dfe54695a906cc",
+            "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/27fd06096f5f542a32c2ab345c4c4646916d19f7",
+            "reference": "27fd06096f5f542a32c2ab345c4c4646916d19f7",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "phpmd/phpmd": "2.*",
+            "phpunit/phpunit": "^5.7",
+            "squizlabs/php_codesniffer": "*",
+            "wp-coding-standards/wpcs": "*"
+        },
+        "time": "2017-11-29T00:22:41+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Inc2734\\WP_Customizer_Framework\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Takashi Kitajima",
+                "email": "inc@2inc.org"
+            }
+        ],
+        "description": "A library for WordPress Customizer."
+    },
+    {
+        "name": "inc2734/mimizuku-core",
+        "version": "1.2.11",
+        "version_normalized": "1.2.11.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/inc2734/mimizuku-core.git",
+            "reference": "1a772bd0b4461f71dae032733ea1ab4994e5b075"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/1a772bd0b4461f71dae032733ea1ab4994e5b075",
+            "reference": "1a772bd0b4461f71dae032733ea1ab4994e5b075",
             "shasum": ""
         },
         "require": {
@@ -684,7 +684,7 @@
             "inc2734/wp-basis": ">=0.5.3",
             "inc2734/wp-breadcrumbs": ">=0.3.2",
             "inc2734/wp-contents-outline": ">=0.3.2",
-            "inc2734/wp-customizer-framework": ">=2.2.0",
+            "inc2734/wp-customizer-framework": ">=2.2.1",
             "inc2734/wp-github-theme-updater": ">=0.2.5",
             "inc2734/wp-like-me-box": ">=0.1.2",
             "inc2734/wp-oembed-blog-card": ">=1.0.3",
@@ -701,7 +701,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-11-28T12:19:20+00:00",
+        "time": "2017-11-29T00:27:18+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

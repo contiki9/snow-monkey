@@ -17377,28 +17377,19 @@ Visible utility for xl or more
         color: black;
         opacity: 0.75; }
   body.mce-content-body .js-bg-parallax {
-    position: relative;
-    overflow: hidden !important; }
-    body.mce-content-body .js-bg-parallax__bg {
-      max-width: none !important;
-      max-height: none !important;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      z-index: 0;
-      opacity: 0;
-      -webkit-transition: opacity .1s;
-      transition: opacity .1s;
-      -o-object-fit: cover;
-      object-fit: cover;
-      -o-object-position: 50% 50%;
-      object-position: 50% 50%; }
-      body.mce-content-body .js-bg-parallax__bg--loaded {
-        height: auto;
-        width: auto;
-        opacity: 1; }
-    body.mce-content-body .js-bg-parallax__content {
-      position: relative; }
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    -webkit-transition: opacity .1s ease-in;
+    transition: opacity .1s ease-in; }
+    body.mce-content-body .js-bg-parallax[data-is-loaded="true"] {
+      opacity: 1; }
+    body.mce-content-body .js-bg-parallax[data-is-mobile="true"] {
+      background-attachment: scroll !important; }
+    @media (min-width: 1024px) {
+      body.mce-content-body .js-bg-parallax {
+        background-attachment: fixed; } }
 
 @font-face {
   body.mce-content-body {
