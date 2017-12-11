@@ -220,50 +220,6 @@
         "description": "A library for WordPress breadcrumbs."
     },
     {
-        "name": "inc2734/wp-oembed-blog-card",
-        "version": "1.0.3",
-        "version_normalized": "1.0.3.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-            "reference": "22598757a51464daf36923108e995d3408eba7df"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/22598757a51464daf36923108e995d3408eba7df",
-            "reference": "22598757a51464daf36923108e995d3408eba7df",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "phpmd/phpmd": "2.*",
-            "phpunit/phpunit": "^5.7",
-            "squizlabs/php_codesniffer": "*",
-            "wp-coding-standards/wpcs": "*"
-        },
-        "time": "2017-10-03T16:19:20+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Inc2734\\WP_OEmbed_Blog_Card\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Takashi Kitajima",
-                "email": "inc@2inc.org"
-            }
-        ],
-        "description": "A library for WordPress oEmbed Blog Card."
-    },
-    {
         "name": "inc2734/wp-view-controller",
         "version": "2.2.0",
         "version_normalized": "2.2.0.0",
@@ -351,50 +307,6 @@
             }
         ],
         "description": "A library for SEO of WordPress."
-    },
-    {
-        "name": "inc2734/wp-awesome-components",
-        "version": "0.4.2",
-        "version_normalized": "0.4.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/inc2734/wp-awesome-components.git",
-            "reference": "39fb1b3e3cd0d6952344828858d82196f9a7a29a"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/39fb1b3e3cd0d6952344828858d82196f9a7a29a",
-            "reference": "39fb1b3e3cd0d6952344828858d82196f9a7a29a",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "phpmd/phpmd": "2.*",
-            "phpunit/phpunit": "^5.7",
-            "squizlabs/php_codesniffer": "*",
-            "wp-coding-standards/wpcs": "*"
-        },
-        "time": "2017-11-07T06:40:30+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Inc2734\\WP_Awesome_Components\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Takashi Kitajima",
-                "email": "inc@2inc.org"
-            }
-        ],
-        "description": "A library to add some awesome components for WordPress."
     },
     {
         "name": "inc2734/wp-share-buttons",
@@ -530,18 +442,18 @@
         "description": "A library for WordPress. This adds contents outline of the post."
     },
     {
-        "name": "inc2734/wp-basis",
-        "version": "0.5.3",
-        "version_normalized": "0.5.3.0",
+        "name": "inc2734/wp-oembed-blog-card",
+        "version": "1.0.4",
+        "version_normalized": "1.0.4.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/inc2734/wp-basis.git",
-            "reference": "1cf415bc8718318360795aacc4aec32c33f79eb8"
+            "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
+            "reference": "cdd00342dd03570f70d3598bbfce50cd7f7df2c9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/1cf415bc8718318360795aacc4aec32c33f79eb8",
-            "reference": "1cf415bc8718318360795aacc4aec32c33f79eb8",
+            "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/cdd00342dd03570f70d3598bbfce50cd7f7df2c9",
+            "reference": "cdd00342dd03570f70d3598bbfce50cd7f7df2c9",
             "shasum": ""
         },
         "require": {
@@ -553,7 +465,95 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-11-28T07:10:24+00:00",
+        "time": "2017-12-11T14:14:00+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Inc2734\\WP_OEmbed_Blog_Card\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Takashi Kitajima",
+                "email": "inc@2inc.org"
+            }
+        ],
+        "description": "A library for WordPress oEmbed Blog Card."
+    },
+    {
+        "name": "inc2734/wp-customizer-framework",
+        "version": "2.2.2",
+        "version_normalized": "2.2.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/inc2734/wp-customizer-framework.git",
+            "reference": "f6f37b16bdcc49bb797b77995eb5e107c5ea59f9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/f6f37b16bdcc49bb797b77995eb5e107c5ea59f9",
+            "reference": "f6f37b16bdcc49bb797b77995eb5e107c5ea59f9",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "phpmd/phpmd": "2.*",
+            "phpunit/phpunit": "^5.7",
+            "squizlabs/php_codesniffer": "*",
+            "wp-coding-standards/wpcs": "*"
+        },
+        "time": "2017-12-11T03:03:48+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Inc2734\\WP_Customizer_Framework\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Takashi Kitajima",
+                "email": "inc@2inc.org"
+            }
+        ],
+        "description": "A library for WordPress Customizer."
+    },
+    {
+        "name": "inc2734/wp-basis",
+        "version": "0.7.0",
+        "version_normalized": "0.7.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/inc2734/wp-basis.git",
+            "reference": "f2530e9b0701d31242cd0e4dfc621b15c396b914"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/f2530e9b0701d31242cd0e4dfc621b15c396b914",
+            "reference": "f2530e9b0701d31242cd0e4dfc621b15c396b914",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "phpmd/phpmd": "2.*",
+            "phpunit/phpunit": "^5.7",
+            "squizlabs/php_codesniffer": "*",
+            "wp-coding-standards/wpcs": "*"
+        },
+        "time": "2017-12-11T12:56:12+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -575,17 +575,17 @@
     },
     {
         "name": "inc2734/wp-awesome-widgets",
-        "version": "1.3.2",
-        "version_normalized": "1.3.2.0",
+        "version": "1.3.3",
+        "version_normalized": "1.3.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-            "reference": "fb86889a0822fbc9ed9f47b5c02a4b7b5e6f11c0"
+            "reference": "9cb205dabf8d10fd6e1c5b943eef07726aa60856"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/fb86889a0822fbc9ed9f47b5c02a4b7b5e6f11c0",
-            "reference": "fb86889a0822fbc9ed9f47b5c02a4b7b5e6f11c0",
+            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/9cb205dabf8d10fd6e1c5b943eef07726aa60856",
+            "reference": "9cb205dabf8d10fd6e1c5b943eef07726aa60856",
             "shasum": ""
         },
         "require": {
@@ -599,7 +599,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-11-28T07:11:39+00:00",
+        "time": "2017-12-11T06:38:37+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -620,18 +620,18 @@
         "description": "A library to add some awesome widgets for WordPress."
     },
     {
-        "name": "inc2734/wp-customizer-framework",
-        "version": "2.2.1",
-        "version_normalized": "2.2.1.0",
+        "name": "inc2734/wp-awesome-components",
+        "version": "0.4.3",
+        "version_normalized": "0.4.3.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/inc2734/wp-customizer-framework.git",
-            "reference": "27fd06096f5f542a32c2ab345c4c4646916d19f7"
+            "url": "https://github.com/inc2734/wp-awesome-components.git",
+            "reference": "e31563423a8e55abc5371a540af44eacd985ffb0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/27fd06096f5f542a32c2ab345c4c4646916d19f7",
-            "reference": "27fd06096f5f542a32c2ab345c4c4646916d19f7",
+            "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/e31563423a8e55abc5371a540af44eacd985ffb0",
+            "reference": "e31563423a8e55abc5371a540af44eacd985ffb0",
             "shasum": ""
         },
         "require": {
@@ -643,12 +643,12 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-11-29T00:22:41+00:00",
+        "time": "2017-12-11T06:11:07+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Inc2734\\WP_Customizer_Framework\\": "src"
+                "Inc2734\\WP_Awesome_Components\\": "src"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -661,33 +661,33 @@
                 "email": "inc@2inc.org"
             }
         ],
-        "description": "A library for WordPress Customizer."
+        "description": "A library to add some awesome components for WordPress."
     },
     {
         "name": "inc2734/mimizuku-core",
-        "version": "1.2.11",
-        "version_normalized": "1.2.11.0",
+        "version": "1.3.2",
+        "version_normalized": "1.3.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "1a772bd0b4461f71dae032733ea1ab4994e5b075"
+            "reference": "dc255be5cc47b86384b30c947c7ee2477d3702e0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/1a772bd0b4461f71dae032733ea1ab4994e5b075",
-            "reference": "1a772bd0b4461f71dae032733ea1ab4994e5b075",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/dc255be5cc47b86384b30c947c7ee2477d3702e0",
+            "reference": "dc255be5cc47b86384b30c947c7ee2477d3702e0",
             "shasum": ""
         },
         "require": {
-            "inc2734/wp-awesome-components": ">=0.4.2",
-            "inc2734/wp-awesome-widgets": ">=1.3.2",
-            "inc2734/wp-basis": ">=0.5.3",
+            "inc2734/wp-awesome-components": ">=0.4.3",
+            "inc2734/wp-awesome-widgets": ">=1.3.3",
+            "inc2734/wp-basis": ">=0.7.0",
             "inc2734/wp-breadcrumbs": ">=0.3.2",
             "inc2734/wp-contents-outline": ">=0.3.2",
-            "inc2734/wp-customizer-framework": ">=2.2.1",
+            "inc2734/wp-customizer-framework": ">=2.2.2",
             "inc2734/wp-github-theme-updater": ">=0.2.5",
             "inc2734/wp-like-me-box": ">=0.1.2",
-            "inc2734/wp-oembed-blog-card": ">=1.0.3",
+            "inc2734/wp-oembed-blog-card": ">=1.0.4",
             "inc2734/wp-profile-box": ">=0.1.1",
             "inc2734/wp-pure-css-gallery": ">=0.1.4",
             "inc2734/wp-seo": ">=0.6.0",
@@ -701,7 +701,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-11-29T00:27:18+00:00",
+        "time": "2017-12-11T14:17:13+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

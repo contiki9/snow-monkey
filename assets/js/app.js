@@ -3179,6 +3179,10 @@ var BasisPageEffect = function () {
             return;
           }
 
+          if ('true' !== link.attr('data-page-effect-link')) {
+            return;
+          }
+
           event.preventDefault();
           _this.show();
           var url = link.attr('href');

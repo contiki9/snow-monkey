@@ -186,14 +186,28 @@ class Inc2734_WP_OEmbed_Blog_Card_Parser {
 	 */
 	public function get_favicon() {
 		preg_match( '/<link +?rel=["\']shortcut icon["\'][^\/>]*? href=["\']([^"\']+?)["\'][^\/>]*?\/?>/si', $this->content, $reg );
-		if ( ! empty( $reg[1] ) ) {
-			return $reg[1];
+		if ( empty( $reg[1] ) ) {
+			preg_match( '/<link +?rel=["\']icon["\'][^\/>]*? href=["\']([^"\']+?)["\'][^\/>]*?\/?>/si', $this->content, $reg );
 		}
 
-		preg_match( '/<link +?rel=["\']icon["\'][^\/>]*? href=["\']([^"\']+?)["\'][^\/>]*?\/?>/si', $this->content, $reg );
-		if ( ! empty( $reg[1] ) ) {
-			return $reg[1];
+		if ( empty( $reg[1] ) ) {
+			return;
 		}
+
+		$favicon = $reg[1];
+
+		if ( is_ssl() ) {
+			$favicon = preg_replace( '|^http:|', 'https:', $favicon );
+		}
+
+		$response    = wp_remote_get( $favicon );
+		$status_code = $this->_get_status_code( $response );
+
+		if ( 200 != $status_code && 304 != $status_code ) {
+			return;
+		}
+
+		return $favicon;
 	}
 
 	/**
@@ -203,8 +217,23 @@ class Inc2734_WP_OEmbed_Blog_Card_Parser {
 	 */
 	public function get_thumbnail() {
 		preg_match( '/<meta +?property=["\']og:image["\'][^\/>]*? content=["\']([^"\']+?)["\'].*?\/?>/si', $this->content, $reg );
-		if ( ! empty( $reg[1] ) ) {
-			return $reg[1];
+		if ( empty( $reg[1] ) ) {
+			return;
 		}
+
+		$thumbnail = $reg[1];
+
+		if ( is_ssl() ) {
+			$thumbnail = preg_replace( '|^http:|', 'https:', $thumbnail );
+		}
+
+		$response    = wp_remote_get( $thumbnail );
+		$status_code = $this->_get_status_code( $response );
+
+		if ( 200 != $status_code && 304 != $status_code ) {
+			return;
+		}
+
+		return $thumbnail;
 	}
 }
