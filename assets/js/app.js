@@ -3124,12 +3124,19 @@ var BasisNavbar = function () {
 
       this.items.each(function (i, e) {
         var item = $(e);
-        item.on('mouseover focus', function (event) {
+        item.on('mouseover focusin', function (event) {
           _this.show(item.children(_this.args.submenu));
         });
 
         item.on('mouseleave', function (event) {
           _this.hidden(item.children(_this.args.submenu));
+        });
+      });
+
+      $(this.args.item).each(function (i, e) {
+        var item = $(e);
+        item.on('focusin', function (event) {
+          _this.hidden(item.siblings(_this.args.item).children(_this.args.submenu));
         });
       });
     }
@@ -4063,6 +4070,9 @@ var SnowMonkeyDropNav = function () {
       _this.nav = $('.l-header__drop-nav');
       _this.min = 1023;
       _this.defaultWindowWidth = $(window).width();
+      _this.gNavClass = '.p-global-nav';
+
+      _this._showGnav();
 
       _this.onScroll();
       _this.onResize();
@@ -4077,12 +4087,12 @@ var SnowMonkeyDropNav = function () {
       $(window).scroll(function () {
         if (_this2.min < $(window).width()) {
           if (_this2.header.outerHeight() < $(window).scrollTop()) {
-            _this2.nav.attr('aria-hidden', 'false');
+            _this2._showDropNav();
             return;
           }
         }
 
-        _this2.nav.attr('aria-hidden', 'true');
+        _this2._showGnav();
       });
     }
   }, {
@@ -4095,8 +4105,22 @@ var SnowMonkeyDropNav = function () {
           return;
         }
 
-        _this3.nav.attr('aria-hidden', 'true');
+        _this3._showGnav();
       });
+    }
+  }, {
+    key: '_showGnav',
+    value: function _showGnav() {
+      $(this.gNavClass).attr('aria-hidden', 'false');
+      this.nav.attr('aria-hidden', 'true');
+      this.nav.find(this.gNavClass).attr('aria-hidden', 'true');
+    }
+  }, {
+    key: '_showDropNav',
+    value: function _showDropNav() {
+      $(this.gNavClass).attr('aria-hidden', 'true');
+      this.nav.attr('aria-hidden', 'false');
+      this.nav.find(this.gNavClass).attr('aria-hidden', 'false');
     }
   }]);
   return SnowMonkeyDropNav;
