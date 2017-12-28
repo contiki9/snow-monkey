@@ -14985,7 +14985,8 @@ iframe {
       -webkit-transition: opacity 0.2s ease-out;
       transition: opacity 0.2s ease-out;
       -webkit-backface-visibility: hidden;
-      backface-visibility: hidden; }
+      backface-visibility: hidden;
+      vertical-align: top; }
       @media (min-width: 64em) {
         .mce-content-body.mceContentBody .wp-profile-box__detail-btn:hover, .mce-content-body.mceContentBody .wp-profile-box__detail-btn:active, .mce-content-body.mceContentBody .wp-profile-box__detail-btn:focus, .mce-content-body.mceContentBody .wp-profile-box__archives-btn:hover, .mce-content-body.mceContentBody .wp-profile-box__archives-btn:active, .mce-content-body.mceContentBody .wp-profile-box__archives-btn:focus {
           opacity: .9; } }
@@ -15432,11 +15433,11 @@ iframe {
       flex: none;
       color: #999;
       display: block;
-      height: 14px;
-      width: 14px;
       line-height: 1;
       overflow: hidden;
       text-decoration: none; }
+      .mce-content-body.mceContentBody .p-social-nav a > span {
+        display: none; }
       .mce-content-body.mceContentBody .p-social-nav a:before {
         display: inline-block;
         font: normal normal normal 14px/1 FontAwesome;

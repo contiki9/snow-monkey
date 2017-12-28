@@ -15739,7 +15739,8 @@ span.wpcf7-not-valid-tip {
     -webkit-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    vertical-align: top; }
     @media (min-width: 64em) {
       .wp-profile-box__detail-btn:hover, .wp-profile-box__detail-btn:active, .wp-profile-box__detail-btn:focus, .wp-profile-box__archives-btn:hover, .wp-profile-box__archives-btn:active, .wp-profile-box__archives-btn:focus {
         opacity: .9; } }
@@ -16221,11 +16222,11 @@ span.wpcf7-not-valid-tip {
     flex: none;
     color: #999;
     display: block;
-    height: 14px;
-    width: 14px;
     line-height: 1;
     overflow: hidden;
     text-decoration: none; }
+    .p-social-nav a > span {
+      display: none; }
     .p-social-nav a:before {
       display: inline-block;
       font: normal normal normal 14px/1 FontAwesome;
