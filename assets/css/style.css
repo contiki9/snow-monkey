@@ -9158,6 +9158,68 @@ h4 {
 iframe {
   max-width: 100%; }
 
+blockquote {
+  position: relative;
+  background-image: url(../img/blockquote/top.svg), url(../img/blockquote/bottom.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0, 100% 100%;
+  background-size: 35px;
+  border-left: none;
+  padding: 1.40217rem 0.93478rem 0.93478rem 2.80435rem; }
+  blockquote > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    margin-top: 0.93478rem; }
+  blockquote > h1 {
+    margin-top: 0;
+    margin-bottom: 0.93478rem; }
+  blockquote > h2 {
+    margin-top: 1.86957rem;
+    margin-bottom: 0.93478rem; }
+  blockquote > h3 {
+    margin-top: 1.40217rem;
+    margin-bottom: 0.70109rem; }
+  blockquote > h4 {
+    margin-top: 1.16848rem;
+    margin-bottom: 0.70109rem; }
+  blockquote > h5 {
+    margin-top: 0.93478rem;
+    margin-bottom: 0.46739rem; }
+  blockquote > h6 {
+    margin-top: 0.93478rem;
+    margin-bottom: 0.46739rem; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > ol ol,
+  blockquote > ol ul,
+  blockquote > ul ol,
+  blockquote > ul ul {
+    margin-bottom: 0; }
+  @media (min-width: 40em) {
+    blockquote {
+      margin-right: 1.86957rem;
+      margin-left: 1.86957rem;
+      background-size: 70px;
+      padding: 1.86957rem 1.86957rem 1.40217rem 3.73913rem; } }
+  blockquote::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: block;
+    height: 18px;
+    width: 18px;
+    background-image: url(../img/blockquote/icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain; }
+    @media (min-width: 40em) {
+      blockquote::before {
+        height: 24px;
+        width: 24px; } }
+  blockquote cite {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.99379;
+    color: #999; }
+
 /**
  * Import WP oEmbed Blog Card
  */
@@ -14564,6 +14626,9 @@ html[data-window-scroll="false"] .l-container {
   @media (min-width: 40em) {
     .wpaw-showcase {
       padding: 1.86957rem 0; } }
+  @media (min-width: 64em) {
+    .wpaw-showcase {
+      background-attachment: fixed; } }
   .wpaw-showcase .wpaw-showcase__inner {
     margin: 0 -0.93478rem; }
     @media (min-width: 40em) {
