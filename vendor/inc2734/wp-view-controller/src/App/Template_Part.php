@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-/**
- * This class make function that like get_template_part().
- * In addition to calling templates, you can pass variables.
- */
-class Inc2734_WP_View_Controller_Template_Part {
+namespace Inc2734\WP_View_Controller\App;
+
+class Template_Part {
 
 	/**
 	 * The template path like get_template_part()
@@ -90,17 +88,4 @@ class Inc2734_WP_View_Controller_Template_Part {
 			$this->wp_query->set( $key, null );
 		}
 	}
-}
-
-/**
- * A template tag that is get_template_part() using variables
- *
- * @param string $template
- * @param array $vars
- * @return void
- */
-function wpvc_get_template_part( $template, $vars = [] ) {
-	$template_part = new Inc2734_WP_View_Controller_Template_Part( $template );
-	$template_part->set_vars( $vars );
-	$template_part->render();
 }

@@ -14,10 +14,6 @@ $ composer require inc2734/wp-view-controller
 <?php
 // When Using composer auto loader
 $Controller = new Inc2734\WP_View_Controller\View_Controller();
-
-// When not Using composer auto loader
-// include_once( get_theme_file_path( '/vendor/inc2734/wp-view-controller/src/wp-view-controller.php' ) );
-// $Controller = new Inc2734_WP_View_Controller();
 ```
 
 ## Directory structure
@@ -54,7 +50,7 @@ Loading `/templates/view/archive.php` when `/templates/view/archive-{post-type}.
 
 ### Static view templates
 
-Tries to load the view template according to the URL. For example when URL is http://example.com/foo/bar, tries to laod from `/templates/view/static/foo/bar.php` or `/templates/view/static/foo/bar/index.php`.
+Tries to load the view template according to the URL. For example when URL is http://example.com/foo/bar, tries to laod from `/templates/static/foo/bar.php` or `/templates/static/foo/bar/index.php`.
 
 ## Using view controller
 ```
