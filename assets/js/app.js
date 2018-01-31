@@ -3964,29 +3964,19 @@ var FixAdminBar = function () {
 
 'use strict';
 
-var SnowMonkeyMainVisual = function SnowMonkeyMainVisual() {
-  classCallCheck(this, SnowMonkeyMainVisual);
+var SnowMonkeyWpawPickupSlider = function SnowMonkeyWpawPickupSlider() {
+  classCallCheck(this, SnowMonkeyWpawPickupSlider);
 
   $(function () {
-    var slider = $('.p-main-visual');
+    var slider = $('.wpaw-pickup-slider__canvas');
+
+    slider.slick('slickSetOption', 'arrows', true, true);
+    slider.slick('slickSetOption', 'pauseOnFocus', false, true);
+    slider.slick('slickSetOption', 'pauseOnHover', false, true);
 
     slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
       slider.find('.slick-slide').removeClass('pan');
       slider.find('.slick-slide').eq(currentSlide).addClass('pan');
-    });
-
-    slider.slick({
-      "speed": 500,
-      "autoplaySpeed": 4000,
-      "slidesToShow": 1,
-      "fade": true,
-      "autoplay": true,
-      "dots": false,
-      "infinite": true,
-      "adaptiveHeight": true,
-      "arrows": true,
-      "pauseOnFocus": false,
-      "pauseOnHover": false
     });
   });
 };
@@ -4335,7 +4325,7 @@ new Inc2734_WP_Share_Buttons();
 
 new FixAdminBar();
 
-new SnowMonkeyMainVisual();
+new SnowMonkeyWpawPickupSlider();
 
 new SnowMonkeyWidgetItemExpander();
 

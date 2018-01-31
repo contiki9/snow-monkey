@@ -8,9 +8,14 @@
 /**
  * Add sidebar widget area
  *
+ * @deprecated
  * @return void
  */
 add_action( 'init', function() {
+	if ( ! apply_filters( 'snow_monkey_use_post_type_widget_area', false ) ) {
+		return;
+	}
+
 	$post_types = snow_monkey_get_public_post_types();
 	foreach ( $post_types as $post_type => $post_type_object ) {
 		register_sidebar( [
@@ -40,17 +45,49 @@ add_action( 'init', function() {
 }, 11 );
 
 /**
+ * Add sidebar widget area
+ *
+ * @return void
+ */
+add_action( 'widgets_init', function() {
+	register_sidebar( [
+		'name'          => __( 'Sidebar', 'snow-monkey' ),
+		'description'   => __( 'This widgets are displayed in the sidebar of singular post.', 'snow-monkey' ),
+		'id'            => 'sidebar-widget-area',
+		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="c-widget__title"><span>',
+		'after_title'   => '</span></h2>',
+	] );
+
+	register_sidebar( [
+		'name'          => __( 'Sticky sidebar', 'snow-monkey' ),
+		'description'   => __( 'This widgets are displayed in the sidebar of singular post.', 'snow-monkey' ),
+		'id'            => 'sidebar-sticky-widget-area',
+		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="c-widget__title"><span>',
+		'after_title'   => '</span></h2>',
+	] );
+} );
+
+/**
 * Add top of title widget area
 *
+* @deprecated
 * @return void
 */
 add_action( 'init', function() {
+	if ( ! apply_filters( 'snow_monkey_use_post_type_widget_area', false ) ) {
+		return;
+	}
+
 	$post_types = snow_monkey_get_public_post_types();
 	foreach ( $post_types as $post_type => $post_type_object ) {
 		register_sidebar( [
 			// @codingStandardsIgnoreStart
 			'name'          => sprintf( __( '%1$s top of title', 'snow-monkey' ), __( $post_type_object->label ) ),
-			'description'   => sprintf( __( 'This widgets are displayed in the top of %1$s title.', 'snow-monkey' ), __( $post_type_object->label ) ),
+			'description'   => sprintf( __( 'This widgets are displayed on the title of %1$s.', 'snow-monkey' ), __( $post_type_object->label ) ),
 			// @codingStandardsIgnoreEnd
 			'id'            => $post_type_object->name . '-post-type-title-top-widget-area',
 			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
@@ -62,17 +99,56 @@ add_action( 'init', function() {
 }, 11 );
 
 /**
+* Add top of page title widget area
+ *
+ * @return void
+ */
+add_action( 'widgets_init', function() {
+	register_sidebar( [
+		'name'          => __( 'Top of the page title', 'snow-monkey' ),
+		'description'   => __( 'This widgets are displayed on the title of the singular post.', 'snow-monkey' ),
+		'id'            => 'title-top-widget-area',
+		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="c-widget__title"><span>',
+		'after_title'   => '</span></h2>',
+	] );
+} );
+
+/**
+* Add top of archive page widget area
+ *
+ * @return void
+ */
+add_action( 'widgets_init', function() {
+	register_sidebar( [
+		'name'          => __( 'Top of the archive page', 'snow-monkey' ),
+		'description'   => __( 'This widgets are displayed top of the archive page.', 'snow-monkey' ),
+		'id'            => 'archive-top-widget-area',
+		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="c-widget__title"><span>',
+		'after_title'   => '</span></h2>',
+	] );
+} );
+
+/**
 * Add bottom of contents widget area
 *
+* @deprecated
 * @return void
 */
 add_action( 'init', function() {
+	if ( ! apply_filters( 'snow_monkey_use_post_type_widget_area', false ) ) {
+		return;
+	}
+
 	$post_types = snow_monkey_get_public_post_types();
 	foreach ( $post_types as $post_type => $post_type_object ) {
 		register_sidebar( [
 			// @codingStandardsIgnoreStart
 			'name'          => sprintf( __( '%1$s bottom of contents', 'snow-monkey' ), __( $post_type_object->label ) ),
-			'description'   => sprintf( __( 'This widgets are displayed in the bottom of %1$s contents.', 'snow-monkey' ), __( $post_type_object->label ) ),
+			'description'   => sprintf( __( 'This widgets are displayed under the contents of %1$s.', 'snow-monkey' ), __( $post_type_object->label ) ),
 			// @codingStandardsIgnoreEnd
 			'id'            => $post_type_object->name . '-post-type-contents-bottom-widget-area',
 			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
@@ -84,6 +160,24 @@ add_action( 'init', function() {
 }, 11 );
 
 /**
+* Add bottom of contents widget area
+*
+* @deprecated
+* @return void
+*/
+add_action( 'widgets_init', function() {
+	register_sidebar( [
+		'name'          => __( 'Bottom of contents', 'snow-monkey' ),
+		'description'   => __( 'This widgets are displayed under the contents of singular post.', 'snow-monkey' ),
+		'id'            => 'contents-bottom-widget-area',
+		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="c-widget__title"><span>',
+		'after_title'   => '</span></h2>',
+	] );
+} );
+
+/**
 * Add sidebar widget area
 *
 * @return void
@@ -92,7 +186,7 @@ add_action( 'widgets_init', function() {
 	register_sidebar( [
 		'name'          => __( 'Archive sidebar', 'snow-monkey' ),
 		'id'            => 'archive-sidebar-widget-area',
-		'description'   => __( 'This widgets are displayed in the archive page sidebar.', 'snow-monkey' ),
+		'description'   => __( 'This widgets are displayed in the sidebar of archive page .', 'snow-monkey' ),
 		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="c-widget__title"><span>',

@@ -6,8 +6,6 @@
  */
 ?>
 <article <?php post_class(); ?>>
-	<?php get_template_part( 'template-parts/main-visual' ); ?>
-
 	<?php get_template_part( 'template-parts/front-page-widget-area-top' ); ?>
 
 	<?php
@@ -18,16 +16,12 @@
 	<?php if ( $content ) : ?>
 		<div class="c-section">
 			<div class="c-container">
-				<?php the_content(); ?>
+				<div class="c-entry__content">
+					<?php the_content(); ?>
+				</div>
 			</div>
 		</div>
 	<?php endif; ?>
-
-	<?php
-	if ( get_theme_mod( 'display-static-front-page-recent-posts' ) ) {
-		get_template_part( 'template-parts/recent-posts' );
-	}
-	?>
 
 	<?php get_template_part( 'template-parts/front-page-widget-area-bottom' ); ?>
 </article>
