@@ -14629,7 +14629,14 @@ blockquote {
     border-radius: 3px 0 0 3px; }
   .mce-content-body.mceContentBody .c-page-header {
     position: relative;
-    height: 60vh; }
+    height: 60vh;
+    max-height: 300px; }
+    @media (min-width: 40em) {
+      .mce-content-body.mceContentBody .c-page-header {
+        max-height: 400px; } }
+    @media (min-width: 64em) {
+      .mce-content-body.mceContentBody .c-page-header {
+        max-height: 500px; } }
     .mce-content-body.mceContentBody .c-page-header::after {
       content: '';
       display: block;

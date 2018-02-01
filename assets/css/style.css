@@ -15236,7 +15236,14 @@ html[data-window-scroll="false"] .l-container {
 
 .c-page-header {
   position: relative;
-  height: 60vh; }
+  height: 60vh;
+  max-height: 300px; }
+  @media (min-width: 40em) {
+    .c-page-header {
+      max-height: 400px; } }
+  @media (min-width: 64em) {
+    .c-page-header {
+      max-height: 500px; } }
   .c-page-header::after {
     content: '';
     display: block;
