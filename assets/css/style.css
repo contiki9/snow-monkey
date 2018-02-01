@@ -13063,9 +13063,7 @@ html[data-window-scroll="false"] .l-container {
   padding: 0.46739rem 0; }
   @media (min-width: 64em) {
     .l-header {
-      border-bottom: none; } }
-  @media (min-width: 64em) {
-    .l-header--center, .l-header--1row, .l-header--2row, .l-header--simple {
+      border-bottom: none;
       padding: 0; } }
   .l-header__drop-nav {
     position: fixed;

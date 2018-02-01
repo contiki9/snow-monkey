@@ -4020,6 +4020,7 @@ var SnowMonkeyHeader = function () {
       _this.min = 1023;
       _this.header = $('.l-header');
       _this.contents = $('.l-contents');
+      _this.defaultType = _this.header.attr('data-l-header-type');
 
       _this.init();
 
@@ -4032,6 +4033,10 @@ var SnowMonkeyHeader = function () {
   createClass(SnowMonkeyHeader, [{
     key: 'init',
     value: function init() {
+      if ('sticky' === this.defaultType) {
+        return;
+      }
+
       if (this.min < $(window).width()) {
         this.header.attr('data-l-header-type', '');
         this.contents.css('margin-top', '');
