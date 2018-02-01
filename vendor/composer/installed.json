@@ -1,23 +1,23 @@
 [
     {
         "name": "inc2734/mimizuku-core",
-        "version": "1.6.1",
-        "version_normalized": "1.6.1.0",
+        "version": "1.6.3",
+        "version_normalized": "1.6.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "770a264c9a832880e96ece9d9531c229ada97ee5"
+            "reference": "d2b99ecda36961d3eed28a380e5c7bbe503425a9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/770a264c9a832880e96ece9d9531c229ada97ee5",
-            "reference": "770a264c9a832880e96ece9d9531c229ada97ee5",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/d2b99ecda36961d3eed28a380e5c7bbe503425a9",
+            "reference": "d2b99ecda36961d3eed28a380e5c7bbe503425a9",
             "shasum": ""
         },
         "require": {
             "inc2734/wp-awesome-components": ">=0.4.4",
-            "inc2734/wp-awesome-widgets": ">=1.6.0",
-            "inc2734/wp-basis": ">=0.7.2",
+            "inc2734/wp-awesome-widgets": ">=1.6.1",
+            "inc2734/wp-basis": ">=0.7.3",
             "inc2734/wp-breadcrumbs": ">=1.0.0",
             "inc2734/wp-contents-outline": ">=0.3.2",
             "inc2734/wp-customizer-framework": ">=3.0.2",
@@ -37,7 +37,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2018-01-29T14:41:14+00:00",
+        "time": "2018-02-01T02:33:00+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -103,17 +103,17 @@
     },
     {
         "name": "inc2734/wp-awesome-widgets",
-        "version": "1.6.0",
-        "version_normalized": "1.6.0.0",
+        "version": "1.6.1",
+        "version_normalized": "1.6.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-            "reference": "42f257a13f43dccb5eb86d9668f2a99030ae1081"
+            "reference": "2b46b3069a7a0fe1f93d96d914ac616c5da758d9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/42f257a13f43dccb5eb86d9668f2a99030ae1081",
-            "reference": "42f257a13f43dccb5eb86d9668f2a99030ae1081",
+            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/2b46b3069a7a0fe1f93d96d914ac616c5da758d9",
+            "reference": "2b46b3069a7a0fe1f93d96d914ac616c5da758d9",
             "shasum": ""
         },
         "require": {
@@ -127,7 +127,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2018-01-29T14:39:58+00:00",
+        "time": "2018-02-01T01:15:03+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -149,17 +149,17 @@
     },
     {
         "name": "inc2734/wp-basis",
-        "version": "0.7.2",
-        "version_normalized": "0.7.2.0",
+        "version": "0.7.3",
+        "version_normalized": "0.7.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/wp-basis.git",
-            "reference": "b40b52f3d38f1735b1438b5980aa8b9cbae14f1d"
+            "reference": "c625523e939f23675371eab04d59a3fbed191a85"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/b40b52f3d38f1735b1438b5980aa8b9cbae14f1d",
-            "reference": "b40b52f3d38f1735b1438b5980aa8b9cbae14f1d",
+            "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/c625523e939f23675371eab04d59a3fbed191a85",
+            "reference": "c625523e939f23675371eab04d59a3fbed191a85",
             "shasum": ""
         },
         "require": {
@@ -171,7 +171,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2017-12-28T04:48:47+00:00",
+        "time": "2018-02-01T02:30:38+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -181,7 +181,7 @@
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "GPL-2.0+"
+            "GPL-2.0-or-later"
         ],
         "authors": [
             {

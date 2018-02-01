@@ -3,7 +3,7 @@
  * Core
  */
 /*!
- * Name: Basis v8.0.3
+ * Name: Basis v8.0.4
  * Description: A lightweight responsive Sass/CSS framework based on flexible box.
  * Author: Takashi Kitajima ( inc2734 )
  * Author URL: https://2inc.org
@@ -4584,7 +4584,7 @@ Container component
       padding-left: 1.86957rem; } }
   @media (min-width: 64em) {
     .c-container {
-      max-width: 80rem; } }
+      max-width: 1280px; } }
 
 /*
 ---
@@ -13033,7 +13033,7 @@ html[data-window-scroll="false"] .l-container {
         margin: 3.73913rem 0 0; } }
   .l-body--one-column-slim .l-contents__main {
     margin: 0 auto;
-    max-width: 64em; }
+    max-width: 1024px; }
   .l-body--one-column-slim .l-contents__sidebar {
     margin: 1.86957rem 0 0; }
     @media (min-width: 64em) {
@@ -13412,8 +13412,8 @@ html[data-window-scroll="false"] .l-container {
             padding: 1.86957rem 0; } }
 
 @media (min-width: 64em) {
-  .l-body--right-sidebar .l-contents__main .c-entries--rich-media .c-entries__item,
-  .l-body--left-sidebar .l-contents__main .c-entries--rich-media .c-entries__item {
+  .l-body--right-sidebar .c-entries--rich-media .c-entries__item,
+  .l-body--left-sidebar .c-entries--rich-media .c-entries__item {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
@@ -13462,7 +13462,7 @@ html[data-window-scroll="false"] .l-container {
         padding-left: 1.86957rem; } }
     @media (min-width: 64em) {
       .l-body--one-column-fluid .c-entry__header {
-        max-width: 80rem; } }
+        max-width: 1280px; } }
 
 .c-entry__title {
   margin: 0 0 0.46739rem; }
@@ -13627,7 +13627,7 @@ html[data-window-scroll="false"] .l-container {
       margin: 0 0 0.46739rem;
       font-size: 24px;
       font-size: 1.5rem;
-      line-height: 1.57971; } }
+      line-height: 1.48309; } }
 
 .c-entry-summary__content {
   margin: 0 0 0.37391rem;
@@ -13796,18 +13796,6 @@ html[data-window-scroll="false"] .l-container {
       width: 60px;
       height: 1px;
       background-color: #bd3c4f; }
-  .l-body--one-column .c-section,
-  .l-body--one-column-slim .c-section,
-  .l-body--right-sidebar .c-section,
-  .l-body--left-sidebar .c-section {
-    padding-top: 0;
-    padding-bottom: 0; }
-    .l-body--one-column .c-section > .c-container,
-    .l-body--one-column-slim .c-section > .c-container,
-    .l-body--right-sidebar .c-section > .c-container,
-    .l-body--left-sidebar .c-section > .c-container {
-      padding-right: 0;
-      padding-left: 0; }
 
 .c-widget__title {
   position: relative;
@@ -14100,8 +14088,7 @@ html[data-window-scroll="false"] .l-container {
 .widget_calendar #next {
   text-align: right; }
 
-.widget_tag_cloud a {
-  margin: 0 4px 8px 0;
+.tag-cloud-link {
   display: inline-block;
   background-color: #f7f7f7;
   border: 1px solid #eeeeee;
@@ -14114,14 +14101,17 @@ html[data-window-scroll="false"] .l-container {
   padding: 4px 8px;
   vertical-align: top; }
   @media (min-width: 64em) {
-    .widget_tag_cloud a:hover, .widget_tag_cloud a:active, .widget_tag_cloud a:focus {
+    .tag-cloud-link:hover, .tag-cloud-link:active, .tag-cloud-link:focus {
       background-color: #eeeeee;
       text-decoration: none; } }
-  .widget_tag_cloud a::before {
+  .tag-cloud-link::before {
     margin-right: 3px;
     content: '#';
     color: #bd3c4f;
     font-weight: bold; }
+
+.widget_tag_cloud .tag-cloud-link {
+  margin: 0 4px 8px 0; }
 
 .textwidget > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   margin-top: 2.05652rem; }
@@ -14565,7 +14555,7 @@ html[data-window-scroll="false"] .l-container {
           padding-left: 1.86957rem; } }
       @media (min-width: 64em) {
         .l-body--one-column-fluid .l-front-page-widget-area .wpaw-pr-box__inner {
-          max-width: 80rem; } }
+          max-width: 1280px; } }
     @media (min-width: 64em) {
       .l-body--one-column-fluid .l-front-page-widget-area .wpaw-pr-box__action {
         margin: 2.80435rem 0 0; } }
@@ -15172,7 +15162,7 @@ html[data-window-scroll="false"] .l-container {
 .snow-monkey-recent-posts .c-entries .c-entry-summary__title {
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.86957; }
+  line-height: 1.57971; }
 
 @media (min-width: 64em) {
   .l-contents__main .snow-monkey-recent-posts .c-entries--rich-media {
@@ -15203,7 +15193,7 @@ html[data-window-scroll="false"] .l-container {
   .l-contents__main .snow-monkey-recent-posts .c-entries .c-entry-summary__title {
     font-size: 24px;
     font-size: 1.5rem;
-    line-height: 1.57971; } }
+    line-height: 1.48309; } }
 
 .snow-monkey-recent-posts__action {
   margin: 1.86957rem 0 0;
@@ -15892,7 +15882,7 @@ html[data-window-scroll="false"] .l-container {
         padding-left: 1.86957rem; } }
     @media (min-width: 64em) {
       .wpac-section__container {
-        max-width: 80rem; } }
+        max-width: 1280px; } }
   .wpac-section + .wpac-section {
     margin-top: 0 !important; }
   .l-body--one-column .wpac-section,
@@ -16398,7 +16388,7 @@ span.wpcf7-not-valid-tip {
   margin: 0 0 0.46739rem;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.86957; }
+  line-height: 1.57971; }
 
 @media (min-width: 64em) {
   .l-body--right-sidebar .p-related-posts .c-entries--rich-media,

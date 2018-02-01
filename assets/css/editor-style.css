@@ -3,7 +3,7 @@
   margin: 10px; }
 
 /*!
- * Name: Basis v8.0.3
+ * Name: Basis v8.0.4
  * Description: A lightweight responsive Sass/CSS framework based on flexible box.
  * Author: Takashi Kitajima ( inc2734 )
  * Author URL: https://2inc.org
@@ -4584,7 +4584,7 @@ Container component
       padding-left: 1.86957rem; } }
   @media (min-width: 64em) {
     .c-container {
-      max-width: 80rem; } }
+      max-width: 1280px; } }
 
 /*
 ---
@@ -12962,8 +12962,8 @@ blockquote {
             .mce-content-body.mceContentBody .c-entries--simple .c-entries__item > a {
               padding: 1.86957rem 0; } }
   @media (min-width: 64em) {
-    .mce-content-body.mceContentBody .l-body--right-sidebar .l-contents__main .c-entries--rich-media .c-entries__item,
-    .mce-content-body.mceContentBody .l-body--left-sidebar .l-contents__main .c-entries--rich-media .c-entries__item {
+    .mce-content-body.mceContentBody .l-body--right-sidebar .c-entries--rich-media .c-entries__item,
+    .mce-content-body.mceContentBody .l-body--left-sidebar .c-entries--rich-media .c-entries__item {
       -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
       flex: 0 1 50%;
@@ -13010,7 +13010,7 @@ blockquote {
           padding-left: 1.86957rem; } }
       @media (min-width: 64em) {
         .l-body--one-column-fluid .mce-content-body.mceContentBody .c-entry__header {
-          max-width: 80rem; } }
+          max-width: 1280px; } }
   .mce-content-body.mceContentBody .c-entry__title {
     margin: 0 0 0.46739rem; }
   .mce-content-body.mceContentBody .c-entry__meta {
@@ -13155,7 +13155,7 @@ blockquote {
         margin: 0 0 0.46739rem;
         font-size: 24px;
         font-size: 1.5rem;
-        line-height: 1.57971; } }
+        line-height: 1.48309; } }
   .mce-content-body.mceContentBody .c-entry-summary__content {
     margin: 0 0 0.37391rem;
     font-size: 12px;
@@ -13311,18 +13311,6 @@ blockquote {
         width: 60px;
         height: 1px;
         background-color: #bd3c4f; }
-    .l-body--one-column .mce-content-body.mceContentBody .c-section,
-    .l-body--one-column-slim .mce-content-body.mceContentBody .c-section,
-    .l-body--right-sidebar .mce-content-body.mceContentBody .c-section,
-    .l-body--left-sidebar .mce-content-body.mceContentBody .c-section {
-      padding-top: 0;
-      padding-bottom: 0; }
-      .l-body--one-column .mce-content-body.mceContentBody .c-section > .c-container,
-      .l-body--one-column-slim .mce-content-body.mceContentBody .c-section > .c-container,
-      .l-body--right-sidebar .mce-content-body.mceContentBody .c-section > .c-container,
-      .l-body--left-sidebar .mce-content-body.mceContentBody .c-section > .c-container {
-        padding-right: 0;
-        padding-left: 0; }
   .mce-content-body.mceContentBody .c-widget__title {
     position: relative;
     margin: 0 0 0.93478rem;
@@ -13570,8 +13558,7 @@ blockquote {
         color: #333; }
   .mce-content-body.mceContentBody .widget_calendar #next {
     text-align: right; }
-  .mce-content-body.mceContentBody .widget_tag_cloud a {
-    margin: 0 4px 8px 0;
+  .mce-content-body.mceContentBody .tag-cloud-link {
     display: inline-block;
     background-color: #f7f7f7;
     border: 1px solid #eeeeee;
@@ -13584,14 +13571,16 @@ blockquote {
     padding: 4px 8px;
     vertical-align: top; }
     @media (min-width: 64em) {
-      .mce-content-body.mceContentBody .widget_tag_cloud a:hover, .mce-content-body.mceContentBody .widget_tag_cloud a:active, .mce-content-body.mceContentBody .widget_tag_cloud a:focus {
+      .mce-content-body.mceContentBody .tag-cloud-link:hover, .mce-content-body.mceContentBody .tag-cloud-link:active, .mce-content-body.mceContentBody .tag-cloud-link:focus {
         background-color: #eeeeee;
         text-decoration: none; } }
-    .mce-content-body.mceContentBody .widget_tag_cloud a::before {
+    .mce-content-body.mceContentBody .tag-cloud-link::before {
       margin-right: 3px;
       content: '#';
       color: #bd3c4f;
       font-weight: bold; }
+  .mce-content-body.mceContentBody .widget_tag_cloud .tag-cloud-link {
+    margin: 0 4px 8px 0; }
   .mce-content-body.mceContentBody .textwidget > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
     margin-top: 2.05652rem; }
   .mce-content-body.mceContentBody .textwidget > h1 {
@@ -14004,7 +13993,7 @@ blockquote {
             padding-left: 1.86957rem; } }
         @media (min-width: 64em) {
           .l-body--one-column-fluid .l-front-page-widget-area .mce-content-body.mceContentBody .wpaw-pr-box__inner {
-            max-width: 80rem; } }
+            max-width: 1280px; } }
       @media (min-width: 64em) {
         .l-body--one-column-fluid .l-front-page-widget-area .mce-content-body.mceContentBody .wpaw-pr-box__action {
           margin: 2.80435rem 0 0; } }
@@ -14576,7 +14565,7 @@ blockquote {
   .mce-content-body.mceContentBody .snow-monkey-recent-posts .c-entries .c-entry-summary__title {
     font-size: 16px;
     font-size: 1rem;
-    line-height: 1.86957; }
+    line-height: 1.57971; }
   @media (min-width: 64em) {
     .l-contents__main .mce-content-body.mceContentBody .snow-monkey-recent-posts .c-entries--rich-media {
       margin-right: -1.86957rem;
@@ -14602,7 +14591,7 @@ blockquote {
     .l-contents__main .mce-content-body.mceContentBody .snow-monkey-recent-posts .c-entries .c-entry-summary__title {
       font-size: 24px;
       font-size: 1.5rem;
-      line-height: 1.57971; } }
+      line-height: 1.48309; } }
   .mce-content-body.mceContentBody .snow-monkey-recent-posts__action {
     margin: 1.86957rem 0 0;
     text-align: center; }
@@ -15254,7 +15243,7 @@ blockquote {
           padding-left: 1.86957rem; } }
       @media (min-width: 64em) {
         .mce-content-body.mceContentBody .wpac-section__container {
-          max-width: 80rem; } }
+          max-width: 1280px; } }
     .mce-content-body.mceContentBody .wpac-section + .mce-content-body.mceContentBody .wpac-section {
       margin-top: 0 !important; }
     .l-body--one-column .mce-content-body.mceContentBody .wpac-section,
@@ -15715,7 +15704,7 @@ blockquote {
     margin: 0 0 0.46739rem;
     font-size: 16px;
     font-size: 1rem;
-    line-height: 1.86957; }
+    line-height: 1.57971; }
   @media (min-width: 64em) {
     .l-body--right-sidebar .mce-content-body.mceContentBody .p-related-posts .c-entries--rich-media,
     .l-body--left-sidebar .mce-content-body.mceContentBody .p-related-posts .c-entries--rich-media {
