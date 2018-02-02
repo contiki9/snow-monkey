@@ -4356,7 +4356,6 @@ $(function () {
 
 $(function () {
   $('.c-page-header').backgroundParallaxScroll();
-  $('.wpaw-showcase').backgroundParallaxScroll();
 });
 
 }(jQuery));

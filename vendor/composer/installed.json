@@ -1,22 +1,22 @@
 [
     {
         "name": "inc2734/mimizuku-core",
-        "version": "1.6.3",
-        "version_normalized": "1.6.3.0",
+        "version": "1.7.0",
+        "version_normalized": "1.7.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "d2b99ecda36961d3eed28a380e5c7bbe503425a9"
+            "reference": "a3f3a4d7fda8631a46a329d4365cb3efbd6b764b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/d2b99ecda36961d3eed28a380e5c7bbe503425a9",
-            "reference": "d2b99ecda36961d3eed28a380e5c7bbe503425a9",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/a3f3a4d7fda8631a46a329d4365cb3efbd6b764b",
+            "reference": "a3f3a4d7fda8631a46a329d4365cb3efbd6b764b",
             "shasum": ""
         },
         "require": {
             "inc2734/wp-awesome-components": ">=0.4.4",
-            "inc2734/wp-awesome-widgets": ">=1.6.1",
+            "inc2734/wp-awesome-widgets": ">=1.7.0",
             "inc2734/wp-basis": ">=0.7.3",
             "inc2734/wp-breadcrumbs": ">=1.0.0",
             "inc2734/wp-contents-outline": ">=0.3.2",
@@ -37,7 +37,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2018-02-01T02:33:00+00:00",
+        "time": "2018-02-02T12:06:48+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -103,17 +103,17 @@
     },
     {
         "name": "inc2734/wp-awesome-widgets",
-        "version": "1.6.1",
-        "version_normalized": "1.6.1.0",
+        "version": "1.7.0",
+        "version_normalized": "1.7.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-            "reference": "2b46b3069a7a0fe1f93d96d914ac616c5da758d9"
+            "reference": "86e3541d88d79995922d941d2699d020c880b664"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/2b46b3069a7a0fe1f93d96d914ac616c5da758d9",
-            "reference": "2b46b3069a7a0fe1f93d96d914ac616c5da758d9",
+            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/86e3541d88d79995922d941d2699d020c880b664",
+            "reference": "86e3541d88d79995922d941d2699d020c880b664",
             "shasum": ""
         },
         "require": {
@@ -127,7 +127,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2018-02-01T01:15:03+00:00",
+        "time": "2018-02-02T12:01:18+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
