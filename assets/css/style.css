@@ -14945,13 +14945,16 @@ html[data-window-scroll="false"] .l-container {
 .wpaw-slider .slick-dots {
   bottom: 10px; }
 
-.wpaw-slider .slick-slide {
-  height: 70vh; }
-  @media (min-width: 64em) {
+@media (max-width: 39.9375em) {
+  .wpaw-slider .slick-slide {
+    height: 70vh; } }
+  @media (max-width: 39.9375em) and (min-width: 64em) {
     .wpaw-slider .slick-slide {
       min-height: 650px; } }
-  .wpaw-slider .slick-slide::before {
-    display: none; }
+
+@media (max-width: 39.9375em) {
+    .wpaw-slider .slick-slide::before {
+      display: none; } }
 
 .l-body--one-column-fluid .l-front-page-widget-area .wpaw-slider {
   margin-right: calc(50% - 50vw);

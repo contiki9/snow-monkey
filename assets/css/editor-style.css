@@ -14374,13 +14374,15 @@ blockquote {
     margin: 0; }
   .mce-content-body.mceContentBody .wpaw-slider .slick-dots {
     bottom: 10px; }
-  .mce-content-body.mceContentBody .wpaw-slider .slick-slide {
-    height: 70vh; }
-    @media (min-width: 64em) {
-      .mce-content-body.mceContentBody .wpaw-slider .slick-slide {
-        min-height: 650px; } }
-    .mce-content-body.mceContentBody .wpaw-slider .slick-slide::before {
-      display: none; }
+  @media (max-width: 39.9375em) {
+    .mce-content-body.mceContentBody .wpaw-slider .slick-slide {
+      height: 70vh; } }
+  @media (max-width: 39.9375em) and (min-width: 64em) {
+    .mce-content-body.mceContentBody .wpaw-slider .slick-slide {
+      min-height: 650px; } }
+  @media (max-width: 39.9375em) {
+      .mce-content-body.mceContentBody .wpaw-slider .slick-slide::before {
+        display: none; } }
   .l-body--one-column-fluid .l-front-page-widget-area .mce-content-body.mceContentBody .wpaw-slider {
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw); }
