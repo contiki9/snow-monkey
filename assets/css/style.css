@@ -13075,6 +13075,8 @@ html[data-window-scroll="false"] .l-container {
     .l-header {
       border-bottom: none;
       padding: 0; } }
+  .l-header .c-row, .l-header .wpac-columns__row, .l-header .c-row__col, .l-header .wpac-columns__col {
+    margin-bottom: 0; }
   .l-header__drop-nav {
     position: fixed;
     top: 0;
@@ -13148,6 +13150,15 @@ html[data-window-scroll="false"] .l-container {
   .l-center-header[data-has-global-nav="true"] .l-center-header__row:nth-child(1) {
     margin: 1.86957rem 0 0.46739rem;
     padding: 0; } }
+
+.l-center-header .p-global-nav .c-navbar {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .l-center-header .p-global-nav .c-navbar__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto; }
 
 .l-sidebar-widget-area > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   margin-top: 1.86957rem; }
