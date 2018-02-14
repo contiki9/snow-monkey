@@ -76,6 +76,8 @@ class View {
 	 * @return void
 	 */
 	protected function _render_direct() {
+		global $post;
+		setup_postdata( $post );
 		$this->_render();
 	}
 
