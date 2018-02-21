@@ -3,7 +3,7 @@
   margin: 10px; }
 
 /*!
- * Name: Basis v8.0.4
+ * Name: Basis v8.0.5
  * Description: A lightweight responsive Sass/CSS framework based on flexible box.
  * Author: Takashi Kitajima ( inc2734 )
  * Author URL: https://2inc.org
@@ -8531,7 +8531,7 @@ Content utility
 </div>
 ```
 */
-.u-content > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+.u-content > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   margin-top: 1.86957rem; }
 
 .u-content > h1 {
@@ -9164,7 +9164,7 @@ blockquote {
   background-size: 35px;
   border-left: none;
   padding: 1.40217rem 0.93478rem 0.93478rem 2.80435rem; }
-  blockquote > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  blockquote > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
     margin-top: 0.93478rem; }
   blockquote > h1 {
     margin-top: 0;
@@ -13094,7 +13094,7 @@ blockquote {
       @media (min-width: 64em) {
         .mce-content-body.mceContentBody .c-entry__meta a:hover, .mce-content-body.mceContentBody .c-entry__meta a:active, .mce-content-body.mceContentBody .c-entry__meta a:focus {
           opacity: .7; } }
-  .mce-content-body.mceContentBody .c-entry__content > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  .mce-content-body.mceContentBody .c-entry__content > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
     margin-top: 2.05652rem; }
   .mce-content-body.mceContentBody .c-entry__content > h1 {
     margin-top: 0;
@@ -13148,7 +13148,7 @@ blockquote {
     margin-top: 0.46739rem; }
   .mce-content-body.mceContentBody .c-entry__footer {
     margin: 3.73913rem 0 0; }
-    .mce-content-body.mceContentBody .c-entry__footer > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    .mce-content-body.mceContentBody .c-entry__footer > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
       margin-top: 1.86957rem; }
     .mce-content-body.mceContentBody .c-entry__footer > h1 {
       margin-top: 0;
@@ -13651,7 +13651,7 @@ blockquote {
       font-weight: bold; }
   .mce-content-body.mceContentBody .widget_tag_cloud .tag-cloud-link {
     margin: 0 4px 8px 0; }
-  .mce-content-body.mceContentBody .textwidget > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  .mce-content-body.mceContentBody .textwidget > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
     margin-top: 2.05652rem; }
   .mce-content-body.mceContentBody .textwidget > h1 {
     margin-top: 0;
@@ -13835,7 +13835,7 @@ blockquote {
       font-size: 0.875rem;
       line-height: 1.99379;
       color: #666666; }
-      .mce-content-body.mceContentBody .wpaw-pr-box__lead > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+      .mce-content-body.mceContentBody .wpaw-pr-box__lead > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
         margin-top: 0.93478rem; }
       .mce-content-body.mceContentBody .wpaw-pr-box__lead > h1 {
         margin-top: 0;
@@ -13985,7 +13985,7 @@ blockquote {
       font-size: 14px;
       font-size: 0.875rem;
       line-height: 1.99379; }
-      .mce-content-body.mceContentBody .wpaw-pr-box__item-summary > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+      .mce-content-body.mceContentBody .wpaw-pr-box__item-summary > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
         margin-top: 0.93478rem; }
       .mce-content-body.mceContentBody .wpaw-pr-box__item-summary > h1 {
         margin-top: 0;
@@ -14085,7 +14085,7 @@ blockquote {
           margin: 0 -1.86957rem; } }
     .mce-content-body.mceContentBody .wpaw-showcase__body {
       padding: 0 0.93478rem; }
-      .mce-content-body.mceContentBody .wpaw-showcase__body > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+      .mce-content-body.mceContentBody .wpaw-showcase__body > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
         margin-top: 0.93478rem; }
       .mce-content-body.mceContentBody .wpaw-showcase__body > h1 {
         margin-top: 0;
@@ -14115,7 +14115,7 @@ blockquote {
       @media (min-width: 40em) {
         .mce-content-body.mceContentBody .wpaw-showcase__body {
           padding: 0 1.86957rem; }
-          .mce-content-body.mceContentBody .wpaw-showcase__body > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+          .mce-content-body.mceContentBody .wpaw-showcase__body > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
             margin-top: 1.86957rem; }
           .mce-content-body.mceContentBody .wpaw-showcase__body > h1 {
             margin-top: 0;
@@ -14148,7 +14148,7 @@ blockquote {
       @media (min-width: 40em) {
         .mce-content-body.mceContentBody .wpaw-showcase__figure {
           padding: 0 1.86957rem; } }
-    .mce-content-body.mceContentBody .wpaw-showcase__lead > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    .mce-content-body.mceContentBody .wpaw-showcase__lead > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
       margin-top: 0.93478rem; }
     .mce-content-body.mceContentBody .wpaw-showcase__lead > h1 {
       margin-top: 0;
@@ -14176,7 +14176,7 @@ blockquote {
     .mce-content-body.mceContentBody .wpaw-showcase__lead > ul ul {
       margin-bottom: 0; }
     @media (min-width: 40em) {
-      .mce-content-body.mceContentBody .wpaw-showcase__lead > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+      .mce-content-body.mceContentBody .wpaw-showcase__lead > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
         margin-top: 1.86957rem; }
       .mce-content-body.mceContentBody .wpaw-showcase__lead > h1 {
         margin-top: 0;
@@ -14409,7 +14409,7 @@ blockquote {
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.99379; }
-    .mce-content-body.mceContentBody .wpaw-slider__item-summary > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    .mce-content-body.mceContentBody .wpaw-slider__item-summary > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
       margin-top: 0.93478rem; }
     .mce-content-body.mceContentBody .wpaw-slider__item-summary > h1 {
       margin-top: 0;
@@ -14479,7 +14479,7 @@ blockquote {
       max-width: 100%; }
   .mce-content-body.mceContentBody .wpaw-site-branding__description {
     margin: 1.40217rem 0 0; }
-    .mce-content-body.mceContentBody .wpaw-site-branding__description > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    .mce-content-body.mceContentBody .wpaw-site-branding__description > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
       margin-top: 0.93478rem; }
     .mce-content-body.mceContentBody .wpaw-site-branding__description > h1 {
       margin-top: 0;
@@ -14967,7 +14967,7 @@ blockquote {
       font-size: 14px;
       font-size: 0.875rem;
       line-height: 1.99379; }
-      .mce-content-body.mceContentBody .c-comment__content > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+      .mce-content-body.mceContentBody .c-comment__content > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
         margin-top: 0.93478rem; }
       .mce-content-body.mceContentBody .c-comment__content > h1 {
         margin-top: 0;
@@ -15559,7 +15559,7 @@ blockquote {
       padding-left: 6em; }
   .mce-content-body.mceContentBody .wpcf7:not(:last-child) {
     margin-bottom: 2.80435rem; }
-  .mce-content-body.mceContentBody .wpcf7-form > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  .mce-content-body.mceContentBody .wpcf7-form > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
     margin-top: 1.86957rem; }
   .mce-content-body.mceContentBody .wpcf7-form > h1 {
     margin-top: 0;
@@ -16100,7 +16100,7 @@ blockquote {
       -webkit-box-flex: 1;
       -ms-flex: 1 1 0%;
       flex: 1 1 0%; }
-  .mce-content-body.mceContentBody > *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  .mce-content-body.mceContentBody > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
     margin-top: 2.05652rem; }
   .mce-content-body.mceContentBody > h1 {
     margin-top: 0;
