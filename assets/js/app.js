@@ -3881,6 +3881,57 @@ var Inc2734_WP_Share_Buttons = function Inc2734_WP_Share_Buttons() {
 
 'use strict';
 
+var Inc2734_WP_Pure_CSS_Gallery = function () {
+  function Inc2734_WP_Pure_CSS_Gallery() {
+    var _this = this;
+
+    classCallCheck(this, Inc2734_WP_Pure_CSS_Gallery);
+
+    $(function () {
+      _this.images = $('a:not([class]) > img[class*="wp-image-"]');
+      _this.generateLightbox();
+    });
+  }
+
+  createClass(Inc2734_WP_Pure_CSS_Gallery, [{
+    key: 'generateLightbox',
+    value: function generateLightbox() {
+      this.images.each(function (i, e) {
+        var image = $(e);
+        var anchor = image.parent();
+        var href = anchor.attr('href');
+
+        if (!href.match(image.attr('src').replace('/^([^\.]+)\.+?$/'))) {
+          return true;
+        }
+
+        var remoteImg = new Image();
+        remoteImg.src = href;
+        var remoteImgWidth = remoteImg.width;
+        var remoteImgHeight = remoteImg.height;
+
+        if (!remoteImgWidth || !remoteImgHeight) {
+          return true;
+        }
+
+        var id = 'wp-pre-css-gallery-lightbox-id-' + i;
+        anchor.attr('href', '#' + id);
+
+        var overlay = $('<div class="wp-pure-css-gallery-lightbox" id="' + id + '" />').append($('<a class="wp-pure-css-gallery-lightbox__close-btn" href="#_">&times</a>')).append($('<a class="wp-pure-css-gallery-lightbox__image-wrapper" href="#_" />').append($('<div class="wp-pure-css-gallery-lightbox__image" />').css({
+          backgroundImage: 'url(' + href + ')',
+          height: remoteImgHeight,
+          width: remoteImgWidth
+        })));
+
+        anchor.after(overlay);
+      });
+    }
+  }]);
+  return Inc2734_WP_Pure_CSS_Gallery;
+}();
+
+'use strict';
+
 var FixAdminBar = function () {
   function FixAdminBar() {
     var _this = this;
@@ -4331,6 +4382,8 @@ var SnowMonkeyFooterStickyNav = function () {
 new BasisStickyHeader();
 
 new Inc2734_WP_Share_Buttons();
+
+new Inc2734_WP_Pure_CSS_Gallery();
 
 new FixAdminBar();
 
