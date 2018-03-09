@@ -13119,6 +13119,9 @@ html[data-window-scroll="false"] .l-container {
     .l-body--one-column-fluid .l-footer {
       margin-top: 3.73913rem; } }
 
+.home.page.l-body--one-column-fluid .l-footer {
+  margin-top: 0; }
+
 .l-header {
   z-index: 2;
   background-color: #fff;
