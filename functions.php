@@ -194,19 +194,21 @@ function snow_monkey_eyecatch_position_choices() {
  * @return boolean
  */
 function snow_monkey_is_output_page_header() {
+	$return = false;
+
 	if ( is_front_page() ) {
-		return false;
+		$return = false;
 	} elseif ( is_page() && 'page-header' === get_theme_mod( 'page-eyecatch' ) ) {
-		return true;
+		$return = true;
 	} elseif ( is_singular( 'post' ) && 'page-header' === get_theme_mod( 'post-eyecatch' ) ) {
-		return true;
+		$return = true;
 	} elseif ( snow_monkey_is_output_page_header_title() ) {
-		return true;
+		$return = true;
 	} elseif ( ! is_singular() ) {
-		return true;
+		$return = true;
 	}
 
-	return false;
+	return apply_filters( 'snow_monkey_is_output_page_header', $return );
 }
 
 /**
@@ -215,13 +217,15 @@ function snow_monkey_is_output_page_header() {
  * @return boolean
  */
 function snow_monkey_is_output_page_header_title() {
+	$return = false;
+
 	if ( is_page() && 'title-on-page-header' === get_theme_mod( 'page-eyecatch' ) ) {
-		return true;
+		$return = true;
 	} elseif ( is_singular( 'post' ) && 'title-on-page-header' === get_theme_mod( 'post-eyecatch' ) ) {
-		return true;
+		$return = true;
 	}
 
-	return false;
+	return apply_filters( 'snow_monkey_is_output_page_header_title', $return );
 }
 
 /**
@@ -338,4 +342,45 @@ function snow_monkey_get_the_tag_ids( $post_id ) {
 	}
 
 	return $tag_ids;
+}
+
+/**
+ * Display the site logo or the site title
+ *
+ * @return void
+ */
+function snow_monkey_the_site_branding_title() {
+	?>
+	<?php if ( has_custom_logo() ) : ?>
+		<?php the_custom_logo(); ?>
+	<?php else : ?>
+		<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
+	<?php endif; ?>
+	<?php
+}
+
+/**
+ * Sets entry content styles
+ *
+ * @param string $selector
+ * @return void
+ */
+function snow_monkey_entry_content_styles( $selector ) {
+	$accent_color = get_theme_mod( 'accent-color' );
+
+	$cfs = \Inc2734\WP_Customizer_Framework\Customizer_Framework::styles();
+
+	$cfs->register(
+		$selector . ' > h2',
+		'border-color: ' . $accent_color
+	);
+
+	$cfs->register(
+		$selector . ' > table thead th',
+		[
+			'background-color: ' . $accent_color,
+			'border-right-color: ' . $cfs->light( $accent_color ),
+			'border-left-color: ' . $cfs->light( $accent_color ),
+		]
+	);
 }
