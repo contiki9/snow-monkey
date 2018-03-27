@@ -1,17 +1,17 @@
 [
     {
         "name": "inc2734/mimizuku-core",
-        "version": "1.10.3",
-        "version_normalized": "1.10.3.0",
+        "version": "1.10.4",
+        "version_normalized": "1.10.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "e0b1e2d1eaef5cae610a44118c41a8ddb1ca0205"
+            "reference": "42016f1feffc6624a7caf7480d614ed680fcfdc6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/e0b1e2d1eaef5cae610a44118c41a8ddb1ca0205",
-            "reference": "e0b1e2d1eaef5cae610a44118c41a8ddb1ca0205",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/42016f1feffc6624a7caf7480d614ed680fcfdc6",
+            "reference": "42016f1feffc6624a7caf7480d614ed680fcfdc6",
             "shasum": ""
         },
         "require": {
@@ -26,7 +26,7 @@
             "inc2734/wp-oembed-blog-card": ">=2.1.0",
             "inc2734/wp-profile-box": ">=1.0.1",
             "inc2734/wp-pure-css-gallery": ">=1.1.0",
-            "inc2734/wp-seo": ">=1.0.2",
+            "inc2734/wp-seo": ">=1.0.3",
             "inc2734/wp-share-buttons": ">=1.0.6",
             "inc2734/wp-view-controller": ">=4.0.5",
             "php": ">=5.6"
@@ -37,7 +37,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2018-03-16T13:18:29+00:00",
+        "time": "2018-03-27T03:13:40+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -589,17 +589,17 @@
     },
     {
         "name": "inc2734/wp-seo",
-        "version": "1.0.2",
-        "version_normalized": "1.0.2.0",
+        "version": "1.0.3",
+        "version_normalized": "1.0.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/wp-seo.git",
-            "reference": "ce5207b16502e1fe0232b82d2ed067cbdad937e4"
+            "reference": "7712520f88dbd2d3115077897669f52dcaac166c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/ce5207b16502e1fe0232b82d2ed067cbdad937e4",
-            "reference": "ce5207b16502e1fe0232b82d2ed067cbdad937e4",
+            "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/7712520f88dbd2d3115077897669f52dcaac166c",
+            "reference": "7712520f88dbd2d3115077897669f52dcaac166c",
             "shasum": ""
         },
         "require": {
@@ -612,7 +612,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2018-03-16T12:34:15+00:00",
+        "time": "2018-03-27T03:11:57+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
