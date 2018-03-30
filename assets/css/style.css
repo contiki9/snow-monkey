@@ -13120,6 +13120,9 @@ html[data-window-scroll="false"] .l-container {
         width: 336px; } }
   .home.page.l-body--one-column-fluid .l-contents__inner {
     margin-top: 0; }
+  .home.page.l-body--one-column-fluid .l-contents > .c-fluid-container {
+    padding-right: 0;
+    padding-left: 0; }
 
 .l-body--right-sidebar .l-footer,
 .l-body--left-sidebar .l-footer,
