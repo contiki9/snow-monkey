@@ -3985,6 +3985,9 @@ var FixAdminBar = function () {
             if ('sticky' === this.header.attr('data-l-header-type')) {
               this.header.css('position', 'relative');
               this.header.css('top', '');
+            } else if ('overlay' === this.header.attr('data-l-header-type')) {
+              this.header.css('position', '');
+              this.header.css('top', adminbar_height + scroll * -1);
             } else {
               this.header.css('top', adminbar_height + scroll * -1);
             }
@@ -4075,7 +4078,7 @@ var SnowMonkeyHeader = function () {
       _this.min = 1023;
       _this.header = $('.l-header');
       _this.contents = $('.l-contents');
-      _this.defaultType = _this.header.attr('data-l-header-type');
+      _this.defaultType = _this.header.attr('data-snow-monkey-default-header-position');
 
       _this.init();
 
@@ -4088,18 +4091,22 @@ var SnowMonkeyHeader = function () {
   createClass(SnowMonkeyHeader, [{
     key: 'init',
     value: function init() {
-      if ('sticky' === this.defaultType) {
+      if ('sticky' !== this.defaultType && 'overlay' !== this.defaultType) {
         return;
       }
 
       if (this.min < $(window).width()) {
-        this.header.attr('data-l-header-type', '');
-        this.contents.css('margin-top', '');
+        if ('sticky' === this.defaultType || 'overlay' === this.defaultType) {
+          this.header.attr('data-l-header-type', '');
+          this.contents.css('margin-top', '');
+        }
       } else {
-        this.header.attr('data-l-header-type', 'sticky');
+        this.header.attr('data-l-header-type', this.defaultType);
         if ('fixed' === this.header.css('position') || 'absolute' === this.header.css('position')) {
-          var headerHeight = this.header.outerHeight();
-          this.contents.css('marginTop', headerHeight + 'px');
+          if ('sticky' === this.defaultType) {
+            var headerHeight = this.header.outerHeight();
+            this.contents.css('margin-top', headerHeight + 'px');
+          }
         }
       }
     }
@@ -4161,6 +4168,10 @@ var SnowMonkeyDropNav = function () {
   }, {
     key: '_showGnav',
     value: function _showGnav() {
+      if ('sticky' === this.header.attr('data-l-header-type') && false === snow_monkey_header_position_only_mobile) {
+        return;
+      }
+
       $(this.gNavClass).attr('aria-hidden', 'false');
       this.nav.attr('aria-hidden', 'true');
       this.nav.find(this.gNavClass).attr('aria-hidden', 'true');
@@ -4168,6 +4179,10 @@ var SnowMonkeyDropNav = function () {
   }, {
     key: '_showDropNav',
     value: function _showDropNav() {
+      if ('sticky' === this.header.attr('data-l-header-type') && false === snow_monkey_header_position_only_mobile) {
+        return;
+      }
+
       $(this.gNavClass).attr('aria-hidden', 'true');
       this.nav.attr('aria-hidden', 'false');
       this.nav.find(this.gNavClass).attr('aria-hidden', 'false');
@@ -4377,6 +4392,82 @@ var SnowMonkeyFooterStickyNav = function () {
   return SnowMonkeyFooterStickyNav;
 }();
 
+'use strict';
+
+var SnowMonkeyProfileBox = function SnowMonkeyProfileBox() {
+  classCallCheck(this, SnowMonkeyProfileBox);
+
+  $(function () {
+    $('.wp-profile-box__sns-accounts-item').each(function (i, e) {
+      $(e).children('a[href*="twitter.com"]').prepend($('<i class="fab fa-twitter" />'));
+      $(e).children('a[href*="facebook.com"]').prepend($('<i class="fab fa-facebook" />'));
+      $(e).children('a[href*="instagram.com"]').prepend($('<i class="fab fa-instagram" />'));
+      $(e).children('a[href*="youtube.com"]').prepend($('<i class="fab fa-youtube" />'));
+      $(e).children('a[href*="linkedin.com"]').prepend($('<i class="fab fa-linkedin" />'));
+      $(e).children('a[href*="wordpress.org"]').prepend($('<i class="fab fa-wordpress" />'));
+      $(e).children('a[href*="wordpress.com"]').prepend($('<i class="fab fa-wordpress" />'));
+      $(e).children('a[href*="tumblr.com"]').prepend($('<i class="fab fa-tumblr" />'));
+      $(e).children('a:not(:has(i))').prepend($('<i class="fas fa-globe" />'));
+    });
+  });
+};
+
+'use strict';
+
+var SnowMonkeySocialNav = function SnowMonkeySocialNav() {
+  classCallCheck(this, SnowMonkeySocialNav);
+
+  $(function () {
+    $('.p-social-nav .menu-item').each(function (i, e) {
+      $(e).children('a[href*="amazon.com"]').prepend($('<i class="fab fa-amazon" />'));
+      $(e).children('a[href*="bitbucket.org"]').prepend($('<i class="fab fa-bitbucket" />'));
+      $(e).children('a[href*="paypal.com"]').prepend($('<i class="fab fa-paypal" />'));
+      $(e).children('a[href*="stripe.com"]').prepend($('<i class="fab fa-stripe" />'));
+      $(e).children('a[href*="codepen.io"]').prepend($('<i class="fab fa-codepen" />'));
+      $(e).children('a[href*="digg.com"]').prepend($('<i class="fab fa-digg" />'));
+      $(e).children('a[href*="dribbble.com"]').prepend($('<i class="fab fa-dribbble" />'));
+      $(e).children('a[href*="dropbox.com"]').prepend($('<i class="fab fa-dropbox" />'));
+      $(e).children('a[href*="facebook.com"]').prepend($('<i class="fab fa-facebook" />'));
+      $(e).children('a[href*="flickr.com"]').prepend($('<i class="fab fa-flickr" />'));
+      $(e).children('a[href*="getpocket.com"]').prepend($('<i class="fab fa-get-pocket" />'));
+      $(e).children('a[href*="github.com"]').prepend($('<i class="fab fa-github" />'));
+      $(e).children('a[href*="gitlab.com"]').prepend($('<i class="fab fa-gitlab" />'));
+      $(e).children('a[href*="plus.google.com"]').prepend($('<i class="fab fa-google-plus" />'));
+      $(e).children('a[href*="google.com"]').prepend($('<i class="fab fa-google" />'));
+      $(e).children('a[href*="instagram.com"]').prepend($('<i class="fab fa-instagram" />'));
+      $(e).children('a[href*="linkedin.com"]').prepend($('<i class="fab fa-linkedin" />'));
+      $(e).children('a[href*="medium.com"]').prepend($('<i class="fab fa-medium" />'));
+      $(e).children('a[href*="pinterest.com"]').prepend($('<i class="fab fa-pinterest" />'));
+      $(e).children('a[href*="pinterest.jp"]').prepend($('<i class="fab fa-pinterest" />'));
+      $(e).children('a[href*="reddit.com"]').prepend($('<i class="fab fa-reddit" />'));
+      $(e).children('a[href*="skype.com"]').prepend($('<i class="fab fa-skype" />'));
+      $(e).children('a[href*="slack.com"]').prepend($('<i class="fab fa-slack" />'));
+      $(e).children('a[href*="slideshare.net"]').prepend($('<i class="fab fa-slideshare" />'));
+      $(e).children('a[href*="snapchat.com"]').prepend($('<i class="fab fa-snapchat" />'));
+      $(e).children('a[href*="stackoverflow.com"]').prepend($('<i class="fab fa-stack-overflow" />'));
+      $(e).children('a[href*="tumblr.com"]').prepend($('<i class="fab fa-tumblr" />'));
+      $(e).children('a[href*="vimeo.com"]').prepend($('<i class="fab fa-vimeo" />'));
+      $(e).children('a[href*="twitter.com"]').prepend($('<i class="fab fa-twitter" />'));
+      $(e).children('a[href*="weibo.com"]').prepend($('<i class="fab fa-weibo" />'));
+      $(e).children('a[href*="wordpress.org"]').prepend($('<i class="fab fa-wordpress" />'));
+      $(e).children('a[href*="wordpress.com"]').prepend($('<i class="fab fa-wordpress" />'));
+      $(e).children('a[href*="youtube.com"]').prepend($('<i class="fab fa-youtube" />'));
+      $(e).children('a:not(:has(i))').prepend($('<i class="fas fa-globe" />'));
+    });
+  });
+};
+
+'use strict';
+
+var SnowMonkeySlick = function SnowMonkeySlick() {
+  classCallCheck(this, SnowMonkeySlick);
+
+  $(function () {
+    $('.slick-prev').prepend($('<span />').prepend($('<i class="fas fa-angle-left" />')));
+    $('.slick-next').prepend($('<span />').prepend($('<i class="fas fa-angle-right" />')));
+  });
+};
+
 /**
  * Name: jquery.contents-outline
  * Author: Takashi Kitajima (inc2734)
@@ -4498,13 +4589,21 @@ new SnowMonkeyWpawPickupSlider();
 
 new SnowMonkeyWidgetItemExpander();
 
-new SnowMonkeyHeader();
+if (snow_monkey_header_position_only_mobile) {
+  new SnowMonkeyHeader();
+}
 
 new SnowMonkeyDropNav();
 
 new SnowMonkeyPageTopScroll();
 
 new SnowMonkeyFooterStickyNav();
+
+new SnowMonkeyProfileBox();
+
+new SnowMonkeySocialNav();
+
+new SnowMonkeySlick();
 
 $(function () {
   $('.l-sidebar-sticky-widget-area').sticky({
