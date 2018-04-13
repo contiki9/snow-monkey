@@ -12572,12 +12572,13 @@ blockquote {
         .mce-content-body.mceContentBody .c-page-header__meta a:hover, .mce-content-body.mceContentBody .c-page-header__meta a:active, .mce-content-body.mceContentBody .c-page-header__meta a:focus {
           opacity: .7; } }
   .mce-content-body.mceContentBody .c-pagination {
-    margin: 1.86957rem 0 0;
     text-align: center;
     font-size: 0; }
-    @media (min-width: 64em) {
-      .mce-content-body.mceContentBody .c-pagination {
-        margin: 3.73913rem 0 0; } }
+    .p-archive + .mce-content-body.mceContentBody .c-pagination {
+      margin: 1.86957rem 0 0; }
+      @media (min-width: 64em) {
+        .p-archive + .mce-content-body.mceContentBody .c-pagination {
+          margin: 3.73913rem 0 0; } }
     .mce-content-body.mceContentBody .c-pagination__item, .mce-content-body.mceContentBody .c-pagination__item-link, .mce-content-body.mceContentBody .c-pagination__item-ellipsis {
       margin: 0 2px;
       display: -webkit-inline-box;
@@ -12593,7 +12594,8 @@ blockquote {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
-      text-decoration: none; }
+      text-decoration: none;
+      vertical-align: top; }
     .mce-content-body.mceContentBody .c-pagination__item {
       background-color: #bd3c4f;
       color: #fff; }
@@ -13800,12 +13802,9 @@ blockquote {
       line-height: 1.2;
       padding: .5em 0;
       text-decoration: none; }
-    .mce-content-body.mceContentBody .p-footer-sticky-nav__icon {
-      margin-bottom: 2px;
-      display: block;
-      font-size: 24px;
-      font-size: 1.5rem;
-      line-height: 1; }
+      .mce-content-body.mceContentBody .p-footer-sticky-nav a > svg {
+        margin: 0 auto 2px;
+        display: block; }
     .mce-content-body.mceContentBody .p-footer-sticky-nav .c-navbar__item {
       -webkit-box-flex: 1;
       -ms-flex: 1 1 0%;

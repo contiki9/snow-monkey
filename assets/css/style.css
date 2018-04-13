@@ -13210,12 +13210,13 @@ html[data-window-scroll="false"] .l-container {
         opacity: .7; } }
 
 .c-pagination {
-  margin: 1.86957rem 0 0;
   text-align: center;
   font-size: 0; }
-  @media (min-width: 64em) {
-    .c-pagination {
-      margin: 3.73913rem 0 0; } }
+  .p-archive + .c-pagination {
+    margin: 1.86957rem 0 0; }
+    @media (min-width: 64em) {
+      .p-archive + .c-pagination {
+        margin: 3.73913rem 0 0; } }
   .c-pagination__item, .c-pagination__item-link, .c-pagination__item-ellipsis {
     margin: 0 2px;
     display: -webkit-inline-box;
@@ -13231,7 +13232,8 @@ html[data-window-scroll="false"] .l-container {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    text-decoration: none; }
+    text-decoration: none;
+    vertical-align: top; }
   .c-pagination__item {
     background-color: #bd3c4f;
     color: #fff; }
@@ -14521,12 +14523,9 @@ span.wpcf7-not-valid-tip {
     line-height: 1.2;
     padding: .5em 0;
     text-decoration: none; }
-  .p-footer-sticky-nav__icon {
-    margin-bottom: 2px;
-    display: block;
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1; }
+    .p-footer-sticky-nav a > svg {
+      margin: 0 auto 2px;
+      display: block; }
   .p-footer-sticky-nav .c-navbar__item {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 0%;
