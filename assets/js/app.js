@@ -4168,8 +4168,10 @@ var SnowMonkeyDropNav = function () {
   }, {
     key: '_showGnav',
     value: function _showGnav() {
-      if ('sticky' === this.header.attr('data-l-header-type') && false === snow_monkey_header_position_only_mobile) {
-        return;
+      if ('sticky' === this.header.attr('data-l-header-type') || 'overlay' === this.header.attr('data-l-header-type')) {
+        if (false === snow_monkey_header_position_only_mobile) {
+          return;
+        }
       }
 
       $(this.gNavClass).attr('aria-hidden', 'false');
@@ -4179,8 +4181,10 @@ var SnowMonkeyDropNav = function () {
   }, {
     key: '_showDropNav',
     value: function _showDropNav() {
-      if ('sticky' === this.header.attr('data-l-header-type') && false === snow_monkey_header_position_only_mobile) {
-        return;
+      if ('sticky' === this.header.attr('data-l-header-type') || 'overlay' === this.header.attr('data-l-header-type')) {
+        if (false === snow_monkey_header_position_only_mobile) {
+          return;
+        }
       }
 
       $(this.gNavClass).attr('aria-hidden', 'true');
