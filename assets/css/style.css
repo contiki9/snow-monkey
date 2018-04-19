@@ -10752,9 +10752,9 @@ html[data-window-scroll="false"] .l-container {
       display: -ms-flexbox;
       display: flex;
       -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
       -ms-flex-wrap: nowrap;
       flex-wrap: nowrap; } }
   .l-body--left-sidebar .l-contents__main {
