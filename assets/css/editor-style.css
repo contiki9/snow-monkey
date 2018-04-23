@@ -9792,6 +9792,17 @@ blockquote {
   bottom: 0;
   left: 0; }
 
+.wpaw-slider__item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: auto; }
+
 .wpaw-slider__body {
   position: relative; }
 
@@ -9816,16 +9827,8 @@ blockquote {
     content: '';
     display: block;
     padding-top: 56.25%; }
-  .wpaw-slider .slick-slide .wpaw-slider__item {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    height: auto; }
+  .wpaw-slider .slick-slide > div > div {
+    display: block !important; }
 
 .wpaw-pr-box {
   /**
@@ -12039,6 +12042,7 @@ blockquote {
   .mce-content-body.mceContentBody .widget_inc2734_wp_awesome_widgets_slider {
     padding: 0; }
   .mce-content-body.mceContentBody .wpaw-slider__item {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -12050,7 +12054,8 @@ blockquote {
     align-items: center; }
   .mce-content-body.mceContentBody .wpaw-slider__item-body {
     position: relative;
-    max-width: 100%; }
+    max-width: 100%;
+    padding: 1.86957rem; }
     @media (min-width: 40em) {
       .mce-content-body.mceContentBody .wpaw-slider__item-body {
         width: 40rem; } }
@@ -12132,18 +12137,33 @@ blockquote {
     margin: 0; }
   .mce-content-body.mceContentBody .wpaw-slider .slick-dots {
     bottom: 10px; }
-  @media (max-width: 39.9375em) {
-    .mce-content-body.mceContentBody .wpaw-slider .slick-slide {
-      height: 70vh; } }
-  @media (max-width: 39.9375em) and (min-width: 64em) {
-    .mce-content-body.mceContentBody .wpaw-slider .slick-slide {
-      min-height: 650px; } }
-  @media (max-width: 39.9375em) {
-      .mce-content-body.mceContentBody .wpaw-slider .slick-slide::before {
-        display: none; } }
+  .mce-content-body.mceContentBody .wpaw-slider .slick-slide::before {
+    display: none; }
   .l-body--one-column-fluid .l-front-page-widget-area .mce-content-body.mceContentBody .wpaw-slider {
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw); }
+  .l-front-page-widget-area .mce-content-body.mceContentBody .wpaw-slider__item {
+    height: 70vh; }
+    @media (min-width: 64em) {
+      .l-front-page-widget-area .mce-content-body.mceContentBody .wpaw-slider__item {
+        min-height: 650px; } }
+  @media (min-width: 64em) {
+    .l-front-page-widget-area .mce-content-body.mceContentBody .wpaw-slider[data-wpaw-slide-slides-to-show] .slick-slide::before {
+      content: '';
+      display: block;
+      padding: 56.25% 0 0; }
+    .l-front-page-widget-area .mce-content-body.mceContentBody .wpaw-slider[data-wpaw-slide-slides-to-show] .wpaw-slider__item {
+      position: absolute;
+      height: auto;
+      min-height: 1px; } }
+  .l-front-page-widget-area .mce-content-body.mceContentBody .wpaw-slider[data-wpaw-slide-slides-to-show="1"] .slick-slide::before {
+    display: none; }
+  .l-front-page-widget-area .mce-content-body.mceContentBody .wpaw-slider[data-wpaw-slide-slides-to-show="1"] .wpaw-slider__item {
+    position: relative;
+    height: 70vh; }
+    @media (min-width: 64em) {
+      .l-front-page-widget-area .mce-content-body.mceContentBody .wpaw-slider[data-wpaw-slide-slides-to-show="1"] .wpaw-slider__item {
+        min-height: 650px; } }
   @media (min-width: 40em) {
     .l-front-page-widget-area .mce-content-body.mceContentBody .wpaw-slider__item-title {
       font-size: 32px;
@@ -12387,12 +12407,6 @@ blockquote {
     right: 0;
     -webkit-transform: translate(100%, -50%);
     transform: translate(100%, -50%); }
-  @media (max-width: 39.9375em) {
-    .mce-content-body.mceContentBody .wpaw-pickup-slider__item {
-      height: 70vh; } }
-  @media (max-width: 39.9375em) and (min-width: 64em) {
-    .mce-content-body.mceContentBody .wpaw-pickup-slider__item {
-      min-height: 650px; } }
   .l-body--one-column-fluid .l-front-page-widget-area .mce-content-body.mceContentBody .wpaw-pickup-slider {
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw); }
