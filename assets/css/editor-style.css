@@ -12512,8 +12512,10 @@ blockquote {
       @media (min-width: 64em) {
         .mce-content-body.mceContentBody .c-breadcrumbs a:hover, .mce-content-body.mceContentBody .c-breadcrumbs a:active, .mce-content-body.mceContentBody .c-breadcrumbs a:focus {
           text-decoration: underline; } }
-    .l-contents .mce-content-body.mceContentBody .c-breadcrumbs {
+    .l-contents .mce-content-body.mceContentBody .c-breadcrumbs:first-child {
       margin-top: 0.46739rem; }
+    .l-contents .mce-content-body.mceContentBody .c-breadcrumbs:last-child {
+      margin-bottom: 0.46739rem; }
   .mce-content-body.mceContentBody .c-input-group__btn {
     background-color: #fff; }
   .mce-content-body.mceContentBody .c-input-group__field > input[type="search"] {
