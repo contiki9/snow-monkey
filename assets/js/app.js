@@ -4514,6 +4514,60 @@ var SnowMonkeySlick = function SnowMonkeySlick() {
   };
 })(jQuery);
 
+(function ($$$1) {
+  $$$1('.wpaw-pickup-slider__canvas').each(function (i, e) {
+    var slider = $$$1(e);
+
+    slider.on('init setPosition', function (event, slick) {
+      setSliderHeight();
+    });
+
+    function setSliderHeight() {
+      var sliderHeight = 0;
+      slider.find('.wpaw-pickup-slider__item').css('min-height', '').each(function (i, e) {
+        var slide = $$$1(e);
+        var recommendHeight = slide.outerWidth() * 0.5625;
+        var naturalHeight = slide.outerHeight();
+        var height = recommendHeight;
+        if (recommendHeight < naturalHeight) {
+          height = naturalHeight;
+        }
+        if (sliderHeight < height) {
+          sliderHeight = height;
+        }
+      }).css('min-height', sliderHeight);
+    }
+  });
+})(jQuery);
+
+(function ($$$1) {
+  $$$1('.wpaw-slider__canvas').each(function (i, e) {
+    var slider = $$$1(e);
+
+    slider.on('init setPosition', function (event, slick) {
+      setSliderHeight();
+    });
+
+    function setSliderHeight() {
+      var sliderHeight = 0;
+      slider.find('.wpaw-slider__item').css('min-height', '').each(function (i, e) {
+        var slide = $$$1(e);
+        var recommendHeight = slide.outerWidth() * 0.5625;
+        var naturalHeight = slide.outerHeight();
+        var height = recommendHeight;
+        if (recommendHeight < naturalHeight) {
+          height = naturalHeight;
+        }
+        if (sliderHeight < height) {
+          sliderHeight = height;
+        }
+      }).css('min-height', sliderHeight);
+    }
+  });
+})(jQuery);
+
+'use strict';
+
 'use strict';
 
 new BasisStickyHeader();
