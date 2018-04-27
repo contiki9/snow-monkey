@@ -4392,7 +4392,9 @@ var SnowMonkeyPageTopScroll = function () {
   createClass(SnowMonkeyPageTopScroll, [{
     key: '_updatePageTopBtnPosition',
     value: function _updatePageTopBtnPosition() {
-      this.pageTop.css('bottom', $('.p-footer-sticky-nav')[0].offsetHeight);
+      if ($('.p-footer-sticky-nav').length) {
+        this.pageTop.css('bottom', $('.p-footer-sticky-nav')[0].offsetHeight);
+      }
     }
   }, {
     key: '_setSmoothScrollEvent',
