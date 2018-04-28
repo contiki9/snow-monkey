@@ -12,6 +12,7 @@ return array(
     'Inc2734\\WP_SEO\\' => array($vendorDir . '/inc2734/wp-seo/src'),
     'Inc2734\\WP_Pure_CSS_Gallery\\' => array($vendorDir . '/inc2734/wp-pure-css-gallery/src'),
     'Inc2734\\WP_Profile_Box\\' => array($vendorDir . '/inc2734/wp-profile-box/src'),
+    'Inc2734\\WP_Page_Speed_Optimization\\' => array($vendorDir . '/inc2734/wp-page-speed-optimization/src'),
     'Inc2734\\WP_OGP\\' => array($vendorDir . '/inc2734/wp-ogp/src'),
     'Inc2734\\WP_OEmbed_Blog_Card\\' => array($vendorDir . '/inc2734/wp-oembed-blog-card/src'),
     'Inc2734\\WP_Like_Me_Box\\' => array($vendorDir . '/inc2734/wp-like-me-box/src'),

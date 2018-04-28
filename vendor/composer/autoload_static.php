@@ -18,6 +18,7 @@ class ComposerStaticInit3ff4c920f90ba1626f3b1a6ee2b3ac32
             'Inc2734\\WP_SEO\\' => 15,
             'Inc2734\\WP_Pure_CSS_Gallery\\' => 28,
             'Inc2734\\WP_Profile_Box\\' => 23,
+            'Inc2734\\WP_Page_Speed_Optimization\\' => 35,
             'Inc2734\\WP_OGP\\' => 15,
             'Inc2734\\WP_OEmbed_Blog_Card\\' => 28,
             'Inc2734\\WP_Like_Me_Box\\' => 23,
@@ -56,6 +57,10 @@ class ComposerStaticInit3ff4c920f90ba1626f3b1a6ee2b3ac32
         'Inc2734\\WP_Profile_Box\\' => 
         array (
             0 => __DIR__ . '/..' . '/inc2734/wp-profile-box/src',
+        ),
+        'Inc2734\\WP_Page_Speed_Optimization\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/inc2734/wp-page-speed-optimization/src',
         ),
         'Inc2734\\WP_OGP\\' => 
         array (
