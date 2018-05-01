@@ -10612,6 +10612,9 @@ img[class*="wp-image-"] {
 /**
  * Layout
  */
+.l-body {
+  visibility: visible; }
+
 html[data-sticky-footer="true"] .l-container > .l-header,
 html[data-sticky-footer="true"] .l-container > .l-footer,
 html[data-window-scroll="false"] > .l-header,
