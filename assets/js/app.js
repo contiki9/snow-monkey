@@ -3934,8 +3934,6 @@ var Inc2734_WP_Pure_CSS_Gallery = function () {
 
 var FixAdminBar = function () {
   function FixAdminBar() {
-    var _this = this;
-
     classCallCheck(this, FixAdminBar);
 
     this.min = 599;
@@ -3943,31 +3941,29 @@ var FixAdminBar = function () {
     this.header = $('.l-header');
     this.contents = $('.l-contents');
 
-    $(function () {
-      _this.adminBar = $('#wpadminbar');
+    this.adminBar = $('#wpadminbar');
 
-      if (_this.adminBar.length) {
-        _this.fixHeaderPosition();
-        _this.fixStickyFooter();
-        _this.fixDisableWindowScroll();
-        _this.setListener();
-      }
-    });
+    if (this.adminBar.length) {
+      this.fixHeaderPosition();
+      this.fixStickyFooter();
+      this.fixDisableWindowScroll();
+      this.setListener();
+    }
   }
 
   createClass(FixAdminBar, [{
     key: 'setListener',
     value: function setListener() {
-      var _this2 = this;
+      var _this = this;
 
       $(window).resize(function () {
-        _this2.fixHeaderPosition();
-        _this2.fixStickyFooter();
-        _this2.fixDisableWindowScroll();
+        _this.fixHeaderPosition();
+        _this.fixStickyFooter();
+        _this.fixDisableWindowScroll();
       });
 
       $(window).scroll(function () {
-        _this2.fixHeaderPosition();
+        _this.fixHeaderPosition();
       });
     }
   }, {
@@ -4025,17 +4021,21 @@ var FixAdminBar = function () {
 var SnowMonkeyWpawPickupSlider = function SnowMonkeyWpawPickupSlider() {
   classCallCheck(this, SnowMonkeyWpawPickupSlider);
 
-  $(function () {
-    var slider = $('.wpaw-pickup-slider__canvas');
+  var slider = $('.wpaw-pickup-slider__canvas');
 
-    slider.slick('slickSetOption', 'arrows', true, true);
-    slider.slick('slickSetOption', 'pauseOnFocus', false, true);
-    slider.slick('slickSetOption', 'pauseOnHover', false, true);
+  slider.on('init', function (event, slick) {
+    setTimeout(function () {
+      slider.slick('slickSetOption', 'arrows', true, true);
+      slider.slick('slickSetOption', 'pauseOnFocus', false, true);
+      slider.slick('slickSetOption', 'pauseOnHover', false, true);
+      slider.slick('slickSetOption', 'prevArrow', '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><span><i class="fas fa-angle-left"></i></span></button>', true);
+      slider.slick('slickSetOption', 'nextArrow', '<button class="slick-next slick-arrow" aria-label="Next" type="button"><span><i class="fas fa-angle-right"></i></span></button>', true);
 
-    slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-      slider.find('.slick-slide').removeClass('pan');
-      slider.find('.slick-slide').eq(currentSlide).addClass('pan');
-    });
+      slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        slider.find('.slick-slide').removeClass('pan');
+        slider.find('.slick-slide').eq(currentSlide).addClass('pan');
+      });
+    }, 0);
   });
 };
 
@@ -4044,24 +4044,22 @@ var SnowMonkeyWpawPickupSlider = function SnowMonkeyWpawPickupSlider() {
 var SnowMonkeyWidgetItemExpander = function SnowMonkeyWidgetItemExpander() {
   classCallCheck(this, SnowMonkeyWidgetItemExpander);
 
-  $(function () {
-    var parents = $('.c-widget li:has(.children, .sub-menu)');
+  var parents = $('.c-widget li:has(.children, .sub-menu)');
 
-    parents.each(function (i, e) {
-      var parent = $(e);
+  parents.each(function (i, e) {
+    var parent = $(e);
 
-      parent.prepend('<button class="children-expander" data-is-expanded="false"></button>');
-      parent.find('.children, .sub-menu').attr('data-is-hidden', 'true');
+    parent.prepend('<button class="children-expander" data-is-expanded="false"></button>');
+    parent.find('.children, .sub-menu').attr('data-is-hidden', 'true');
 
-      parent.children('.children-expander').click(function (event) {
-        if ('false' === $(event.target).attr('data-is-expanded')) {
-          $(event.target).attr('data-is-expanded', 'true');
-          parent.children('.children, .sub-menu').attr('data-is-hidden', 'false');
-        } else {
-          parent.find('.children-expander').attr('data-is-expanded', 'false');
-          parent.find('.children, .sub-menu').attr('data-is-hidden', 'true');
-        }
-      });
+    parent.children('.children-expander').click(function (event) {
+      if ('false' === $(event.target).attr('data-is-expanded')) {
+        $(event.target).attr('data-is-expanded', 'true');
+        parent.children('.children, .sub-menu').attr('data-is-hidden', 'false');
+      } else {
+        parent.find('.children-expander').attr('data-is-expanded', 'false');
+        parent.find('.children, .sub-menu').attr('data-is-hidden', 'true');
+      }
     });
   });
 };
@@ -4074,17 +4072,15 @@ var SnowMonkeyHeader = function () {
 
     classCallCheck(this, SnowMonkeyHeader);
 
-    $(function () {
-      _this.min = 1023;
-      _this.header = $('.l-header');
-      _this.contents = $('.l-contents');
-      _this.defaultType = _this.header.attr('data-snow-monkey-default-header-position');
+    this.min = 1023;
+    this.header = $('.l-header');
+    this.contents = $('.l-contents');
+    this.defaultType = this.header.attr('data-snow-monkey-default-header-position');
 
+    this.init();
+
+    $(window).resize(function () {
       _this.init();
-
-      $(window).resize(function () {
-        _this.init();
-      });
     });
   }
 
@@ -4118,62 +4114,58 @@ var SnowMonkeyHeader = function () {
 
 var SnowMonkeyDropNav = function () {
   function SnowMonkeyDropNav() {
-    var _this = this;
-
     classCallCheck(this, SnowMonkeyDropNav);
 
-    $(function () {
-      _this.header = $('.l-header');
-      _this.nav = $('.l-header__drop-nav');
-      _this.min = 1023;
-      _this.defaultWindowWidth = $(window).width();
-      _this.gNavClass = '.p-global-nav';
+    this.header = $('.l-header');
+    this.nav = $('.l-header__drop-nav');
+    this.min = 1023;
+    this.defaultWindowWidth = $(window).width();
+    this.gNavClass = '.p-global-nav';
 
-      if (_this._isUpdateVisibility()) {
-        _this._showGnav();
-        _this._hideDropNav();
-      }
+    if (this._isUpdateVisibility()) {
+      this._showGnav();
+      this._hideDropNav();
+    }
 
-      _this.onScroll();
-      _this.onResize();
-    });
+    this.onScroll();
+    this.onResize();
   }
 
   createClass(SnowMonkeyDropNav, [{
     key: 'onScroll',
     value: function onScroll() {
-      var _this2 = this;
+      var _this = this;
 
       $(window).scroll(function () {
-        if (_this2.min < $(window).width()) {
-          if (_this2.header.outerHeight() < $(window).scrollTop()) {
-            if (_this2._isUpdateVisibility()) {
-              _this2._hideGnav();
-              _this2._showDropNav();
+        if (_this.min < $(window).width()) {
+          if (_this.header.outerHeight() < $(window).scrollTop()) {
+            if (_this._isUpdateVisibility()) {
+              _this._hideGnav();
+              _this._showDropNav();
               return;
             }
           }
         }
 
-        if (_this2._isUpdateVisibility()) {
-          _this2._showGnav();
-          _this2._hideDropNav();
+        if (_this._isUpdateVisibility()) {
+          _this._showGnav();
+          _this._hideDropNav();
         }
       });
     }
   }, {
     key: 'onResize',
     value: function onResize() {
-      var _this3 = this;
+      var _this2 = this;
 
       $(window).resize(function () {
-        if ($(window).width() === _this3.defaultWindowWidth) {
+        if ($(window).width() === _this2.defaultWindowWidth) {
           return;
         }
 
-        if (_this3._isUpdateVisibility()) {
-          _this3._showGnav();
-          _this3._hideDropNav();
+        if (_this2._isUpdateVisibility()) {
+          _this2._showGnav();
+          _this2._hideDropNav();
         }
       });
     }
@@ -4367,25 +4359,23 @@ var SnowMonkeyPageTopScroll = function () {
 
     classCallCheck(this, SnowMonkeyPageTopScroll);
 
-    $(function () {
-      _this.pageTop = $('.c-page-top');
+    this.pageTop = $('.c-page-top');
 
-      $(window).load(function () {
-        _this._updatePageTopBtnPosition();
-        _this._setSmoothScrollEvent();
-      });
+    $(window).load(function () {
+      _this._updatePageTopBtnPosition();
+      _this._setSmoothScrollEvent();
+    });
 
-      $(window).resize(function () {
-        _this._updatePageTopBtnPosition();
-      });
+    $(window).resize(function () {
+      _this._updatePageTopBtnPosition();
+    });
 
-      $(window).scroll(function () {
-        if (500 > $(window).scrollTop()) {
-          _this.pageTop.attr('aria-hidden', 'true');
-        } else {
-          _this.pageTop.attr('aria-hidden', 'false');
-        }
-      });
+    $(window).scroll(function () {
+      if (500 > $(window).scrollTop()) {
+        _this.pageTop.attr('aria-hidden', 'true');
+      } else {
+        _this.pageTop.attr('aria-hidden', 'false');
+      }
     });
   }
 
@@ -4444,14 +4434,12 @@ var SnowMonkeyFooterStickyNav = function () {
 
     classCallCheck(this, SnowMonkeyFooterStickyNav);
 
-    $(function () {
-      _this.nav = $('.p-footer-sticky-nav');
+    this.nav = $('.p-footer-sticky-nav');
 
+    this._init();
+
+    $(window).on('load resize', function () {
       _this._init();
-
-      $(window).on('load resize', function () {
-        _this._init();
-      });
     });
   }
 
@@ -4467,17 +4455,6 @@ var SnowMonkeyFooterStickyNav = function () {
   }]);
   return SnowMonkeyFooterStickyNav;
 }();
-
-'use strict';
-
-var SnowMonkeySlick = function SnowMonkeySlick() {
-  classCallCheck(this, SnowMonkeySlick);
-
-  $(function () {
-    $('.slick-prev').prepend($('<span />').prepend($('<i class="fas fa-angle-left" />')));
-    $('.slick-next').prepend($('<span />').prepend($('<i class="fas fa-angle-right" />')));
-  });
-};
 
 /**
  * Name: jquery.contents-outline
@@ -4663,8 +4640,6 @@ new SnowMonkeyDropNav();
 new SnowMonkeyPageTopScroll();
 
 new SnowMonkeyFooterStickyNav();
-
-new SnowMonkeySlick();
 
 $('.l-sidebar-sticky-widget-area').sticky({
   breakpoint: 1024,
