@@ -4666,20 +4666,17 @@ new SnowMonkeyFooterStickyNav();
 
 new SnowMonkeySlick();
 
-$(function () {
-  $('.l-sidebar-sticky-widget-area').sticky({
-    breakpoint: 1024,
-    offset: function () {
-      if ('sticky' === $('.l-header').attr('data-l-header-type')) {
-        return $('.l-header').outerHeight() + parseInt($('html').css('margin-top'));
-      }
-      return $('.l-header__drop-nav .p-global-nav').outerHeight() + parseInt($('html').css('margin-top'));
-    }()
-  });
+$('.l-sidebar-sticky-widget-area').sticky({
+  breakpoint: 1024,
+  offset: function () {
+    if ('sticky' === $('.l-header').attr('data-l-header-type')) {
+      return $('.l-header').outerHeight() + parseInt($('html').css('margin-top'));
+    }
+    return $('.l-header__drop-nav .p-global-nav').outerHeight() + parseInt($('html').css('margin-top'));
+  }()
 });
 
-$(function () {
-  $('.c-page-header').backgroundParallaxScroll();
-});
+$('.c-page-header').backgroundParallaxScroll();
+$('.wpaw-showcase').backgroundParallaxScroll();
 
 }(jQuery));
