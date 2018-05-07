@@ -5,7 +5,7 @@
   var api = wp.customize;
 
   api.bind('ready', function () {
-    wp.customize('design-skin', function (setting) {
+    api('design-skin', function (setting) {
       setting.bind(function (value) {
         api.panel.each(function (panel) {
           panel.container.remove();

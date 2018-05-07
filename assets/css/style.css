@@ -11505,7 +11505,7 @@ html[data-window-scroll="false"] .l-container {
       font-size: 1.5rem;
       line-height: 1.32609; } }
   @media (min-width: 64em) {
-    .c-site-branding__title {
+    .l-center-header .c-site-branding__title {
       font-size: 32px;
       font-size: 2rem;
       line-height: 1.32609; } }

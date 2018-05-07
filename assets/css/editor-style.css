@@ -11008,7 +11008,7 @@ blockquote {
         font-size: 1.5rem;
         line-height: 1.32609; } }
     @media (min-width: 64em) {
-      .mce-content-body.mceContentBody .c-site-branding__title {
+      .l-center-header .mce-content-body.mceContentBody .c-site-branding__title {
         font-size: 32px;
         font-size: 2rem;
         line-height: 1.32609; } }

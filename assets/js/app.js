@@ -3522,6 +3522,281 @@ var Sticky = function () {
 })(jQuery);
 
 /**
+ * Name: jquery.contents-outline
+ * Author: Takashi Kitajima (inc2734)
+ * Author URI: https://2inc.org
+ * License: MIT
+ *
+ * @param { headings, moveToBefore1stHeading }
+ */
+
+'use strict';
+
+(function ($$$1) {
+  $$$1.fn.contentsOutline = function (params) {
+    var params = $$$1.extend({
+      headings: $$$1('h2, h3, h4, h5, h6'),
+      moveToBefore1stHeading: true
+    }, params);
+
+    return this.each(function (i, e) {
+      var wrapper = $$$1(e);
+      var co = wrapper.find('.contents-outline');
+
+      var outlines = $$$1('<ol />');
+
+      (function () {
+        params.headings.each(function (i, e) {
+          if (!$$$1(e).attr('id')) {
+            $$$1(e).attr('id', 'co-index-' + i);
+          }
+          outlines = _createTree(outlines, $$$1(e));
+        });
+
+        if (!outlines.html()) {
+          wrapper.remove();
+        }
+
+        if (true === params.moveToBefore1stHeading) {
+          params.headings.first().before(wrapper);
+        }
+
+        wrapper.attr('aria-hidden', 'false');
+        co.append(outlines);
+      })();
+
+      /**
+       * Create tree
+       *
+       * @param   {dom}  parent  The children wrapper element
+       * @param   {dom}  heading  Heading
+       * @param   {Number} hierarchical  Hierarchical
+       * @return  {dom}  The tree
+       */
+      function _createTree(parent, heading) {
+        var hierarchical = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2;
+
+        var nest = parseInt(heading.prop('tagName').replace('H', '') - hierarchical);
+
+        if (0 > nest) {
+          return parent;
+        }
+
+        if (0 === nest) {
+          parent.append(_createItem(heading));
+        } else {
+          var children = _createSubTree(parent, heading, hierarchical);
+
+          if (1 > parent.children('li').length) {
+            parent.append($$$1('<li />').append(children));
+          } else {
+            parent.children('li:last-child').append(children);
+          }
+        }
+
+        return parent;
+      }
+
+      /**
+       * Create child item
+       *
+       * @param {dom}  heading  Heading
+       * @return {dom}  Child item
+       */
+      function _createItem(heading) {
+        return $$$1('<li />').append($$$1('<a />').text(heading.text()).attr('href', '#' + heading.attr('id')));
+      }
+
+      /**
+       * Create subtree
+       *
+       * @param   {dom}  parent  The children wrapper element
+       * @param   {dom}  heading  Heading
+       * @param   {Number} hierarchical  Hierarchical
+       * @return  {dom}  The tree
+       */
+      function _createSubTree(parent, heading, hierarchical) {
+        var _parent = void 0;
+        if (1 > parent.children('li:last-child').children('ol').length) {
+          _parent = $$$1('<ol />');
+        } else {
+          _parent = parent.children('li:last-child').children('ol');
+        }
+        return _createTree(_parent, heading, hierarchical + 1);
+      }
+    });
+  };
+})(jQuery);
+
+'use strict';
+
+$.fn.WpawPickupSlider = function () {
+  var methods = {
+    setItemHeight: function setItemHeight(items) {
+      var sliderHeight = 0;
+      items.css('min-height', '');
+      items.each(function (i, e) {
+        var slide = $(e);
+        var naturalHeight = slide.outerHeight();
+        var recommendHeight = slide.outerWidth() * 0.5625;
+        if (sliderHeight < naturalHeight || sliderHeight < recommendHeight) {
+          if (recommendHeight < naturalHeight) {
+            sliderHeight = naturalHeight;
+          } else {
+            sliderHeight = recommendHeight;
+          }
+        }
+      });
+      items.css('min-height', sliderHeight);
+    }
+  };
+
+  var windowWidth = $(window).width();
+
+  return this.each(function (i, e) {
+    var slider = $(e);
+    var sliderWidth = false;
+
+    slider.on('init', function (event, slick) {
+      setTimeout(function () {
+        methods.setItemHeight(slider.find('.wpaw-pickup-slider__item'));
+      }, 0);
+    });
+
+    slider.on('setPosition', function (event, slick) {
+      if (slick.windowWidth !== windowWidth || slick.slideWidth !== sliderWidth) {
+        methods.setItemHeight(slider.find('.wpaw-pickup-slider__item'));
+        windowWidth = slick.windowWidth;
+        sliderWidth = slick.slideWidth;
+      }
+    });
+
+    slider.slick({
+      "speed": 500,
+      "autoplaySpeed": 4000,
+      "slidesToShow": 1,
+      "fade": true,
+      "autoplay": true,
+      "dots": false,
+      "infinite": true
+    });
+  });
+};
+
+'use strict';
+
+$.fn.WpawSlider = function () {
+  var methods = {
+    setItemHeight: function setItemHeight(items) {
+      var sliderHeight = 0;
+      items.css('min-height', '');
+      items.each(function (i, e) {
+        var slide = $(e);
+        var naturalHeight = slide.outerHeight();
+        var recommendHeight = slide.outerWidth() * 0.5625;
+        if (sliderHeight < naturalHeight || sliderHeight < recommendHeight) {
+          if (recommendHeight < naturalHeight) {
+            sliderHeight = naturalHeight;
+          } else {
+            sliderHeight = recommendHeight;
+          }
+        }
+      });
+      items.css('min-height', sliderHeight);
+    }
+  };
+
+  var windowWidth = $(window).width();
+
+  return this.each(function (i, e) {
+    var slider = $(e);
+    var sliderWidth = false;
+
+    slider.on('init', function (event, slick) {
+      setTimeout(function () {
+        methods.setItemHeight(slider.find('.wpaw-slider__item'));
+      }, 0);
+    });
+
+    slider.on('setPosition', function (event, slick) {
+      if (slick.windowWidth !== windowWidth || slick.slideWidth !== sliderWidth) {
+        methods.setItemHeight(slider.find('.wpaw-slider__item'));
+        windowWidth = slick.windowWidth;
+        sliderWidth = slick.slideWidth;
+      }
+    });
+
+    slider.slick({
+      "speed": slider.attr('data-wpaw-slide-duration'),
+      "autoplaySpeed": slider.attr('data-wpaw-slide-interval'),
+      "slidesToShow": slider.attr('data-wpaw-slide-slides-to-show'),
+      "slidesToScroll": slider.attr('data-wpaw-slide-slides-to-scroll'),
+      "autoplay": true,
+      "fade": slider.attr('data-wpaw-slide-fade'),
+      "dots": true,
+      "infinite": true,
+      "arrows": false,
+      "responsive": [{
+        "breakpoint": 1024,
+        "settings": {
+          "slidesToShow": 1,
+          "slidesToScroll": 1
+        }
+      }]
+    });
+  });
+};
+
+'use strict';
+
+'use strict';
+
+$.fn.wpContentsOutline = function () {
+  return this.each(function (i, e) {
+    var post_class = $(e).attr('data-wpco-post-class');
+    var selector = $(e).attr('data-wpco-selector');
+    var headings = $(e).attr('data-wpco-headings');
+    var move = $(e).attr('data-wpco-move');
+
+    $(e).contentsOutline({
+      headings: $(post_class).find(selector).children(headings),
+      moveToBefore1stHeading: move
+    });
+  });
+};
+
+'use strict';
+
+$.fn.SnowMonkeyWpawPickupSlider = function () {
+  var methods = {
+    init: function init(slider) {
+      slider.slick('slickSetOption', 'arrows', true, true);
+      slider.slick('slickSetOption', 'pauseOnFocus', false, true);
+      slider.slick('slickSetOption', 'pauseOnHover', false, true);
+      slider.slick('slickSetOption', 'prevArrow', '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><span><i class="fas fa-angle-left"></i></span></button>', true);
+      slider.slick('slickSetOption', 'nextArrow', '<button class="slick-next slick-arrow" aria-label="Next" type="button"><span><i class="fas fa-angle-right"></i></span></button>', true);
+
+      slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        slider.find('.slick-slide').removeClass('pan');
+        slider.find('.slick-slide').eq(currentSlide).addClass('pan');
+      });
+    }
+  };
+
+  return this.each(function (i, e) {
+    var slider = $(e);
+
+    slider.on('init', function (event, slick) {
+      setTimeout(function () {
+        methods.init(slider);
+      }, 0);
+    });
+
+    slider.WpawPickupSlider();
+  });
+};
+
+/**
  * This is for the sticky header.
  */
 
@@ -4018,29 +4293,6 @@ var FixAdminBar = function () {
 
 'use strict';
 
-var SnowMonkeyWpawPickupSlider = function SnowMonkeyWpawPickupSlider() {
-  classCallCheck(this, SnowMonkeyWpawPickupSlider);
-
-  var slider = $('.wpaw-pickup-slider__canvas');
-
-  slider.on('init', function (event, slick) {
-    setTimeout(function () {
-      slider.slick('slickSetOption', 'arrows', true, true);
-      slider.slick('slickSetOption', 'pauseOnFocus', false, true);
-      slider.slick('slickSetOption', 'pauseOnHover', false, true);
-      slider.slick('slickSetOption', 'prevArrow', '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><span><i class="fas fa-angle-left"></i></span></button>', true);
-      slider.slick('slickSetOption', 'nextArrow', '<button class="slick-next slick-arrow" aria-label="Next" type="button"><span><i class="fas fa-angle-right"></i></span></button>', true);
-
-      slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        slider.find('.slick-slide').removeClass('pan');
-        slider.find('.slick-slide').eq(currentSlide).addClass('pan');
-      });
-    }, 0);
-  });
-};
-
-'use strict';
-
 var SnowMonkeyWidgetItemExpander = function SnowMonkeyWidgetItemExpander() {
   classCallCheck(this, SnowMonkeyWidgetItemExpander);
 
@@ -4456,167 +4708,6 @@ var SnowMonkeyFooterStickyNav = function () {
   return SnowMonkeyFooterStickyNav;
 }();
 
-/**
- * Name: jquery.contents-outline
- * Author: Takashi Kitajima (inc2734)
- * Author URI: https://2inc.org
- * License: MIT
- *
- * @param { headings, moveToBefore1stHeading }
- */
-
-'use strict';
-
-(function ($$$1) {
-  $$$1.fn.contentsOutline = function (params) {
-    var params = $$$1.extend({
-      headings: $$$1('h2, h3, h4, h5, h6'),
-      moveToBefore1stHeading: true
-    }, params);
-
-    return this.each(function (i, e) {
-      var wrapper = $$$1(e);
-      var co = wrapper.find('.contents-outline');
-
-      var outlines = $$$1('<ol />');
-
-      (function () {
-        params.headings.each(function (i, e) {
-          if (!$$$1(e).attr('id')) {
-            $$$1(e).attr('id', 'co-index-' + i);
-          }
-          outlines = _createTree(outlines, $$$1(e));
-        });
-
-        if (!outlines.html()) {
-          wrapper.remove();
-        }
-
-        if (true === params.moveToBefore1stHeading) {
-          params.headings.first().before(wrapper);
-        }
-
-        wrapper.attr('aria-hidden', 'false');
-        co.append(outlines);
-      })();
-
-      /**
-       * Create tree
-       *
-       * @param   {dom}  parent  The children wrapper element
-       * @param   {dom}  heading  Heading
-       * @param   {Number} hierarchical  Hierarchical
-       * @return  {dom}  The tree
-       */
-      function _createTree(parent, heading) {
-        var hierarchical = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2;
-
-        var nest = parseInt(heading.prop('tagName').replace('H', '') - hierarchical);
-
-        if (0 > nest) {
-          return parent;
-        }
-
-        if (0 === nest) {
-          parent.append(_createItem(heading));
-        } else {
-          var children = _createSubTree(parent, heading, hierarchical);
-
-          if (1 > parent.children('li').length) {
-            parent.append($$$1('<li />').append(children));
-          } else {
-            parent.children('li:last-child').append(children);
-          }
-        }
-
-        return parent;
-      }
-
-      /**
-       * Create child item
-       *
-       * @param {dom}  heading  Heading
-       * @return {dom}  Child item
-       */
-      function _createItem(heading) {
-        return $$$1('<li />').append($$$1('<a />').text(heading.text()).attr('href', '#' + heading.attr('id')));
-      }
-
-      /**
-       * Create subtree
-       *
-       * @param   {dom}  parent  The children wrapper element
-       * @param   {dom}  heading  Heading
-       * @param   {Number} hierarchical  Hierarchical
-       * @return  {dom}  The tree
-       */
-      function _createSubTree(parent, heading, hierarchical) {
-        var _parent = void 0;
-        if (1 > parent.children('li:last-child').children('ol').length) {
-          _parent = $$$1('<ol />');
-        } else {
-          _parent = parent.children('li:last-child').children('ol');
-        }
-        return _createTree(_parent, heading, hierarchical + 1);
-      }
-    });
-  };
-})(jQuery);
-
-(function ($$$1) {
-  $$$1('.wpaw-pickup-slider__canvas').each(function (i, e) {
-    var slider = $$$1(e);
-
-    slider.on('init setPosition', function (event, slick) {
-      setSliderHeight();
-    });
-
-    function setSliderHeight() {
-      var sliderHeight = 0;
-      slider.find('.wpaw-pickup-slider__item').css('min-height', '').each(function (i, e) {
-        var slide = $$$1(e);
-        var recommendHeight = slide.outerWidth() * 0.5625;
-        var naturalHeight = slide.outerHeight();
-        var height = recommendHeight;
-        if (recommendHeight < naturalHeight) {
-          height = naturalHeight;
-        }
-        if (sliderHeight < height) {
-          sliderHeight = height;
-        }
-      }).css('min-height', sliderHeight);
-    }
-  });
-})(jQuery);
-
-(function ($$$1) {
-  $$$1('.wpaw-slider__canvas').each(function (i, e) {
-    var slider = $$$1(e);
-
-    slider.on('init setPosition', function (event, slick) {
-      setSliderHeight();
-    });
-
-    function setSliderHeight() {
-      var sliderHeight = 0;
-      slider.find('.wpaw-slider__item').css('min-height', '').each(function (i, e) {
-        var slide = $$$1(e);
-        var recommendHeight = slide.outerWidth() * 0.5625;
-        var naturalHeight = slide.outerHeight();
-        var height = recommendHeight;
-        if (recommendHeight < naturalHeight) {
-          height = naturalHeight;
-        }
-        if (sliderHeight < height) {
-          sliderHeight = height;
-        }
-      }).css('min-height', sliderHeight);
-    }
-  });
-})(jQuery);
-
-'use strict';
-
 'use strict';
 
 new BasisStickyHeader();
@@ -4626,8 +4717,6 @@ new Inc2734_WP_Share_Buttons();
 new Inc2734_WP_Pure_CSS_Gallery();
 
 new FixAdminBar();
-
-new SnowMonkeyWpawPickupSlider();
 
 new SnowMonkeyWidgetItemExpander();
 
@@ -4653,5 +4742,10 @@ $('.l-sidebar-sticky-widget-area').sticky({
 
 $('.c-page-header').backgroundParallaxScroll();
 $('.wpaw-showcase').backgroundParallaxScroll();
+
+$('.wpaw-pickup-slider__canvas').SnowMonkeyWpawPickupSlider();
+$('.wpaw-slider__canvas').WpawSlider();
+
+$('.wpco-wrapper').wpContentsOutline();
 
 }(jQuery));

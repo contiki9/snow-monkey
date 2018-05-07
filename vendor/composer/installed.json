@@ -1,30 +1,30 @@
 [
     {
         "name": "inc2734/mimizuku-core",
-        "version": "1.11.7",
-        "version_normalized": "1.11.7.0",
+        "version": "2.0.2",
+        "version_normalized": "2.0.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "01e87b6ff935a273ff69790443cd47dbbc9411ef"
+            "reference": "eb2d121f1842328ab5565db81ca1634c84f6f7b9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/01e87b6ff935a273ff69790443cd47dbbc9411ef",
-            "reference": "01e87b6ff935a273ff69790443cd47dbbc9411ef",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/eb2d121f1842328ab5565db81ca1634c84f6f7b9",
+            "reference": "eb2d121f1842328ab5565db81ca1634c84f6f7b9",
             "shasum": ""
         },
         "require": {
             "inc2734/wp-awesome-components": ">=0.5.0",
-            "inc2734/wp-awesome-widgets": ">=1.11.6",
+            "inc2734/wp-awesome-widgets": ">=2.0.1",
             "inc2734/wp-basis": ">=0.7.7",
             "inc2734/wp-breadcrumbs": ">=1.0.2",
-            "inc2734/wp-contents-outline": ">=0.5.2",
+            "inc2734/wp-contents-outline": ">=1.0.1",
             "inc2734/wp-customizer-framework": ">=3.0.8",
             "inc2734/wp-github-theme-updater": ">=0.2.7",
             "inc2734/wp-like-me-box": ">=0.1.5",
             "inc2734/wp-oembed-blog-card": ">=3.0.0",
-            "inc2734/wp-page-speed-optimization": ">=0.4.0",
+            "inc2734/wp-page-speed-optimization": ">=0.5.0",
             "inc2734/wp-profile-box": ">=1.1.0",
             "inc2734/wp-pure-css-gallery": ">=1.1.0",
             "inc2734/wp-seo": ">=1.0.3",
@@ -38,7 +38,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2018-05-02T15:17:41+00:00",
+        "time": "2018-05-07T23:42:05+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -104,21 +104,21 @@
     },
     {
         "name": "inc2734/wp-awesome-widgets",
-        "version": "1.11.6",
-        "version_normalized": "1.11.6.0",
+        "version": "2.0.1",
+        "version_normalized": "2.0.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-            "reference": "2d7579e4e54582bf7379b0d988ddb244ebce9dd3"
+            "reference": "9bc51c566630bdd7f5826a577b8c01abd20128a0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/2d7579e4e54582bf7379b0d988ddb244ebce9dd3",
-            "reference": "2d7579e4e54582bf7379b0d988ddb244ebce9dd3",
+            "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/9bc51c566630bdd7f5826a577b8c01abd20128a0",
+            "reference": "9bc51c566630bdd7f5826a577b8c01abd20128a0",
             "shasum": ""
         },
         "require": {
-            "inc2734/wp-contents-outline": ">=0.5.2",
+            "inc2734/wp-contents-outline": ">=1.0.1",
             "inc2734/wp-view-controller": ">=4.0.5",
             "php": ">=5.6"
         },
@@ -128,7 +128,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2018-05-02T14:15:35+00:00",
+        "time": "2018-05-07T22:47:52+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -238,17 +238,17 @@
     },
     {
         "name": "inc2734/wp-contents-outline",
-        "version": "0.5.2",
-        "version_normalized": "0.5.2.0",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/wp-contents-outline.git",
-            "reference": "bb6a575ef1739a22528f6f0619e9cfb506706085"
+            "reference": "6a94a0e6930936681ddf68eec0dc775c61610b6c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/bb6a575ef1739a22528f6f0619e9cfb506706085",
-            "reference": "bb6a575ef1739a22528f6f0619e9cfb506706085",
+            "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/6a94a0e6930936681ddf68eec0dc775c61610b6c",
+            "reference": "6a94a0e6930936681ddf68eec0dc775c61610b6c",
             "shasum": ""
         },
         "require": {
@@ -260,7 +260,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2018-04-28T07:17:35+00:00",
+        "time": "2018-05-07T22:43:42+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -502,17 +502,17 @@
     },
     {
         "name": "inc2734/wp-page-speed-optimization",
-        "version": "0.4.0",
-        "version_normalized": "0.4.0.0",
+        "version": "0.5.0",
+        "version_normalized": "0.5.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-            "reference": "1f88b194c97940d6dc9ea5d2afe116ade509bbff"
+            "reference": "d627e24ebf41f55bb3fa03c0cfff790ad0e40394"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/1f88b194c97940d6dc9ea5d2afe116ade509bbff",
-            "reference": "1f88b194c97940d6dc9ea5d2afe116ade509bbff",
+            "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/d627e24ebf41f55bb3fa03c0cfff790ad0e40394",
+            "reference": "d627e24ebf41f55bb3fa03c0cfff790ad0e40394",
             "shasum": ""
         },
         "require": {
@@ -524,7 +524,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2018-05-02T15:15:43+00:00",
+        "time": "2018-05-07T23:33:53+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
