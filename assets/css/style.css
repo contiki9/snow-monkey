@@ -12715,6 +12715,11 @@ html[data-window-scroll="false"] .l-container {
   .wpaw-slider__item-more:hover, .wpaw-slider__item-more:active, .wpaw-slider__item-more:focus {
     opacity: 1; }
 
+.wpaw-slider .slick-slider {
+  overflow: hidden; }
+  .wpaw-slider .slick-slider .slick-list {
+    margin-right: -1px; }
+
 .wpaw-slider .slick-dotted.slick-slider {
   margin: 0; }
 

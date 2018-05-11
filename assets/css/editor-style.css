@@ -12127,6 +12127,10 @@ blockquote {
         transition: opacity 0.2s ease-out; } }
     .mce-content-body.mceContentBody .wpaw-slider__item-more:hover, .mce-content-body.mceContentBody .wpaw-slider__item-more:active, .mce-content-body.mceContentBody .wpaw-slider__item-more:focus {
       opacity: 1; }
+  .mce-content-body.mceContentBody .wpaw-slider .slick-slider {
+    overflow: hidden; }
+    .mce-content-body.mceContentBody .wpaw-slider .slick-slider .slick-list {
+      margin-right: -1px; }
   .mce-content-body.mceContentBody .wpaw-slider .slick-dotted.slick-slider {
     margin: 0; }
   .mce-content-body.mceContentBody .wpaw-slider .slick-dots {
