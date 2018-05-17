@@ -4748,4 +4748,16 @@ $('.wpaw-slider__canvas').WpawSlider();
 
 $('.wpco-wrapper').wpContentsOutline();
 
+$(window).on('elementor/frontend/init', function () {
+  elementorFrontend.hooks.addAction('frontend/element_ready/widget', function (scope) {
+    if (scope.hasClass('elementor-widget-wp-widget-inc2734_wp_awesome_widgets_slider')) {
+      scope.find('.wpaw-slider__canvas').WpawSlider();
+    } else if (scope.hasClass('elementor-widget-wp-widget-inc2734_wp_awesome_widgets_pickup_slider')) {
+      scope.find('.wpaw-pickup-slider__canvas').SnowMonkeyWpawPickupSlider();
+    } else if (scope.hasClass('elementor-widget-wp-widget-inc2734_wp_awesome_widgets_showcase')) {
+      scope.find('.wpaw-showcase').backgroundParallaxScroll();
+    }
+  });
+});
+
 }(jQuery));
