@@ -1,17 +1,17 @@
 [
     {
         "name": "inc2734/mimizuku-core",
-        "version": "2.2.2",
-        "version_normalized": "2.2.2.0",
+        "version": "2.3.0",
+        "version_normalized": "2.3.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/mimizuku-core.git",
-            "reference": "41124f8a8b0772fb2afb765838757bbca40eff6a"
+            "reference": "4f21feb7f572bef1ebd931b8da0bc7cdb4e9fb2c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/41124f8a8b0772fb2afb765838757bbca40eff6a",
-            "reference": "41124f8a8b0772fb2afb765838757bbca40eff6a",
+            "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/4f21feb7f572bef1ebd931b8da0bc7cdb4e9fb2c",
+            "reference": "4f21feb7f572bef1ebd931b8da0bc7cdb4e9fb2c",
             "shasum": ""
         },
         "require": {
@@ -24,7 +24,7 @@
             "inc2734/wp-github-theme-updater": ">=0.2.7",
             "inc2734/wp-like-me-box": ">=0.1.5",
             "inc2734/wp-oembed-blog-card": ">=3.0.0",
-            "inc2734/wp-page-speed-optimization": ">=0.5.1",
+            "inc2734/wp-page-speed-optimization": ">=0.6.0",
             "inc2734/wp-profile-box": ">=1.1.0",
             "inc2734/wp-pure-css-gallery": ">=1.1.0",
             "inc2734/wp-seo": ">=1.0.3",
@@ -38,7 +38,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2018-05-21T22:49:15+00:00",
+        "time": "2018-05-23T06:44:17+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -502,17 +502,17 @@
     },
     {
         "name": "inc2734/wp-page-speed-optimization",
-        "version": "0.5.1",
-        "version_normalized": "0.5.1.0",
+        "version": "0.6.0",
+        "version_normalized": "0.6.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-            "reference": "35c20ea98a083076c8df84f1f63834b3035808fe"
+            "reference": "c84069d5b147e741b7f817fcd5e6c10cf2c5339b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/35c20ea98a083076c8df84f1f63834b3035808fe",
-            "reference": "35c20ea98a083076c8df84f1f63834b3035808fe",
+            "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/c84069d5b147e741b7f817fcd5e6c10cf2c5339b",
+            "reference": "c84069d5b147e741b7f817fcd5e6c10cf2c5339b",
             "shasum": ""
         },
         "require": {
@@ -524,7 +524,7 @@
             "squizlabs/php_codesniffer": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2018-05-09T02:56:45+00:00",
+        "time": "2018-05-23T06:39:23+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
