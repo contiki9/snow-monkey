@@ -17287,6 +17287,26 @@ blockquote {
   .mce-content-body.mceContentBody .woocommerce-checkout > ul ol,
   .mce-content-body.mceContentBody .woocommerce-checkout > ul ul {
     margin-bottom: 0; }
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-navigation {
+    margin-bottom: 1.86957rem; }
+    .mce-content-body.mceContentBody .woocommerce-MyAccount-navigation ul {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      border-top: 1px solid #eeeeee; }
+    .mce-content-body.mceContentBody .woocommerce-MyAccount-navigation li {
+      border-bottom: 1px solid #eeeeee; }
+    .mce-content-body.mceContentBody .woocommerce-MyAccount-navigation a {
+      display: block;
+      text-decoration: none;
+      padding: 0.46739rem 0; }
+      @media (min-width: 64em) {
+        .mce-content-body.mceContentBody .woocommerce-MyAccount-navigation a:hover, .mce-content-body.mceContentBody .woocommerce-MyAccount-navigation a:active, .mce-content-body.mceContentBody .woocommerce-MyAccount-navigation a:focus {
+          text-decoration: underline; } }
+  .mce-content-body.mceContentBody .c-entry__content .woocommerce .shop_table {
+    border-collapse: collapse; }
+    .mce-content-body.mceContentBody .c-entry__content .woocommerce .shop_table thead th {
+      background-color: #f7f7f7; }
   .mce-content-body.mceContentBody .p-comments__list {
     list-style: none;
     margin-left: 0;

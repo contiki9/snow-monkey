@@ -17996,6 +17996,28 @@ span.wpcf7-not-valid-tip {
 .woocommerce-checkout > ul ul {
   margin-bottom: 0; }
 
+.woocommerce-MyAccount-navigation {
+  margin-bottom: 1.86957rem; }
+  .woocommerce-MyAccount-navigation ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    border-top: 1px solid #eeeeee; }
+  .woocommerce-MyAccount-navigation li {
+    border-bottom: 1px solid #eeeeee; }
+  .woocommerce-MyAccount-navigation a {
+    display: block;
+    text-decoration: none;
+    padding: 0.46739rem 0; }
+    @media (min-width: 64em) {
+      .woocommerce-MyAccount-navigation a:hover, .woocommerce-MyAccount-navigation a:active, .woocommerce-MyAccount-navigation a:focus {
+        text-decoration: underline; } }
+
+.c-entry__content .woocommerce .shop_table {
+  border-collapse: collapse; }
+  .c-entry__content .woocommerce .shop_table thead th {
+    background-color: #f7f7f7; }
+
 /**
  * Object - Project
  */
