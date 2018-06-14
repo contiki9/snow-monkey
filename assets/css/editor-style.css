@@ -17166,7 +17166,8 @@ blockquote {
     margin-bottom: 0; }
   .mce-content-body.mceContentBody .woocommerce-input-wrapper .input-text,
   .mce-content-body.mceContentBody .quantity .input-text,
-  .mce-content-body.mceContentBody .woocommerce-EditAccountForm .input-text {
+  .mce-content-body.mceContentBody .woocommerce-EditAccountForm .input-text,
+  .mce-content-body.mceContentBody .woocommerce-form .input-text {
     border: 1px solid #cccccc;
     border-radius: 3px;
     outline: 0;
@@ -17177,7 +17178,8 @@ blockquote {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.035); }
     .mce-content-body.mceContentBody .woocommerce-input-wrapper .input-text:hover,
     .mce-content-body.mceContentBody .quantity .input-text:hover,
-    .mce-content-body.mceContentBody .woocommerce-EditAccountForm .input-text:hover {
+    .mce-content-body.mceContentBody .woocommerce-EditAccountForm .input-text:hover,
+    .mce-content-body.mceContentBody .woocommerce-form .input-text:hover {
       border-color: #999; }
     .mce-content-body.mceContentBody .woocommerce-input-wrapper .input-text:active, .mce-content-body.mceContentBody .woocommerce-input-wrapper .input-text:focus, .mce-content-body.mceContentBody .woocommerce-input-wrapper .input-text[aria-selected="true"],
     .mce-content-body.mceContentBody .quantity .input-text:active,
@@ -17185,13 +17187,106 @@ blockquote {
     .mce-content-body.mceContentBody .quantity .input-text[aria-selected="true"],
     .mce-content-body.mceContentBody .woocommerce-EditAccountForm .input-text:active,
     .mce-content-body.mceContentBody .woocommerce-EditAccountForm .input-text:focus,
-    .mce-content-body.mceContentBody .woocommerce-EditAccountForm .input-text[aria-selected="true"] {
+    .mce-content-body.mceContentBody .woocommerce-EditAccountForm .input-text[aria-selected="true"],
+    .mce-content-body.mceContentBody .woocommerce-form .input-text:active,
+    .mce-content-body.mceContentBody .woocommerce-form .input-text:focus,
+    .mce-content-body.mceContentBody .woocommerce-form .input-text[aria-selected="true"] {
       border-color: #85b7d9; }
-    textarea.mce-content-body.mceContentBody .woocommerce-input-wrapper .input-text, .mce-content-body.mceContentBody .quantity .input-text, .mce-content-body.mceContentBody .woocommerce-EditAccountForm .input-text {
+    textarea.mce-content-body.mceContentBody .woocommerce-input-wrapper .input-text, .mce-content-body.mceContentBody .quantity .input-text, .mce-content-body.mceContentBody .woocommerce-EditAccountForm .input-text, .mce-content-body.mceContentBody .woocommerce-form .input-text {
       height: auto;
       width: 100%; }
+  .mce-content-body.mceContentBody .woocommerce-EditAccountForm > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    margin-top: 1.86957rem; }
+  .mce-content-body.mceContentBody .woocommerce-EditAccountForm > h1 {
+    margin-top: 0;
+    margin-bottom: 1.86957rem; }
+  .mce-content-body.mceContentBody .woocommerce-EditAccountForm > h2 {
+    margin-top: 3.73913rem;
+    margin-bottom: 1.86957rem; }
+  .mce-content-body.mceContentBody .woocommerce-EditAccountForm > h3 {
+    margin-top: 2.80435rem;
+    margin-bottom: 1.40217rem; }
+  .mce-content-body.mceContentBody .woocommerce-EditAccountForm > h4 {
+    margin-top: 2.33696rem;
+    margin-bottom: 1.40217rem; }
+  .mce-content-body.mceContentBody .woocommerce-EditAccountForm > h5 {
+    margin-top: 1.86957rem;
+    margin-bottom: 0.93478rem; }
+  .mce-content-body.mceContentBody .woocommerce-EditAccountForm > h6 {
+    margin-top: 1.86957rem;
+    margin-bottom: 0.93478rem; }
+  .mce-content-body.mceContentBody .woocommerce-EditAccountForm > :first-child {
+    margin-top: 0; }
+  .mce-content-body.mceContentBody .woocommerce-EditAccountForm > ol ol,
+  .mce-content-body.mceContentBody .woocommerce-EditAccountForm > ol ul,
+  .mce-content-body.mceContentBody .woocommerce-EditAccountForm > ul ol,
+  .mce-content-body.mceContentBody .woocommerce-EditAccountForm > ul ul {
+    margin-bottom: 0; }
   .mce-content-body.mceContentBody .woocommerce-EditAccountForm fieldset {
     border: none; }
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6),
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > [class^="woocommerce-"] > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6),
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > header > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6),
+  .mce-content-body.mceContentBody .woocommerce-checkout > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    margin-top: 1.86957rem; }
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > h1,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > [class^="woocommerce-"] > h1,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > header > h1,
+  .mce-content-body.mceContentBody .woocommerce-checkout > h1 {
+    margin-top: 0;
+    margin-bottom: 1.86957rem; }
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > h2,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > [class^="woocommerce-"] > h2,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > header > h2,
+  .mce-content-body.mceContentBody .woocommerce-checkout > h2 {
+    margin-top: 3.73913rem;
+    margin-bottom: 1.86957rem; }
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > h3,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > [class^="woocommerce-"] > h3,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > header > h3,
+  .mce-content-body.mceContentBody .woocommerce-checkout > h3 {
+    margin-top: 2.80435rem;
+    margin-bottom: 1.40217rem; }
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > h4,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > [class^="woocommerce-"] > h4,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > header > h4,
+  .mce-content-body.mceContentBody .woocommerce-checkout > h4 {
+    margin-top: 2.33696rem;
+    margin-bottom: 1.40217rem; }
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > h5,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > [class^="woocommerce-"] > h5,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > header > h5,
+  .mce-content-body.mceContentBody .woocommerce-checkout > h5 {
+    margin-top: 1.86957rem;
+    margin-bottom: 0.93478rem; }
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > h6,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > [class^="woocommerce-"] > h6,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > header > h6,
+  .mce-content-body.mceContentBody .woocommerce-checkout > h6 {
+    margin-top: 1.86957rem;
+    margin-bottom: 0.93478rem; }
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > :first-child,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > [class^="woocommerce-"] > :first-child,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > header > :first-child,
+  .mce-content-body.mceContentBody .woocommerce-checkout > :first-child {
+    margin-top: 0; }
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > ol ol,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > ol ul,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > ul ol,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > ul ul,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > [class^="woocommerce-"] > ol ol,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > [class^="woocommerce-"] > ol ul,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > [class^="woocommerce-"] > ul ol,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > [class^="woocommerce-"] > ul ul,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > header > ol ol,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > header > ol ul,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > header > ul ol,
+  .mce-content-body.mceContentBody .woocommerce-MyAccount-content > header > ul ul,
+  .mce-content-body.mceContentBody .woocommerce-checkout > ol ol,
+  .mce-content-body.mceContentBody .woocommerce-checkout > ol ul,
+  .mce-content-body.mceContentBody .woocommerce-checkout > ul ol,
+  .mce-content-body.mceContentBody .woocommerce-checkout > ul ul {
+    margin-bottom: 0; }
   .mce-content-body.mceContentBody .p-comments__list {
     list-style: none;
     margin-left: 0;

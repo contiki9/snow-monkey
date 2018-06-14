@@ -17855,7 +17855,8 @@ span.wpcf7-not-valid-tip {
 
 .woocommerce-input-wrapper .input-text,
 .quantity .input-text,
-.woocommerce-EditAccountForm .input-text {
+.woocommerce-EditAccountForm .input-text,
+.woocommerce-form .input-text {
   border: 1px solid #cccccc;
   border-radius: 3px;
   outline: 0;
@@ -17866,7 +17867,8 @@ span.wpcf7-not-valid-tip {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.035); }
   .woocommerce-input-wrapper .input-text:hover,
   .quantity .input-text:hover,
-  .woocommerce-EditAccountForm .input-text:hover {
+  .woocommerce-EditAccountForm .input-text:hover,
+  .woocommerce-form .input-text:hover {
     border-color: #999; }
   .woocommerce-input-wrapper .input-text:active, .woocommerce-input-wrapper .input-text:focus, .woocommerce-input-wrapper .input-text[aria-selected="true"],
   .quantity .input-text:active,
@@ -17874,14 +17876,125 @@ span.wpcf7-not-valid-tip {
   .quantity .input-text[aria-selected="true"],
   .woocommerce-EditAccountForm .input-text:active,
   .woocommerce-EditAccountForm .input-text:focus,
-  .woocommerce-EditAccountForm .input-text[aria-selected="true"] {
+  .woocommerce-EditAccountForm .input-text[aria-selected="true"],
+  .woocommerce-form .input-text:active,
+  .woocommerce-form .input-text:focus,
+  .woocommerce-form .input-text[aria-selected="true"] {
     border-color: #85b7d9; }
-  textarea.woocommerce-input-wrapper .input-text, .quantity .input-text, .woocommerce-EditAccountForm .input-text {
+  textarea.woocommerce-input-wrapper .input-text, .quantity .input-text, .woocommerce-EditAccountForm .input-text, .woocommerce-form .input-text {
     height: auto;
     width: 100%; }
 
+.woocommerce-EditAccountForm > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  margin-top: 1.86957rem; }
+
+.woocommerce-EditAccountForm > h1 {
+  margin-top: 0;
+  margin-bottom: 1.86957rem; }
+
+.woocommerce-EditAccountForm > h2 {
+  margin-top: 3.73913rem;
+  margin-bottom: 1.86957rem; }
+
+.woocommerce-EditAccountForm > h3 {
+  margin-top: 2.80435rem;
+  margin-bottom: 1.40217rem; }
+
+.woocommerce-EditAccountForm > h4 {
+  margin-top: 2.33696rem;
+  margin-bottom: 1.40217rem; }
+
+.woocommerce-EditAccountForm > h5 {
+  margin-top: 1.86957rem;
+  margin-bottom: 0.93478rem; }
+
+.woocommerce-EditAccountForm > h6 {
+  margin-top: 1.86957rem;
+  margin-bottom: 0.93478rem; }
+
+.woocommerce-EditAccountForm > :first-child {
+  margin-top: 0; }
+
+.woocommerce-EditAccountForm > ol ol,
+.woocommerce-EditAccountForm > ol ul,
+.woocommerce-EditAccountForm > ul ol,
+.woocommerce-EditAccountForm > ul ul {
+  margin-bottom: 0; }
+
 .woocommerce-EditAccountForm fieldset {
   border: none; }
+
+.woocommerce-MyAccount-content > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6),
+.woocommerce-MyAccount-content > [class^="woocommerce-"] > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6),
+.woocommerce-MyAccount-content > header > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6),
+.woocommerce-checkout > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  margin-top: 1.86957rem; }
+
+.woocommerce-MyAccount-content > h1,
+.woocommerce-MyAccount-content > [class^="woocommerce-"] > h1,
+.woocommerce-MyAccount-content > header > h1,
+.woocommerce-checkout > h1 {
+  margin-top: 0;
+  margin-bottom: 1.86957rem; }
+
+.woocommerce-MyAccount-content > h2,
+.woocommerce-MyAccount-content > [class^="woocommerce-"] > h2,
+.woocommerce-MyAccount-content > header > h2,
+.woocommerce-checkout > h2 {
+  margin-top: 3.73913rem;
+  margin-bottom: 1.86957rem; }
+
+.woocommerce-MyAccount-content > h3,
+.woocommerce-MyAccount-content > [class^="woocommerce-"] > h3,
+.woocommerce-MyAccount-content > header > h3,
+.woocommerce-checkout > h3 {
+  margin-top: 2.80435rem;
+  margin-bottom: 1.40217rem; }
+
+.woocommerce-MyAccount-content > h4,
+.woocommerce-MyAccount-content > [class^="woocommerce-"] > h4,
+.woocommerce-MyAccount-content > header > h4,
+.woocommerce-checkout > h4 {
+  margin-top: 2.33696rem;
+  margin-bottom: 1.40217rem; }
+
+.woocommerce-MyAccount-content > h5,
+.woocommerce-MyAccount-content > [class^="woocommerce-"] > h5,
+.woocommerce-MyAccount-content > header > h5,
+.woocommerce-checkout > h5 {
+  margin-top: 1.86957rem;
+  margin-bottom: 0.93478rem; }
+
+.woocommerce-MyAccount-content > h6,
+.woocommerce-MyAccount-content > [class^="woocommerce-"] > h6,
+.woocommerce-MyAccount-content > header > h6,
+.woocommerce-checkout > h6 {
+  margin-top: 1.86957rem;
+  margin-bottom: 0.93478rem; }
+
+.woocommerce-MyAccount-content > :first-child,
+.woocommerce-MyAccount-content > [class^="woocommerce-"] > :first-child,
+.woocommerce-MyAccount-content > header > :first-child,
+.woocommerce-checkout > :first-child {
+  margin-top: 0; }
+
+.woocommerce-MyAccount-content > ol ol,
+.woocommerce-MyAccount-content > ol ul,
+.woocommerce-MyAccount-content > ul ol,
+.woocommerce-MyAccount-content > ul ul,
+.woocommerce-MyAccount-content > [class^="woocommerce-"] > ol ol,
+.woocommerce-MyAccount-content > [class^="woocommerce-"] > ol ul,
+.woocommerce-MyAccount-content > [class^="woocommerce-"] > ul ol,
+.woocommerce-MyAccount-content > [class^="woocommerce-"] > ul ul,
+.woocommerce-MyAccount-content > header > ol ol,
+.woocommerce-MyAccount-content > header > ol ul,
+.woocommerce-MyAccount-content > header > ul ol,
+.woocommerce-MyAccount-content > header > ul ul,
+.woocommerce-checkout > ol ol,
+.woocommerce-checkout > ol ul,
+.woocommerce-checkout > ul ol,
+.woocommerce-checkout > ul ul {
+  margin-bottom: 0; }
 
 /**
  * Object - Project
