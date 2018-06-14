@@ -2294,55 +2294,6 @@ Abstract button component
 */
 /*
 ---
-name: _card()
-category:
-  - core/abstract
-compile: true
----
-Abstract card component
-
-### scss
-```scss
-.c-card {
-  @include _card();
-  background-color: #fff;
-
-  &__body, &__action {
-    @include _padding(.75);
-  }
-}
-```
-
-### html
-```ejs
-<div class="c-card">
-  <div class="c-card__figure">
-    <img src="/basis/aigis_assets/images/dummy.jpg">
-  </div>
-  <div class="c-card__body">
-    ...
-  </div>
-  <div class="c-card__action">
-    ...
-  </div>
-</div>
-```
-```ejs
-<div class="c-card">
-  <div class="c-card__figure" style="background-image: url('/basis/aigis_assets/images/dummy.jpg'); padding-top: 50%">
-    <div style="position: absolute; left: 10px; bottom: 10px">...</div>
-  </div>
-  <div class="c-card__body">
-    ...
-  </div>
-  <div class="c-card__action">
-    ...
-  </div>
-</div>
-```
-*/
-/*
----
 name: _checkbox()
 category:
   - core/abstract
@@ -2549,9 +2500,12 @@ new BasisDrawer({
 </div>
 
 <div id="hamburger-btn" class="c-hamburger-btn" aria-expanded="false" aria-controls="drawer">
-  <div class="c-hamburger-btn__bar"></div>
-  <div class="c-hamburger-btn__bar"></div>
-  <div class="c-hamburger-btn__bar"></div>
+  <div class="c-hamburger-btn__bars">
+    <div class="c-hamburger-btn__bar"></div>
+    <div class="c-hamburger-btn__bar"></div>
+    <div class="c-hamburger-btn__bar"></div>
+  </div>
+  <div class="c-hamburger-btn__label">MENU</div>
 </div>
 ```
 */
@@ -2623,43 +2577,6 @@ Abstract entry component
 */
 /*
 ---
-name: _flex-media()
-category:
-  - core/abstract
----
-Abstract flexible media component
-
-### scss
-```scss
-.c-flex-media {
-  @include _flex-media();
-
-  &__figure {
-    @include _margin(0, 0, .5);
-    width: 100%;
-
-    @include _media-min(md) {
-      @include _margin(0, 1, 0, 0);
-      width: 150px;
-    }
-  }
-}
-```
-
-### html
-```ejs
-<div class="c-flex-media">
-  <div class="c-flex-media__figure">
-    <img src="/basis/aigis_assets/images/dummy.jpg">
-  </div>
-  <div class="c-flex-media__body">
-    ...
-  </div>
-</div>
-```
-*/
-/*
----
 name: _form-control()
 category:
   - core/abstract
@@ -2710,9 +2627,12 @@ new BasisHamburgerBtn({
 ### html
 ```ejs
 <div id="hamburger-btn" class="c-hamburger-btn" role="button" aria-expanded="false" aria-controls="drawer">
-  <div class="c-hamburger-btn__bar"></div>
-  <div class="c-hamburger-btn__bar"></div>
-  <div class="c-hamburger-btn__bar"></div>
+  <div class="c-hamburger-btn__bars">
+    <div class="c-hamburger-btn__bar"></div>
+    <div class="c-hamburger-btn__bar"></div>
+    <div class="c-hamburger-btn__bar"></div>
+  </div>
+  <div class="c-hamburger-btn__label">MENU</div>
 </div>
 
 <nav id="drawer" aria-labelledby="hamburger-btn">...</nav>
@@ -3227,6 +3147,41 @@ Abstract radio button component
   </span>
   ...
 </label>
+```
+*/
+/*
+---
+name: _radio()
+category:
+  - core/abstract
+---
+Abstract responsive table component
+
+### scss
+```scss
+.responsive-table {
+  @include _media-max(sm) {
+    @include _responsive-table();
+  }
+}
+```
+
+### html
+```html
+<div class="c-responsive-table">
+  <table style="width: 1000px">
+    <tr>
+      <th>th</th>
+      <td>td</td>
+      <td>td</td>
+    </tr>
+    <tr>
+      <th>th</th>
+      <td>td</td>
+      <td>td</td>
+    </tr>
+  </table>
+</div>
 ```
 */
 /*
@@ -4320,19 +4275,28 @@ Abstract pulse spinner component
   .wpac-columns__col-inner > h3 {
     border-bottom: 1px solid #eeeeee;
     padding: 0 0 0.46739rem; }
-  .wpac-columns__col-inner > table {
+  .wpac-columns__col-inner > table,
+  .wpac-columns__col-inner > .c-responsive-table > table {
     border-collapse: collapse;
     width: 100%; }
-    .wpac-columns__col-inner > table th, .wpac-columns__col-inner > table td {
+    .wpac-columns__col-inner > table th, .wpac-columns__col-inner > table td,
+    .wpac-columns__col-inner > .c-responsive-table > table th,
+    .wpac-columns__col-inner > .c-responsive-table > table td {
       border: 1px solid #eeeeee;
       padding: 0.46739rem 0.93478rem; }
-    .wpac-columns__col-inner > table th {
+    .wpac-columns__col-inner > table th,
+    .wpac-columns__col-inner > .c-responsive-table > table th {
       font-weight: bold; }
-    .wpac-columns__col-inner > table thead th {
+    .wpac-columns__col-inner > table thead th,
+    .wpac-columns__col-inner > .c-responsive-table > table thead th {
       background-color: #bd3c4f;
       border-right: 1px solid #d98692;
       border-left: 1px solid #d98692;
       color: #fff; }
+    .wpac-columns__col-inner > table tbody th,
+    .wpac-columns__col-inner > .c-responsive-table > table tbody th {
+      background-color: #f7f7f7;
+      text-align: left; }
   .wpac-columns__col-inner > ul > li + li,
   .wpac-columns__col-inner > ol > li + li {
     margin-top: 0.46739rem; }
@@ -4416,19 +4380,28 @@ Abstract pulse spinner component
   .wpac-section__body > h3 {
     border-bottom: 1px solid #eeeeee;
     padding: 0 0 0.46739rem; }
-  .wpac-section__body > table {
+  .wpac-section__body > table,
+  .wpac-section__body > .c-responsive-table > table {
     border-collapse: collapse;
     width: 100%; }
-    .wpac-section__body > table th, .wpac-section__body > table td {
+    .wpac-section__body > table th, .wpac-section__body > table td,
+    .wpac-section__body > .c-responsive-table > table th,
+    .wpac-section__body > .c-responsive-table > table td {
       border: 1px solid #eeeeee;
       padding: 0.46739rem 0.93478rem; }
-    .wpac-section__body > table th {
+    .wpac-section__body > table th,
+    .wpac-section__body > .c-responsive-table > table th {
       font-weight: bold; }
-    .wpac-section__body > table thead th {
+    .wpac-section__body > table thead th,
+    .wpac-section__body > .c-responsive-table > table thead th {
       background-color: #bd3c4f;
       border-right: 1px solid #d98692;
       border-left: 1px solid #d98692;
       color: #fff; }
+    .wpac-section__body > table tbody th,
+    .wpac-section__body > .c-responsive-table > table tbody th {
+      background-color: #f7f7f7;
+      text-align: left; }
   .wpac-section__body > ul > li + li,
   .wpac-section__body > ol > li + li {
     margin-top: 0.46739rem; }

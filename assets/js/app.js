@@ -3132,7 +3132,7 @@ var BasisNavbar = function () {
           _this.show(item.children(_this.args.submenu));
         });
 
-        item.on('mouseleave', function (event) {
+        item.on('mouseleave blur', function (event) {
           _this.hidden(item.children(_this.args.submenu));
         });
       });
@@ -3140,7 +3140,14 @@ var BasisNavbar = function () {
       $(this.args.item).each(function (i, e) {
         var item = $(e);
         item.on('focusin', function (event) {
-          _this.hidden(item.siblings(_this.args.item).children(_this.args.submenu));
+          _this.hidden(item.siblings(_this.args.item).find(_this.args.submenu));
+        });
+
+        item.find(_this.args.subitem).each(function (i, e) {
+          var subitem = $(e);
+          subitem.on('focusin', function (event) {
+            _this.hidden(subitem.siblings(_this.args.subitem).find(_this.args.submenu));
+          });
         });
       });
     }
@@ -3635,6 +3642,11 @@ $.fn.WpawPickupSlider = function () {
     setItemHeight: function setItemHeight(items) {
       var sliderHeight = 0;
       items.css('min-height', '');
+
+      if (methods.isIE11()) {
+        items.css('height', '');
+      }
+
       items.each(function (i, e) {
         var slide = $(e);
         var naturalHeight = slide.outerHeight();
@@ -3647,7 +3659,16 @@ $.fn.WpawPickupSlider = function () {
           }
         }
       });
+
+      if (methods.isIE11()) {
+        items.css('height', sliderHeight);
+      }
+
       items.css('min-height', sliderHeight);
+    },
+    isIE11: function isIE11() {
+      var ua = navigator.userAgent;
+      return ua.indexOf('Trident') !== -1;
     }
   };
 
@@ -3690,6 +3711,11 @@ $.fn.WpawSlider = function () {
     setItemHeight: function setItemHeight(items) {
       var sliderHeight = 0;
       items.css('min-height', '');
+
+      if (methods.isIE11()) {
+        items.css('height', '');
+      }
+
       items.each(function (i, e) {
         var slide = $(e);
         var naturalHeight = slide.outerHeight();
@@ -3702,7 +3728,16 @@ $.fn.WpawSlider = function () {
           }
         }
       });
+
+      if (methods.isIE11()) {
+        items.css('height', sliderHeight);
+      }
+
       items.css('min-height', sliderHeight);
+    },
+    isIE11: function isIE11() {
+      var ua = navigator.userAgent;
+      return ua.indexOf('Trident') !== -1;
     }
   };
 
