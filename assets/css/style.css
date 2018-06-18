@@ -13818,7 +13818,7 @@ html[data-window-scroll="false"] .l-container {
         width: 336px; } }
 
 .l-header {
-  z-index: 2;
+  z-index: 3;
   background-color: #fff;
   padding: 0.46739rem 0;
   -webkit-transition: all 0.2s ease-out;
@@ -17856,7 +17856,8 @@ span.wpcf7-not-valid-tip {
 .woocommerce-input-wrapper .input-text,
 .quantity .input-text,
 .woocommerce-EditAccountForm .input-text,
-.woocommerce-form .input-text {
+.woocommerce-form .input-text,
+.woocommerce-ResetPassword .input-text {
   border: 1px solid #cccccc;
   border-radius: 3px;
   outline: 0;
@@ -17868,7 +17869,8 @@ span.wpcf7-not-valid-tip {
   .woocommerce-input-wrapper .input-text:hover,
   .quantity .input-text:hover,
   .woocommerce-EditAccountForm .input-text:hover,
-  .woocommerce-form .input-text:hover {
+  .woocommerce-form .input-text:hover,
+  .woocommerce-ResetPassword .input-text:hover {
     border-color: #999; }
   .woocommerce-input-wrapper .input-text:active, .woocommerce-input-wrapper .input-text:focus, .woocommerce-input-wrapper .input-text[aria-selected="true"],
   .quantity .input-text:active,
@@ -17879,9 +17881,12 @@ span.wpcf7-not-valid-tip {
   .woocommerce-EditAccountForm .input-text[aria-selected="true"],
   .woocommerce-form .input-text:active,
   .woocommerce-form .input-text:focus,
-  .woocommerce-form .input-text[aria-selected="true"] {
+  .woocommerce-form .input-text[aria-selected="true"],
+  .woocommerce-ResetPassword .input-text:active,
+  .woocommerce-ResetPassword .input-text:focus,
+  .woocommerce-ResetPassword .input-text[aria-selected="true"] {
     border-color: #85b7d9; }
-  textarea.woocommerce-input-wrapper .input-text, .quantity .input-text, .woocommerce-EditAccountForm .input-text, .woocommerce-form .input-text {
+  textarea.woocommerce-input-wrapper .input-text, .quantity .input-text, .woocommerce-EditAccountForm .input-text, .woocommerce-form .input-text, .woocommerce-ResetPassword .input-text {
     height: auto;
     width: 100%; }
 
@@ -18017,6 +18022,84 @@ span.wpcf7-not-valid-tip {
   border-collapse: collapse; }
   .c-entry__content .woocommerce .shop_table thead th {
     background-color: #f7f7f7; }
+
+.woocommerce .quantity .qty {
+  max-height: 37px; }
+
+.woocommerce-Tabs-panel > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) + :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  margin-top: 1.86957rem; }
+
+.woocommerce-Tabs-panel > h1 {
+  margin-top: 0;
+  margin-bottom: 1.86957rem; }
+
+.woocommerce-Tabs-panel > h2 {
+  margin-top: 3.73913rem;
+  margin-bottom: 1.86957rem; }
+
+.woocommerce-Tabs-panel > h3 {
+  margin-top: 2.80435rem;
+  margin-bottom: 1.40217rem; }
+
+.woocommerce-Tabs-panel > h4 {
+  margin-top: 2.33696rem;
+  margin-bottom: 1.40217rem; }
+
+.woocommerce-Tabs-panel > h5 {
+  margin-top: 1.86957rem;
+  margin-bottom: 0.93478rem; }
+
+.woocommerce-Tabs-panel > h6 {
+  margin-top: 1.86957rem;
+  margin-bottom: 0.93478rem; }
+
+.woocommerce-Tabs-panel > :first-child {
+  margin-top: 0; }
+
+.woocommerce-Tabs-panel > ol ol,
+.woocommerce-Tabs-panel > ol ul,
+.woocommerce-Tabs-panel > ul ol,
+.woocommerce-Tabs-panel > ul ul {
+  margin-bottom: 0; }
+
+.woocommerce-Tabs-panel > h2 + h2, .woocommerce-Tabs-panel > h2 + h3, .woocommerce-Tabs-panel > h2 + h4, .woocommerce-Tabs-panel > h2 + h5, .woocommerce-Tabs-panel > h2 + h6, .woocommerce-Tabs-panel > h3 + h2, .woocommerce-Tabs-panel > h3 + h3, .woocommerce-Tabs-panel > h3 + h4, .woocommerce-Tabs-panel > h3 + h5, .woocommerce-Tabs-panel > h3 + h6, .woocommerce-Tabs-panel > h4 + h2, .woocommerce-Tabs-panel > h4 + h3, .woocommerce-Tabs-panel > h4 + h4, .woocommerce-Tabs-panel > h4 + h5, .woocommerce-Tabs-panel > h4 + h6, .woocommerce-Tabs-panel > h5 + h2, .woocommerce-Tabs-panel > h5 + h3, .woocommerce-Tabs-panel > h5 + h4, .woocommerce-Tabs-panel > h5 + h5, .woocommerce-Tabs-panel > h5 + h6, .woocommerce-Tabs-panel > h6 + h2, .woocommerce-Tabs-panel > h6 + h3, .woocommerce-Tabs-panel > h6 + h4, .woocommerce-Tabs-panel > h6 + h5, .woocommerce-Tabs-panel > h6 + h6 {
+  margin-top: 0; }
+
+.woocommerce-Tabs-panel > h2 {
+  border-left: 3px solid #bd3c4f;
+  background-color: #f7f7f7;
+  padding: 0.46739rem 0.46739rem 0.46739rem 0.93478rem; }
+
+.woocommerce-Tabs-panel > h3 {
+  border-bottom: 1px solid #eeeeee;
+  padding: 0 0 0.46739rem; }
+
+.woocommerce-Tabs-panel > table,
+.woocommerce-Tabs-panel > .c-responsive-table > table {
+  border-collapse: collapse;
+  width: 100%; }
+  .woocommerce-Tabs-panel > table th, .woocommerce-Tabs-panel > table td,
+  .woocommerce-Tabs-panel > .c-responsive-table > table th,
+  .woocommerce-Tabs-panel > .c-responsive-table > table td {
+    border: 1px solid #eeeeee;
+    padding: 0.46739rem 0.93478rem; }
+  .woocommerce-Tabs-panel > table th,
+  .woocommerce-Tabs-panel > .c-responsive-table > table th {
+    font-weight: bold; }
+  .woocommerce-Tabs-panel > table thead th,
+  .woocommerce-Tabs-panel > .c-responsive-table > table thead th {
+    background-color: #bd3c4f;
+    border-right: 1px solid #d98692;
+    border-left: 1px solid #d98692;
+    color: #fff; }
+  .woocommerce-Tabs-panel > table tbody th,
+  .woocommerce-Tabs-panel > .c-responsive-table > table tbody th {
+    background-color: #f7f7f7;
+    text-align: left; }
+
+.woocommerce-Tabs-panel > ul > li + li,
+.woocommerce-Tabs-panel > ol > li + li {
+  margin-top: 0.46739rem; }
 
 /**
  * Object - Project
@@ -18193,6 +18276,80 @@ span.wpcf7-not-valid-tip {
     text-decoration: none; }
     .p-social-nav a > span {
       display: none; }
+  .p-social-nav .fa-amazon {
+    color: #fd9827; }
+  .p-social-nav .fa-bitbucket {
+    color: #23517f; }
+  .p-social-nav .fa-paypal {
+    color: #1172b9; }
+  .p-social-nav .fa-stripe {
+    color: #553ffb; }
+  .p-social-nav .fa-codepen {
+    color: #000; }
+  .p-social-nav .fa-digg {
+    color: #1b1a19; }
+  .p-social-nav .fa-dribbble {
+    color: #e84f89; }
+  .p-social-nav .fa-dropbox {
+    color: #1267fb; }
+  .p-social-nav .fa-facebook {
+    color: #3c5a96; }
+  .p-social-nav .fa-flickr {
+    color: #000; }
+  .p-social-nav .fa-get-pocket {
+    color: #e64555; }
+  .p-social-nav .fa-github {
+    color: #25292e; }
+  .p-social-nav .fa-gitlab {
+    color: #e04432; }
+  .p-social-nav .fa-google-plus {
+    color: #db4a42; }
+  .p-social-nav .fa-google {
+    color: #5592f2; }
+  .p-social-nav .fa-instagram {
+    color: #000; }
+  .p-social-nav .fa-linkedin {
+    color: #1178b3; }
+  .p-social-nav .fa-medium {
+    color: #26b377; }
+  .p-social-nav .fa-pinterest {
+    color: #bb0f23; }
+  .p-social-nav .fa-reddit {
+    color: #e23f19; }
+  .p-social-nav .fa-skype {
+    color: #1cace7; }
+  .p-social-nav .fa-slack {
+    color: #323747; }
+  .p-social-nav .fa-slideshare {
+    color: #1177b2; }
+  .p-social-nav .fa-snapchat {
+    color: #fff937; }
+  .p-social-nav .fa-stack-overflow {
+    color: #f28033; }
+  .p-social-nav .fa-tumblr {
+    color: #324357; }
+  .p-social-nav .fa-vimeo {
+    color: #2ab8e8; }
+  .p-social-nav .fa-twitter {
+    color: #2aa3f0; }
+  .p-social-nav .fa-weibo {
+    color: #d32d31; }
+  .p-social-nav .fa-wordpress {
+    color: #1ca9da; }
+  .p-social-nav .fa-youtube {
+    color: #fb0d1b; }
+  .p-social-nav .fa-behance {
+    color: #115efb; }
+  .p-social-nav .fa-500px {
+    color: #000; }
+  .p-social-nav .fa-blogger {
+    color: #fd8024; }
+  .p-social-nav .fa-soundcloud {
+    color: #fc561f; }
+  .p-social-nav .fa-spotify {
+    color: #2fd566; }
+  .p-social-nav .fa-foursquare {
+    color: #315fe0; }
 
 .p-footer-sticky-nav {
   position: fixed;
